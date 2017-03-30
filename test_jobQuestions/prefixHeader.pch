@@ -1,0 +1,51 @@
+//
+//  prefixHeader.pch
+//  test_jobQuestions
+//
+//  Created by Jingnan Zhang on 2017/3/29.
+//  Copyright © 2017年 Jingnan Zhang. All rights reserved.
+/*  1. 使用自定义打印函数，若需要打印的内容太多时，不如打印网络请求时的签名字符串时，会很耗性能，此时需用自定义的打印函数，来使app在release下不会打印
+// 2. 若此类名被用户改过，则需要进行需要的设置以使此类为全局宏文件，
+        2.1  在building settings 中 设置 Apple LLVM 7.1 language
+        2.2  Precompile Prefix Header 设置为YES 下一行
+        2.3 Prefix Heaser 设置内容为： $(SRCROOT)/网易新闻/pchFile.pch
+
+
+
+ */
+
+
+ 
+/**
+ *  参数解释：
+ 
+     __VA_ARGS__是一个可变参数的宏，很少人知道这个宏，这个可变参数的宏是新的C99规范中新增的，目前似乎只有gcc支（VC6.0的编译器不支持）。宏前面加上##的作用在于，当可变参数的个数为0时，这里的##起到把前面多余的","去掉的作用,否则会编译出错, 你可以试试。
+     __FILE__宏在预编译时会替换成当前的源文件名
+     3.__LINE__宏在预编译时会替换成当前的行号
+     4.__FUNCTION__宏在预编译时会替换成当前的函数名称
+     有了以上这几个宏，特别是有了__VA_ARGS__，调试信息的输出就变得灵活多了。
+
+ */
+
+#define kbounds  [UIScreen mainScreen].bounds
+#define kwidth  [UIScreen mainScreen].bounds.size.width
+#define kheight  [UIScreen mainScreen].bounds.size.height
+
+#ifdef DEBUG
+
+    // 1. 较为简单的打印
+//    #define MyLog(...) NSLog(__VA_ARGS__)
+
+    // 2. 最复杂的打印
+//    #define MyLog(fmt, ...) NSLog((@"[文件名:%s]\n" "[函数名:%s]\n" "[行号:%d] \n" fmt), __FILE__, __FUNCTION__, __LINE__, ##__VA_ARGS__);
+
+    // 3. 较为负责的打印，不需要打印时间戳等信息
+    #define MyLog(FORMAT, ...) fprintf(stderr,"%s\n",[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+
+
+#else
+    #define MyLog(format, ...)
+#endif
+
+
+
