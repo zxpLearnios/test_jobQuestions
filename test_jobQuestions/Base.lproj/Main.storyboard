@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hwo-Vk-q1g">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="hwo-Vk-q1g">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -14,41 +18,59 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRu-Uc-dbr">
-                                <rect key="frame" x="234" y="144" width="132" height="30"/>
+                                <rect key="frame" x="121" y="144" width="134" height="30"/>
                                 <state key="normal" title="进入TestTwo控制器"/>
                                 <connections>
                                     <action selector="gotoTestTwoVCAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Fa-pT-S51"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYd-Os-hgg">
-                                <rect key="frame" x="278" y="169" width="45" height="30"/>
+                                <rect key="frame" x="165" y="169" width="46" height="30"/>
                                 <state key="normal" title="测试三"/>
                                 <connections>
                                     <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cKv-n8-o6W"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZv-wI-q5C">
-                                <rect key="frame" x="278" y="239" width="45" height="30"/>
+                                <rect key="frame" x="165" y="239" width="46" height="30"/>
                                 <state key="normal" title="测试五"/>
+                                <connections>
+                                    <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C9m-Qk-G1p"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8w-hW-zn9">
-                                <rect key="frame" x="278" y="277" width="45" height="30"/>
+                                <rect key="frame" x="165" y="277" width="46" height="30"/>
                                 <state key="normal" title="测试六"/>
+                                <connections>
+                                    <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o82-aF-bTy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYi-3V-aT1">
-                                <rect key="frame" x="278" y="207" width="45" height="30"/>
+                                <rect key="frame" x="165" y="207" width="46" height="30"/>
                                 <state key="normal" title="测试四"/>
+                                <connections>
+                                    <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tN5-CR-vGg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNG-xB-AwN">
+                                <rect key="frame" x="164" y="106" width="46" height="30"/>
+                                <state key="normal" title="测试一"/>
+                                <connections>
+                                    <action selector="testoneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tEu-kb-T3z"/>
+                                </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="CRu-Uc-dbr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="1ZX-d5-Fa4"/>
                             <constraint firstItem="hYd-Os-hgg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="105" id="7uD-rf-xZk"/>
                             <constraint firstItem="RYi-3V-aT1" firstAttribute="top" secondItem="hYd-Os-hgg" secondAttribute="bottom" constant="8" symbolic="YES" id="Gyo-RE-eW5"/>
+                            <constraint firstItem="ZNG-xB-AwN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K1d-e9-Heg"/>
+                            <constraint firstItem="CRu-Uc-dbr" firstAttribute="top" secondItem="ZNG-xB-AwN" secondAttribute="bottom" constant="8" symbolic="YES" id="OQ2-pt-21K"/>
                             <constraint firstItem="U8w-hW-zn9" firstAttribute="top" secondItem="VZv-wI-q5C" secondAttribute="bottom" constant="8" symbolic="YES" id="U6d-gB-ZAt"/>
                             <constraint firstItem="CRu-Uc-dbr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="X5A-5H-6Ze"/>
                             <constraint firstItem="VZv-wI-q5C" firstAttribute="top" secondItem="RYi-3V-aT1" secondAttribute="bottom" constant="2" id="bZj-LB-aQS"/>
@@ -68,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-245" y="472"/>
+            <point key="canvasLocation" x="20" y="367"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mJo-Rq-xeZ">

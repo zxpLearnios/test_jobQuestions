@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BaseTest.h"
 
-@interface TestThree : NSObject
+@interface TestThree : BaseTest
 
--(void)doTest;
+
 @end

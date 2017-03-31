@@ -1,13 +1,13 @@
 //
-//  TestOne.h
+//  TestFive.h
 //  test_jobQuestions
 //
-//  Created by Jingnan Zhang on 2017/3/29.
+//  Created by Jingnan Zhang on 2017/3/31.
 //  Copyright © 2017年 Jingnan Zhang. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "BaseTest.h"
+#import <UIKit/UIKit.h>
 
-@interface TestOne : BaseTest
+@interface TestFive : UIViewController
 @end
