@@ -12,6 +12,12 @@
 #import "TestThree.h"
 #import "TestFour.h"
 #import "TestFive.h"
+#import "TestSix.h"
+#import "TestSeven.h"
+#import "TestEight.h"
+#import "TestNine.h"
+#import "TestTen.h"
+#import "Test11.h"
 
 
 @interface ViewController ()
@@ -55,10 +61,41 @@
         TestFive *tt = [[TestFive alloc] init];
         [self.navigationController pushViewController:tt animated:YES];
     }else if (sender.tag == 3){ // 测试六
-        
+        TestSix  *tt = [[TestSix alloc] init];
+        [tt doTest];
     }else if (sender.tag == 4){ // 测试七
+        TestSeven  *tt = [[TestSeven alloc] initWithFrame:CGRectMake(0, 100, 300, 400)];
+        [self.view addSubview:tt];
+        
+    }else if (sender.tag == 5){ // 测试8
+        TestEight  *tt = [[TestEight alloc] initWithFrame:CGRectMake(10, 100, 100, 40)];
+        [self.view addSubview:tt];
+        
+    }else if (sender.tag == 6){ // 测试9
+        TestNine *tt = [[TestNine alloc] initWithFrame:CGRectMake(10, 100, 100, 40)];
+        
+        TestEight  *t8 = [[TestEight alloc] initWithFrame:tt.bounds];
+        [tt addSubview:t8];
+        
+        [self.view addSubview:tt];
+        
+    }else if (sender.tag == 7){ // 测试10
+        TesthitTestViewA *t = [TesthitTestViewA getSelf];
+        [self.view addSubview:t];
+    }else if (sender.tag == 8) {
+        
+        Test11 *t = [[Test11 alloc] initWithFrame:CGRectMake(50, 150, 300, 100)];
+        [self.view addSubview:t];
+    }else if (sender.tag == 9) {
+        
+    }else if (sender.tag == 10) {
+        
+    }else if (sender.tag == 11) {
         
     }
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

@@ -20,6 +20,8 @@
 
 //  6. 全局队列时并行队列，和并行队列的属性完全一样，故执行异步操作时，需要看操作的复杂度，越复杂的越靠后完成
 
+//  7. 在GCD中你可以使用dispatch_set_target_queue()函数为你自己创建的队列指定优先级，
+//    dispatch_set_target_queue(<#dispatch_object_t  _Nonnull object#>, <#dispatch_queue_t  _Nullable queue#>), 不过还不如用NSOperationQueue呢
 
 
 
@@ -53,8 +55,8 @@ typedef enum : NSUInteger {
 }
 
 -(void)doTest{
-    [self testDelay];
-//    [self testOperateGroup];
+//    [self testDelay];
+    [self testOperateGroup];
 //    [self testGcdGroupCrashAndOther];
 }
 
@@ -124,7 +126,7 @@ typedef enum : NSUInteger {
     // 若用1.1 和3. 结果为--1---hahahaha---group里的一句执行完毕，说明不管group里有无操作，wait的作用都是先阻塞当前线程执行wait位置前面的操作，然后再执行dispatch_group_notify里的block
     // 若用1. 和3. 结果为： hahahah-----1-----0(除非wait里的时间为一个>=10几亿的数字或DISPATCH_TIME_FOREVER，否则的话，haha都有可能会被第一个被打印；若时间不是太大会出现先打印--2而后再打印hahahha 即顺序并无规律。 得知此种情况下，wait并不能很好的发挥作用)。 故若要使用wait最好将时间DISPATCH_TIME_FOREVER
     dispatch_group_wait(group, 10); // DISPATCH_TIME_FOREVER
-    
+    NSLog(@"在dispatch_group_wait之后的");
     
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
             NSLog(@"group里的一句执行完毕！");}
@@ -178,23 +180,29 @@ typedef enum : NSUInteger {
     // 进入组和离开组必须成对出现, 否则会造成死锁。 dispatch_group_notify放在【dispatch_group_enter  dispatch_group_leave】块外前、块中、块外后，结果都一样
    
     // dispatch_group_notify放在块外前、块中、块外后 结果都一样
-//    dispatch_group_enter(group);
-//    
-//    dispatch_group_notify(group, queue, ^{ // 这句代码的放置顺序 不会影响到最终的结果
-//        MyLog(@"---------2");
+    dispatch_group_enter(group);
+    
+    dispatch_group_notify(group, queue, ^{ // 这句代码的放置顺序 不会影响到最终的结果
+        MyLog(@"---------2");
+    });
+    
+    // 同步
+//    dispatch_sync(queue, ^{
+//        MyLog(@"----------4"); // -----4
 //    });
-//    
-//    // 同步
-////    dispatch_sync(queue, ^{
-////        MyLog(@"----------4"); // -----4
-////    });
-//    
-//    // 异步
+    
+    // 异步
 //    dispatch_async(queue, ^{
 //        MyLog(@"---------3");
 //    });
-//    
-//    dispatch_group_leave(group);
+    
+    dispatch_group_async(group, queue, ^{ // block里若执行的是异步请求，有时可能达不到预期效果，即可能不等group里所有的任务都执行完毕就会调用dispatch_group_notify了，
+        [NSThread sleepForTimeInterval:1];
+        MyLog(@"----------3");
+
+    });
+    
+    dispatch_group_leave(group);
     
    
 

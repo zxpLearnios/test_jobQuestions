@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,6 +22,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNG-xB-AwN">
+                                <rect key="frame" x="164" y="106" width="46" height="30"/>
+                                <state key="normal" title="测试一"/>
+                                <connections>
+                                    <action selector="testoneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tEu-kb-T3z"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRu-Uc-dbr">
                                 <rect key="frame" x="121" y="144" width="134" height="30"/>
                                 <state key="normal" title="进入TestTwo控制器"/>
@@ -29,56 +37,121 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYd-Os-hgg">
-                                <rect key="frame" x="165" y="169" width="46" height="30"/>
+                                <rect key="frame" x="46" y="169" width="46" height="30"/>
                                 <state key="normal" title="测试三"/>
                                 <connections>
                                     <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cKv-n8-o6W"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYi-3V-aT1">
+                                <rect key="frame" x="46" y="207" width="46" height="30"/>
+                                <state key="normal" title="测试四"/>
+                                <connections>
+                                    <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tN5-CR-vGg"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VZv-wI-q5C">
-                                <rect key="frame" x="165" y="239" width="46" height="30"/>
+                                <rect key="frame" x="46" y="239" width="46" height="30"/>
                                 <state key="normal" title="测试五"/>
                                 <connections>
                                     <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C9m-Qk-G1p"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8w-hW-zn9">
-                                <rect key="frame" x="165" y="277" width="46" height="30"/>
+                                <rect key="frame" x="46" y="277" width="46" height="30"/>
                                 <state key="normal" title="测试六"/>
                                 <connections>
                                     <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o82-aF-bTy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RYi-3V-aT1">
-                                <rect key="frame" x="165" y="207" width="46" height="30"/>
-                                <state key="normal" title="测试四"/>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XJf-ZH-aDS">
+                                <rect key="frame" x="50" y="315" width="39" height="30"/>
+                                <state key="normal" title="测试7"/>
                                 <connections>
-                                    <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tN5-CR-vGg"/>
+                                    <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KJA-RW-zdC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZNG-xB-AwN">
-                                <rect key="frame" x="164" y="106" width="46" height="30"/>
-                                <state key="normal" title="测试一"/>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PwR-Vb-qw3">
+                                <rect key="frame" x="49" y="353" width="40" height="30"/>
+                                <state key="normal" title="测试8"/>
                                 <connections>
-                                    <action selector="testoneAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tEu-kb-T3z"/>
+                                    <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SHM-Ly-mEh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S9d-m2-tvH">
+                                <rect key="frame" x="49" y="391" width="40" height="30"/>
+                                <state key="normal" title="测试9"/>
+                                <connections>
+                                    <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qun-dc-Vox"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52v-aH-Zd6">
+                                <rect key="frame" x="49" y="429" width="47" height="30"/>
+                                <state key="normal" title="测试10"/>
+                                <connections>
+                                    <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nRq-fj-Eju"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yd9-dC-9ja">
+                                <rect key="frame" x="50" y="460" width="45" height="30"/>
+                                <state key="normal" title="测试11"/>
+                                <connections>
+                                    <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PQk-kE-doW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1K-Wx-l6E">
+                                <rect key="frame" x="50" y="498" width="47" height="30"/>
+                                <state key="normal" title="测试12"/>
+                                <connections>
+                                    <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M44-Kq-x4x"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUU-zq-748">
+                                <rect key="frame" x="50" y="536" width="47" height="30"/>
+                                <state key="normal" title="测试13"/>
+                                <connections>
+                                    <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XJe-J7-ueJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VK8-yF-WhJ">
+                                <rect key="frame" x="50" y="574" width="47" height="30"/>
+                                <state key="normal" title="测试14"/>
+                                <connections>
+                                    <action selector="testThreeAndThenAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xob-O3-hLc"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="CRu-Uc-dbr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="1ZX-d5-Fa4"/>
+                            <constraint firstItem="S9d-m2-tvH" firstAttribute="top" secondItem="PwR-Vb-qw3" secondAttribute="bottom" constant="8" symbolic="YES" id="6dA-y4-wxg"/>
                             <constraint firstItem="hYd-Os-hgg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="105" id="7uD-rf-xZk"/>
+                            <constraint firstItem="hYd-Os-hgg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="80Y-yh-Ns8"/>
+                            <constraint firstItem="S9d-m2-tvH" firstAttribute="leading" secondItem="52v-aH-Zd6" secondAttribute="leading" id="8Cy-Pp-4sb"/>
+                            <constraint firstItem="PwR-Vb-qw3" firstAttribute="top" secondItem="XJf-ZH-aDS" secondAttribute="bottom" constant="8" symbolic="YES" id="8wc-5l-4P1"/>
                             <constraint firstItem="RYi-3V-aT1" firstAttribute="top" secondItem="hYd-Os-hgg" secondAttribute="bottom" constant="8" symbolic="YES" id="Gyo-RE-eW5"/>
                             <constraint firstItem="ZNG-xB-AwN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="K1d-e9-Heg"/>
+                            <constraint firstItem="B1K-Wx-l6E" firstAttribute="leading" secondItem="DUU-zq-748" secondAttribute="leading" id="KBY-OA-t6h"/>
+                            <constraint firstItem="XJf-ZH-aDS" firstAttribute="centerX" secondItem="U8w-hW-zn9" secondAttribute="centerX" id="LQG-TE-Ng5"/>
                             <constraint firstItem="CRu-Uc-dbr" firstAttribute="top" secondItem="ZNG-xB-AwN" secondAttribute="bottom" constant="8" symbolic="YES" id="OQ2-pt-21K"/>
+                            <constraint firstItem="XJf-ZH-aDS" firstAttribute="top" secondItem="U8w-hW-zn9" secondAttribute="bottom" constant="8" symbolic="YES" id="OsL-Kd-cEJ"/>
+                            <constraint firstItem="yd9-dC-9ja" firstAttribute="leading" secondItem="B1K-Wx-l6E" secondAttribute="leading" id="QMp-mV-LSo"/>
+                            <constraint firstItem="XJf-ZH-aDS" firstAttribute="trailing" secondItem="PwR-Vb-qw3" secondAttribute="trailing" id="Rac-09-lrG"/>
+                            <constraint firstItem="yd9-dC-9ja" firstAttribute="top" secondItem="52v-aH-Zd6" secondAttribute="bottom" constant="1" id="T3e-7o-lPa"/>
                             <constraint firstItem="U8w-hW-zn9" firstAttribute="top" secondItem="VZv-wI-q5C" secondAttribute="bottom" constant="8" symbolic="YES" id="U6d-gB-ZAt"/>
                             <constraint firstItem="CRu-Uc-dbr" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="X5A-5H-6Ze"/>
                             <constraint firstItem="VZv-wI-q5C" firstAttribute="top" secondItem="RYi-3V-aT1" secondAttribute="bottom" constant="2" id="bZj-LB-aQS"/>
-                            <constraint firstItem="hYd-Os-hgg" firstAttribute="centerX" secondItem="CRu-Uc-dbr" secondAttribute="centerX" id="j1k-vy-NRs"/>
+                            <constraint firstItem="B1K-Wx-l6E" firstAttribute="top" secondItem="yd9-dC-9ja" secondAttribute="bottom" constant="8" symbolic="YES" id="d5T-m4-yd2"/>
+                            <constraint firstItem="PwR-Vb-qw3" firstAttribute="leading" secondItem="S9d-m2-tvH" secondAttribute="leading" id="gCY-dG-ubq"/>
                             <constraint firstItem="hYd-Os-hgg" firstAttribute="leading" secondItem="RYi-3V-aT1" secondAttribute="leading" id="qbV-vb-zY7"/>
                             <constraint firstItem="RYi-3V-aT1" firstAttribute="leading" secondItem="VZv-wI-q5C" secondAttribute="leading" id="qdu-RB-V9B"/>
+                            <constraint firstItem="DUU-zq-748" firstAttribute="top" secondItem="B1K-Wx-l6E" secondAttribute="bottom" constant="8" symbolic="YES" id="sIS-iu-Bsf"/>
+                            <constraint firstItem="52v-aH-Zd6" firstAttribute="top" secondItem="S9d-m2-tvH" secondAttribute="bottom" constant="8" symbolic="YES" id="t7L-14-354"/>
+                            <constraint firstItem="DUU-zq-748" firstAttribute="leading" secondItem="VK8-yF-WhJ" secondAttribute="leading" id="tgw-BC-E8e"/>
                             <constraint firstItem="CRu-Uc-dbr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="twQ-RJ-GBg"/>
+                            <constraint firstItem="yd9-dC-9ja" firstAttribute="leading" secondItem="XJf-ZH-aDS" secondAttribute="leading" id="wgJ-y8-QdQ"/>
                             <constraint firstItem="VZv-wI-q5C" firstAttribute="leading" secondItem="U8w-hW-zn9" secondAttribute="leading" id="xxq-1W-TV7"/>
+                            <constraint firstItem="VK8-yF-WhJ" firstAttribute="top" secondItem="DUU-zq-748" secondAttribute="bottom" constant="8" symbolic="YES" id="yqJ-0Z-Lww"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -90,7 +163,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="367"/>
+            <point key="canvasLocation" x="28" y="454"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mJo-Rq-xeZ">

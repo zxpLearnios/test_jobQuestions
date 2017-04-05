@@ -15,11 +15,18 @@
 		54514FD81E8BB3D80067E7AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54514FD61E8BB3D80067E7AF /* LaunchScreen.storyboard */; };
 		54514FE31E8BB3D90067E7AF /* test_jobQuestionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54514FE21E8BB3D90067E7AF /* test_jobQuestionsTests.m */; };
 		54514FEE1E8BB3D90067E7AF /* test_jobQuestionsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54514FED1E8BB3D90067E7AF /* test_jobQuestionsUITests.m */; };
-		54514FFD1E8BB4DA0067E7AF /* TestOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 54514FFC1E8BB4DA0067E7AF /* TestOne.m */; };
-		545150031E8BC4000067E7AF /* TestTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 545150021E8BC4000067E7AF /* TestTwo.m */; };
-		5485D2F51E8CB6C100B2851B /* TestThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 5485D2F41E8CB6C100B2851B /* TestThree.m */; };
-		54924DCB1E8D11AA0059816C /* TestFour.m in Sources */ = {isa = PBXBuildFile; fileRef = 54924DCA1E8D11AA0059816C /* TestFour.m */; };
-		54BF383B1E8E5624002A38DF /* TestFive.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BF383A1E8E5624002A38DF /* TestFive.m */; };
+		5495B2EA1E94F153000CEF45 /* Test11.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2D21E94F153000CEF45 /* Test11.m */; };
+		5495B2EB1E94F153000CEF45 /* TestEight.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2D41E94F153000CEF45 /* TestEight.m */; };
+		5495B2EC1E94F153000CEF45 /* TestNine.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2D61E94F153000CEF45 /* TestNine.m */; };
+		5495B2ED1E94F153000CEF45 /* TestTen.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2D81E94F153000CEF45 /* TestTen.m */; };
+		5495B2EE1E94F153000CEF45 /* TestTen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5495B2D91E94F153000CEF45 /* TestTen.xib */; };
+		5495B2EF1E94F153000CEF45 /* TestFour.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2DC1E94F153000CEF45 /* TestFour.m */; };
+		5495B2F01E94F153000CEF45 /* TestOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2DE1E94F153000CEF45 /* TestOne.m */; };
+		5495B2F11E94F153000CEF45 /* TestSix.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2E01E94F153000CEF45 /* TestSix.m */; };
+		5495B2F21E94F153000CEF45 /* TestTwo.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2E21E94F153000CEF45 /* TestTwo.m */; };
+		5495B2F31E94F153000CEF45 /* TestFive.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2E51E94F153000CEF45 /* TestFive.m */; };
+		5495B2F41E94F153000CEF45 /* TestSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2E71E94F153000CEF45 /* TestSeven.m */; };
+		5495B2F51E94F153000CEF45 /* TestThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2E91E94F153000CEF45 /* TestThree.m */; };
 		54BF383E1E8E5678002A38DF /* BaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BF383D1E8E5678002A38DF /* BaseTest.m */; };
 /* End PBXBuildFile section */
 
@@ -57,19 +64,32 @@
 		54514FE91E8BB3D90067E7AF /* test_jobQuestionsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test_jobQuestionsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54514FED1E8BB3D90067E7AF /* test_jobQuestionsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = test_jobQuestionsUITests.m; sourceTree = "<group>"; };
 		54514FEF1E8BB3D90067E7AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		54514FFB1E8BB4DA0067E7AF /* TestOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOne.h; sourceTree = "<group>"; };
-		54514FFC1E8BB4DA0067E7AF /* TestOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOne.m; sourceTree = "<group>"; };
 		545150001E8BBD220067E7AF /* prefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefixHeader.pch; sourceTree = "<group>"; };
-		545150011E8BC4000067E7AF /* TestTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTwo.h; sourceTree = "<group>"; };
-		545150021E8BC4000067E7AF /* TestTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTwo.m; sourceTree = "<group>"; };
-		5485D2F31E8CB6C100B2851B /* TestThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestThree.h; sourceTree = "<group>"; };
-		5485D2F41E8CB6C100B2851B /* TestThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestThree.m; sourceTree = "<group>"; };
-		54924DC91E8D11AA0059816C /* TestFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFour.h; sourceTree = "<group>"; };
-		54924DCA1E8D11AA0059816C /* TestFour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFour.m; sourceTree = "<group>"; };
-		54BF38391E8E5624002A38DF /* TestFive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFive.h; sourceTree = "<group>"; };
-		54BF383A1E8E5624002A38DF /* TestFive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFive.m; sourceTree = "<group>"; };
-		54BF383C1E8E5677002A38DF /* BaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTest.h; sourceTree = "<group>"; };
-		54BF383D1E8E5678002A38DF /* BaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTest.m; sourceTree = "<group>"; };
+		5495B2D11E94F153000CEF45 /* Test11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test11.h; sourceTree = "<group>"; };
+		5495B2D21E94F153000CEF45 /* Test11.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test11.m; sourceTree = "<group>"; };
+		5495B2D31E94F153000CEF45 /* TestEight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestEight.h; sourceTree = "<group>"; };
+		5495B2D41E94F153000CEF45 /* TestEight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestEight.m; sourceTree = "<group>"; };
+		5495B2D51E94F153000CEF45 /* TestNine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestNine.h; sourceTree = "<group>"; };
+		5495B2D61E94F153000CEF45 /* TestNine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestNine.m; sourceTree = "<group>"; };
+		5495B2D71E94F153000CEF45 /* TestTen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTen.h; sourceTree = "<group>"; };
+		5495B2D81E94F153000CEF45 /* TestTen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTen.m; sourceTree = "<group>"; };
+		5495B2D91E94F153000CEF45 /* TestTen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestTen.xib; sourceTree = "<group>"; };
+		5495B2DB1E94F153000CEF45 /* TestFour.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFour.h; sourceTree = "<group>"; };
+		5495B2DC1E94F153000CEF45 /* TestFour.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFour.m; sourceTree = "<group>"; };
+		5495B2DD1E94F153000CEF45 /* TestOne.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestOne.h; sourceTree = "<group>"; };
+		5495B2DE1E94F153000CEF45 /* TestOne.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestOne.m; sourceTree = "<group>"; };
+		5495B2DF1E94F153000CEF45 /* TestSix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSix.h; sourceTree = "<group>"; };
+		5495B2E01E94F153000CEF45 /* TestSix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSix.m; sourceTree = "<group>"; };
+		5495B2E11E94F153000CEF45 /* TestTwo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestTwo.h; sourceTree = "<group>"; };
+		5495B2E21E94F153000CEF45 /* TestTwo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestTwo.m; sourceTree = "<group>"; };
+		5495B2E41E94F153000CEF45 /* TestFive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFive.h; sourceTree = "<group>"; };
+		5495B2E51E94F153000CEF45 /* TestFive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestFive.m; sourceTree = "<group>"; };
+		5495B2E61E94F153000CEF45 /* TestSeven.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSeven.h; sourceTree = "<group>"; };
+		5495B2E71E94F153000CEF45 /* TestSeven.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSeven.m; sourceTree = "<group>"; };
+		5495B2E81E94F153000CEF45 /* TestThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestThree.h; sourceTree = "<group>"; };
+		5495B2E91E94F153000CEF45 /* TestThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestThree.m; sourceTree = "<group>"; };
+		54BF383C1E8E5677002A38DF /* BaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTest.h; path = ../BaseTest.h; sourceTree = "<group>"; };
+		54BF383D1E8E5678002A38DF /* BaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTest.m; path = ../BaseTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,18 +144,7 @@
 				54514FCC1E8BB3D80067E7AF /* AppDelegate.m */,
 				54514FCE1E8BB3D80067E7AF /* ViewController.h */,
 				54514FCF1E8BB3D80067E7AF /* ViewController.m */,
-				54BF383C1E8E5677002A38DF /* BaseTest.h */,
-				54BF383D1E8E5678002A38DF /* BaseTest.m */,
-				54514FFB1E8BB4DA0067E7AF /* TestOne.h */,
-				54514FFC1E8BB4DA0067E7AF /* TestOne.m */,
-				545150011E8BC4000067E7AF /* TestTwo.h */,
-				545150021E8BC4000067E7AF /* TestTwo.m */,
-				5485D2F31E8CB6C100B2851B /* TestThree.h */,
-				5485D2F41E8CB6C100B2851B /* TestThree.m */,
-				54924DC91E8D11AA0059816C /* TestFour.h */,
-				54924DCA1E8D11AA0059816C /* TestFour.m */,
-				54BF38391E8E5624002A38DF /* TestFive.h */,
-				54BF383A1E8E5624002A38DF /* TestFive.m */,
+				5495B2CC1E94F024000CEF45 /* TestFolder */,
 				545150001E8BBD220067E7AF /* prefixHeader.pch */,
 				54514FD11E8BB3D80067E7AF /* Main.storyboard */,
 				54514FD41E8BB3D80067E7AF /* Assets.xcassets */,
@@ -170,6 +179,62 @@
 				54514FEF1E8BB3D90067E7AF /* Info.plist */,
 			);
 			path = test_jobQuestionsUITests;
+			sourceTree = "<group>";
+		};
+		5495B2CC1E94F024000CEF45 /* TestFolder */ = {
+			isa = PBXGroup;
+			children = (
+				54BF383C1E8E5677002A38DF /* BaseTest.h */,
+				54BF383D1E8E5678002A38DF /* BaseTest.m */,
+				5495B2D01E94F153000CEF45 /* HitTestView */,
+				5495B2DA1E94F153000CEF45 /* Other */,
+				5495B2E31E94F153000CEF45 /* Queue */,
+			);
+			path = TestFolder;
+			sourceTree = "<group>";
+		};
+		5495B2D01E94F153000CEF45 /* HitTestView */ = {
+			isa = PBXGroup;
+			children = (
+				5495B2D11E94F153000CEF45 /* Test11.h */,
+				5495B2D21E94F153000CEF45 /* Test11.m */,
+				5495B2D31E94F153000CEF45 /* TestEight.h */,
+				5495B2D41E94F153000CEF45 /* TestEight.m */,
+				5495B2D51E94F153000CEF45 /* TestNine.h */,
+				5495B2D61E94F153000CEF45 /* TestNine.m */,
+				5495B2D71E94F153000CEF45 /* TestTen.h */,
+				5495B2D81E94F153000CEF45 /* TestTen.m */,
+				5495B2D91E94F153000CEF45 /* TestTen.xib */,
+			);
+			path = HitTestView;
+			sourceTree = "<group>";
+		};
+		5495B2DA1E94F153000CEF45 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				5495B2DB1E94F153000CEF45 /* TestFour.h */,
+				5495B2DC1E94F153000CEF45 /* TestFour.m */,
+				5495B2DD1E94F153000CEF45 /* TestOne.h */,
+				5495B2DE1E94F153000CEF45 /* TestOne.m */,
+				5495B2DF1E94F153000CEF45 /* TestSix.h */,
+				5495B2E01E94F153000CEF45 /* TestSix.m */,
+				5495B2E11E94F153000CEF45 /* TestTwo.h */,
+				5495B2E21E94F153000CEF45 /* TestTwo.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		5495B2E31E94F153000CEF45 /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				5495B2E41E94F153000CEF45 /* TestFive.h */,
+				5495B2E51E94F153000CEF45 /* TestFive.m */,
+				5495B2E61E94F153000CEF45 /* TestSeven.h */,
+				5495B2E71E94F153000CEF45 /* TestSeven.m */,
+				5495B2E81E94F153000CEF45 /* TestThree.h */,
+				5495B2E91E94F153000CEF45 /* TestThree.m */,
+			);
+			path = Queue;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +343,7 @@
 				54514FD81E8BB3D80067E7AF /* LaunchScreen.storyboard in Resources */,
 				54514FD51E8BB3D80067E7AF /* Assets.xcassets in Resources */,
 				54514FD31E8BB3D80067E7AF /* Main.storyboard in Resources */,
+				5495B2EE1E94F153000CEF45 /* TestTen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,15 +368,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5495B2EC1E94F153000CEF45 /* TestNine.m in Sources */,
 				54514FD01E8BB3D80067E7AF /* ViewController.m in Sources */,
-				54924DCB1E8D11AA0059816C /* TestFour.m in Sources */,
 				54514FCD1E8BB3D80067E7AF /* AppDelegate.m in Sources */,
+				5495B2EF1E94F153000CEF45 /* TestFour.m in Sources */,
+				5495B2ED1E94F153000CEF45 /* TestTen.m in Sources */,
+				5495B2F51E94F153000CEF45 /* TestThree.m in Sources */,
+				5495B2F41E94F153000CEF45 /* TestSeven.m in Sources */,
+				5495B2EA1E94F153000CEF45 /* Test11.m in Sources */,
+				5495B2F21E94F153000CEF45 /* TestTwo.m in Sources */,
+				5495B2EB1E94F153000CEF45 /* TestEight.m in Sources */,
 				54BF383E1E8E5678002A38DF /* BaseTest.m in Sources */,
-				5485D2F51E8CB6C100B2851B /* TestThree.m in Sources */,
-				54514FFD1E8BB4DA0067E7AF /* TestOne.m in Sources */,
+				5495B2F11E94F153000CEF45 /* TestSix.m in Sources */,
+				5495B2F01E94F153000CEF45 /* TestOne.m in Sources */,
 				54514FCA1E8BB3D80067E7AF /* main.m in Sources */,
-				545150031E8BC4000067E7AF /* TestTwo.m in Sources */,
-				54BF383B1E8E5624002A38DF /* TestFive.m in Sources */,
+				5495B2F31E94F153000CEF45 /* TestFive.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
