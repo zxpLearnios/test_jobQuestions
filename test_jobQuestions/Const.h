@@ -61,4 +61,11 @@
  
  每更改一次coreData表，最好删除appclean下并build再运行
  
+ 7. SQLite : 轻量级的数据库
+ 
+ 
+ 
  */
+
+
+
