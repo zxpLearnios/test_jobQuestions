@@ -58,7 +58,16 @@
  
  顺序为：[进入A]-->[A_view--- pointInside withEven] ---> [A_view--- pointInside withEvent ------ isInside:1] --> [C,D 的和A的类比即可] --> [离开D]--> [离开C]--> [离开E]。(因E在D之后添加，故这里不会进入E；若E在D之前添加，则，在应将上述变为[C,E 的和A的类比即可]) --> [离开E] --> [D的和A的类比即可] --> [离开D]--> [离开C]）
 
-5.1 若D的userInterface或enable为NO，则点击事件会交由C去响应，此时C变成了hitTestView了
+5.1 若D的userInterface或enable为NO，则点击事件会交由C去响应，此时C变成了hitTestView了。 若将C的userInterface或enable为NO，则点击事件会遍历A的子viewB和C到C时发现他不可与用户交互，会马上离开C，到B时发现B虽然可与用户交互但B不包含点击点，故会离开B，之后再离开A。
+   最重要的：这里A有子viewB和C，C有子viewD和E，B和C的进入顺序以及D和E的进入顺序或有可能是B\C  D\E只进入了一个（此时已经找到HitTestView了），都是根据子view的添加顺序的（净测试，越后添加的子view越是先遍历之即先进入之）。  即使是点击屏幕的其他地方（非此view的区域，此view也会被调用，先进入之后发现它不包含此点，会立即离开，都是循环2遍）,鼠标移入屏幕的任何地方或点击屏幕的任何地方（当然包括移入自己）都会触发此循环
+ 
+ 6. 如果HitTestView不能处理该事件，则该事件就会交付给view响应者链的上一级处理，直到系统找到一个能够处理该事件的对象。 例如点击D，且D不可与用户交互，则事件会交由D的上一级C处理。  
+ 
+ 7. 响应者链：一系列的响应者对象。 事件会交由第一响应者去响应，若其不响应，则会沿着链向上一级传递。一般第一响应者是一个View对象或其子类对象（如按钮、label、imgV等等），若其不响应，则会沿着链向上一级传递，传给其控制器对象（若存在），然后传给父view（若存在），。。。然后传给window，然后传给application，若过程中有响应，则立马停止传递。响应者链[appDelegate]--[UIApplication]--[UIViewController]--[UIView]--[UIbutton]
+ 
+ 8. 在iOS中，能够响应事件的对象都是UIResponder的子类对象。UIResponder提供了四个用户点击的回调方法，分别对应用户点击开始、移动、点击结束以及取消点击，其中只有在程序强制退出或者来电时，取消点击事件才会调用。
+ 
+ 9. 假如点击了C，则必须在离开C后，C才会成为hitTestView
  
  */
 
@@ -74,13 +83,14 @@
     return view;
 }
 
-/** hit：撞击， 返回被撞击的view即包含用户所点击的点的view，第一个调用 */
+/** hit：撞击， 返回被撞击的view即包含用户所点击的点的view，第一个调用,若此view不是hitTestView则返回的UIview为nil */
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     NSLog(@"进入A_View---hitTest withEvent ---");
     UIView * view = [super hitTest:point withEvent:event];
     NSLog(@"离开A_View--- hitTest withEvent ---hitTestView:%@",view);
     return view;
 }
+
 /** 看在自己的响应区域里是否包含用户点击的点，会在hitTest方法调用后调用  第二个调用 */
 - (BOOL)pointInside:(CGPoint)point withEvent:(nullable UIEvent *)event {
     NSLog(@"A_view--- pointInside withEvent ---");

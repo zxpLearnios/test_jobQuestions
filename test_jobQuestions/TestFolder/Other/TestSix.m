@@ -90,9 +90,9 @@
 
 
 -(void)smaphoreTask1{
-    __block BOOL isok = NO;
-    __weak TestSix *wSelf = self;
-    typeof(TestSix) *ws = self;
+//    __block BOOL isok = NO;
+//    __weak TestSix *wSelf = self;
+//    typeof(TestSix) *ws = self;
     
     [UIView animateWithDuration:1 animations:^{
         

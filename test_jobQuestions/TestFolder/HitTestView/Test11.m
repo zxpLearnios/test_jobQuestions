@@ -4,7 +4,7 @@
 //
 //  Created by Jingnan Zhang on 2017/4/5.
 //  Copyright © 2017年 Jingnan Zhang. All rights reserved.
-//  测试hitTestView3
+//  测试hitTestView3  子view超出父view或点击父view时，交由特定的子view去响应事件
 //  UIscroller如何在 2个子view的间隙进行滚动
 //  系统默认的：只要摁住UIScrollView后，手不松开（即使是离开了UIScrollView、即使是离开了UIScrollView的父view），一直拖动都是有效的，除非手离开屏幕，
 

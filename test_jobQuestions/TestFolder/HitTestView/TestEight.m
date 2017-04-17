@@ -26,7 +26,7 @@
     }
     return self;
 }
-
+// 即使是父view .clipsToBounds = YES; 它也会响应的
 /**
  * 1. 更改按钮的响应区域，会使按钮的x、y方向各增、减n
  */
@@ -41,11 +41,11 @@
 /**
  * 2. 更改按钮的响应区域，会使按钮的x或y的正方向或负方向改变n
  */
--(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{
-    // 只增加x正方向的区域， 其余的情况以此类推
-    CGRect newB = CGRectMake(0, 0, self.bounds.size.width + 40, self.bounds.size.height);
-    return CGRectContainsPoint(newB, point);
-}
+//-(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{
+//    // 只增加x正方向的区域， 其余的情况以此类推
+//    CGRect newB = CGRectMake(0, 0, self.bounds.size.width + 40, self.bounds.size.height);
+//    return CGRectContainsPoint(newB, point);
+//}
 
 ///
 

@@ -40,6 +40,7 @@
 }
 
 -(void)setString:(NSString *)string{
+    
     @synchronized(self) { // 加互斥锁
         if (![_string isEqualToString:string]) {
             _string = string;

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestCoreData">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="LfY-va-DtH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RI4-co-Zd6">
+                    <rect key="frame" x="46" y="212" width="31" height="30"/>
+                    <state key="normal" title="添加"/>
+                    <connections>
+                        <action selector="addAction:" destination="-1" eventType="touchUpInside" id="MgF-7w-OVM"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I9s-3R-K0z">
+                    <rect key="frame" x="145" y="212" width="31" height="30"/>
+                    <state key="normal" title="搜索"/>
+                    <connections>
+                        <action selector="searchAction:" destination="-1" eventType="touchUpInside" id="JIV-ZV-c8v"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vYk-hR-QhE">
+                    <rect key="frame" x="237" y="212" width="31" height="30"/>
+                    <state key="normal" title="删除"/>
+                    <connections>
+                        <action selector="deleteAction:" destination="-1" eventType="touchUpInside" id="yTo-dv-jgN"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="RI4-co-Zd6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="46" id="SXL-jR-BUf"/>
+                <constraint firstItem="RI4-co-Zd6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="212" id="UQd-bJ-IAH"/>
+                <constraint firstItem="vYk-hR-QhE" firstAttribute="leading" secondItem="I9s-3R-K0z" secondAttribute="trailing" constant="61" id="XSP-EI-S8F"/>
+                <constraint firstItem="I9s-3R-K0z" firstAttribute="baseline" secondItem="vYk-hR-QhE" secondAttribute="baseline" id="b77-sR-r6p"/>
+                <constraint firstItem="I9s-3R-K0z" firstAttribute="leading" secondItem="RI4-co-Zd6" secondAttribute="trailing" constant="68" id="k91-L7-6Me"/>
+                <constraint firstItem="RI4-co-Zd6" firstAttribute="baseline" secondItem="I9s-3R-K0z" secondAttribute="baseline" id="nmz-fr-4Cg"/>
+            </constraints>
+            <point key="canvasLocation" x="44" y="46"/>
+        </view>
+    </objects>
+</document>

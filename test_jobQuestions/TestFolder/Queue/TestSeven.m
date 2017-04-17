@@ -36,20 +36,21 @@
 -(void)drawRect:(CGRect)rect{
     [super drawRect:rect];
     
-    [self drawRects];
+    [self doDrawRects];
 }
 
--(void)drawRects{
+-(void)doDrawRects{
     
       CGContextRef ctx = UIGraphicsGetCurrentContext();
-    CGContextSetStrokeColorWithColor(ctx, [UIColor blackColor].CGColor);
+    CGContextSetStrokeColorWithColor(ctx, [UIColor redColor].CGColor);  // 相当于设置线的颜色
+
     CGContextSetLineWidth(ctx, 1);
     
     
     CGContextAddRect(ctx,  CGRectMake(0, 0, 100, 100));
 
-    CGContextStrokeRect(ctx, CGRectMake(0, 0, 100, 100));
-//    CGContextAddEllipseInRect(ctx, CGRectMake(0, 0, 100, 100));
+//    CGContextStrokeRect(ctx, CGRectMake(0, 0, 100, 100));
+    CGContextAddEllipseInRect(ctx, CGRectMake(0, 0, 100, 100));
 
     
     CGContextMoveToPoint(ctx, 50, 0);
@@ -59,7 +60,6 @@
     
     // 这两句，哪个在前面，就只执行；后面的那个不会被执行
     CGContextStrokePath(ctx);
-    
     
 //    CGContextSetFillColorWithColor(ctx,  [UIColor purpleColor].CGColor);
 //    CGContextFillPath(ctx);
