@@ -14,7 +14,7 @@
 
 @interface TestKVOModel : NSObject
 {
-    NSString *isName; // name _name isName _isName 是等价的
+    NSString *isName; // name _name isName _isName 是等价的。外部不可直接访问
 }
 @property (nonatomic, copy) NSString *phone;
 
