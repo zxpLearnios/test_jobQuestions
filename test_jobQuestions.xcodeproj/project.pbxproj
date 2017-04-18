@@ -35,6 +35,7 @@
 		5495B2F51E94F153000CEF45 /* TestThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2E91E94F153000CEF45 /* TestThree.m */; };
 		54A428771E9F7659001D4E46 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54A428751E9F7659001D4E46 /* CoreDataModel.xcdatamodeld */; };
 		54B1B5131EA5AB0900B7047F /* Test14.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1B5121EA5AB0900B7047F /* Test14.m */; };
+		54B1B5171EA5B43000B7047F /* TestKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1B5161EA5B43000B7047F /* TestKVO.m */; };
 		54BF383E1E8E5678002A38DF /* BaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BF383D1E8E5678002A38DF /* BaseTest.m */; };
 		54C16E421E95E38E003F6BFA /* NSString+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C16E411E95E38E003F6BFA /* NSString+category.m */; };
 		54E152601E9F61CA0016771D /* BaseCoreDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1525F1E9F61CA0016771D /* BaseCoreDataModel.m */; };
@@ -112,6 +113,8 @@
 		54A428761E9F7659001D4E46 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		54B1B5111EA5AB0900B7047F /* Test14.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test14.h; sourceTree = "<group>"; };
 		54B1B5121EA5AB0900B7047F /* Test14.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test14.m; sourceTree = "<group>"; };
+		54B1B5151EA5B43000B7047F /* TestKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestKVO.h; sourceTree = "<group>"; };
+		54B1B5161EA5B43000B7047F /* TestKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestKVO.m; sourceTree = "<group>"; };
 		54BF383C1E8E5677002A38DF /* BaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTest.h; path = ../BaseTest.h; sourceTree = "<group>"; };
 		54BF383D1E8E5678002A38DF /* BaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTest.m; path = ../BaseTest.m; sourceTree = "<group>"; };
 		54C16E401E95E38E003F6BFA /* NSString+category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+category.h"; sourceTree = "<group>"; };
@@ -194,14 +197,14 @@
 				54514FCC1E8BB3D80067E7AF /* AppDelegate.m */,
 				54514FCE1E8BB3D80067E7AF /* ViewController.h */,
 				54514FCF1E8BB3D80067E7AF /* ViewController.m */,
-				546F46841E96247200243CCE /* Const.h */,
-				546F46851E96247200243CCE /* Const.m */,
-				5495B2CC1E94F024000CEF45 /* TestFolder */,
-				545150001E8BBD220067E7AF /* prefixHeader.pch */,
 				54514FD11E8BB3D80067E7AF /* Main.storyboard */,
 				54514FD41E8BB3D80067E7AF /* Assets.xcassets */,
 				54514FD61E8BB3D80067E7AF /* LaunchScreen.storyboard */,
+				546F46841E96247200243CCE /* Const.h */,
+				546F46851E96247200243CCE /* Const.m */,
+				545150001E8BBD220067E7AF /* prefixHeader.pch */,
 				54514FD91E8BB3D80067E7AF /* Info.plist */,
+				5495B2CC1E94F024000CEF45 /* TestFolder */,
 				54514FC81E8BB3D80067E7AF /* Supporting Files */,
 			);
 			path = test_jobQuestions;
@@ -255,6 +258,7 @@
 				54C16E411E95E38E003F6BFA /* NSString+category.m */,
 				542586011E9B6D2F0014D5E4 /* NSMutableArray+category.h */,
 				542586021E9B6D2F0014D5E4 /* NSMutableArray+category.m */,
+				54B1B5141EA5B42200B7047F /* KVO */,
 				5412D3BC1EA4C23000D40CFD /* ValueForKey& ValueForKeyPath */,
 				5492F6F31E9E2C2B00B04424 /* CoreData */,
 				542585FA1E9B615B0014D5E4 /* RunTime&RunLoop */,
@@ -307,6 +311,15 @@
 				5495B2E91E94F153000CEF45 /* TestThree.m */,
 			);
 			path = Queue;
+			sourceTree = "<group>";
+		};
+		54B1B5141EA5B42200B7047F /* KVO */ = {
+			isa = PBXGroup;
+			children = (
+				54B1B5151EA5B43000B7047F /* TestKVO.h */,
+				54B1B5161EA5B43000B7047F /* TestKVO.m */,
+			);
+			path = KVO;
 			sourceTree = "<group>";
 		};
 		54E1525B1E9F615A0016771D /* Frameworks */ = {
@@ -466,6 +479,7 @@
 				5495B2EB1E94F153000CEF45 /* TestEight.m in Sources */,
 				542586031E9B6D2F0014D5E4 /* NSMutableArray+category.m in Sources */,
 				54A428771E9F7659001D4E46 /* CoreDataModel.xcdatamodeld in Sources */,
+				54B1B5171EA5B43000B7047F /* TestKVO.m in Sources */,
 				54BF383E1E8E5678002A38DF /* BaseTest.m in Sources */,
 				5495B2F11E94F153000CEF45 /* TestSix.m in Sources */,
 				5495B2F01E94F153000CEF45 /* TestOne.m in Sources */,

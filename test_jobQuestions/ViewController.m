@@ -22,6 +22,7 @@
 #import "TestCoreData.h"
 #import "Test13.h"
 #import "Test14.h"
+#import "TestKVO.h"
 
 
 @interface ViewController ()
@@ -104,8 +105,16 @@
 //        [tt doTest];
         
         
-        Test14 *tt = [[Test14 alloc] init];
-        [tt doTest];
+//        Test14 *tt = [[Test14 alloc] init];
+//        [tt doTest];
+        
+        TestKVO *td = [[TestKVO alloc] init];
+        [self.navigationController pushViewController:td animated:YES];
+        
+        
+        
+        
+        
     }
     
     
