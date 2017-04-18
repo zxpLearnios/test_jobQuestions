@@ -21,6 +21,7 @@
 #import "Test12.h"
 #import "TestCoreData.h"
 #import "Test13.h"
+#import "Test14.h"
 
 
 @interface ViewController ()
@@ -98,8 +99,12 @@
         [self.navigationController pushViewController:td animated:YES];
         
     }else if (sender.tag == 11) { // 14
-        Test13 *tt = [Test13 alloc];
-        tt = [tt init];
+//        Test13 *tt = [Test13 alloc];
+//        tt = [tt init];
+//        [tt doTest];
+        
+        
+        Test14 *tt = [[Test14 alloc] init];
         [tt doTest];
     }
     

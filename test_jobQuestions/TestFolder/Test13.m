@@ -19,6 +19,9 @@
     
     4. 所以以后我们就用forKeyPath就行了。因为这个更强大。
  
+ 5. setValueForKey 若与可以对应的属性不是对象类型，则使用
+ [kvcModel setValue:nil forKey:@"age"] 会直接crash。就会执行setNilValueForKey:方法,setNilValueForKey:方法的默认实现,是产生一个NSInvalidArgumentException的异常
+    6. 
  
 */
 
@@ -33,7 +36,6 @@
 -(void)doTest{
     
     TestKVCModel *kvcModel = [[TestKVCModel alloc] init];
-    
     // 1.valueForKey
 //    NSNumber *heightNumber = [kvcModel valueForKey:@"height"]; // 0
 //    NSString *name = [kvcModel valueForKey:@"name"]; // nil
@@ -74,6 +76,9 @@
     NSNumber *dogAge =  [kvcModel valueForKeyPath:@"dogs.@avg.age"]; // age的平均数
     NSNumber *sumAge = [kvcModel valueForKeyPath:@"dogs.@sum.age"]; // age的和
     
+//    if (1 <= 2) {
+//        [NSException exceptionWithName:@"异常" reason:@"测试异常" userInfo:@{}];
+//    }
 }
 
 

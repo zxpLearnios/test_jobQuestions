@@ -34,6 +34,7 @@
 		5495B2F41E94F153000CEF45 /* TestSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2E71E94F153000CEF45 /* TestSeven.m */; };
 		5495B2F51E94F153000CEF45 /* TestThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2E91E94F153000CEF45 /* TestThree.m */; };
 		54A428771E9F7659001D4E46 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54A428751E9F7659001D4E46 /* CoreDataModel.xcdatamodeld */; };
+		54B1B5131EA5AB0900B7047F /* Test14.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1B5121EA5AB0900B7047F /* Test14.m */; };
 		54BF383E1E8E5678002A38DF /* BaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BF383D1E8E5678002A38DF /* BaseTest.m */; };
 		54C16E421E95E38E003F6BFA /* NSString+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C16E411E95E38E003F6BFA /* NSString+category.m */; };
 		54E152601E9F61CA0016771D /* BaseCoreDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1525F1E9F61CA0016771D /* BaseCoreDataModel.m */; };
@@ -109,6 +110,8 @@
 		5495B2E81E94F153000CEF45 /* TestThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestThree.h; sourceTree = "<group>"; };
 		5495B2E91E94F153000CEF45 /* TestThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestThree.m; sourceTree = "<group>"; };
 		54A428761E9F7659001D4E46 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		54B1B5111EA5AB0900B7047F /* Test14.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test14.h; sourceTree = "<group>"; };
+		54B1B5121EA5AB0900B7047F /* Test14.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test14.m; sourceTree = "<group>"; };
 		54BF383C1E8E5677002A38DF /* BaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTest.h; path = ../BaseTest.h; sourceTree = "<group>"; };
 		54BF383D1E8E5678002A38DF /* BaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTest.m; path = ../BaseTest.m; sourceTree = "<group>"; };
 		54C16E401E95E38E003F6BFA /* NSString+category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+category.h"; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 			children = (
 				5412D3B91EA4C21900D40CFD /* Test13.h */,
 				5412D3BA1EA4C21900D40CFD /* Test13.m */,
+				54B1B5111EA5AB0900B7047F /* Test14.h */,
+				54B1B5121EA5AB0900B7047F /* Test14.m */,
 			);
 			path = "ValueForKey& ValueForKeyPath";
 			sourceTree = "<group>";
@@ -453,6 +458,7 @@
 				5495B2ED1E94F153000CEF45 /* TestTen.m in Sources */,
 				5495B2F51E94F153000CEF45 /* TestThree.m in Sources */,
 				5495B2F41E94F153000CEF45 /* TestSeven.m in Sources */,
+				54B1B5131EA5AB0900B7047F /* Test14.m in Sources */,
 				5495B2EA1E94F153000CEF45 /* Test11.m in Sources */,
 				5495B2F21E94F153000CEF45 /* TestTwo.m in Sources */,
 				546F46861E96247200243CCE /* Const.m in Sources */,
