@@ -34,8 +34,12 @@
 		5495B2F41E94F153000CEF45 /* TestSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2E71E94F153000CEF45 /* TestSeven.m */; };
 		5495B2F51E94F153000CEF45 /* TestThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2E91E94F153000CEF45 /* TestThree.m */; };
 		54A428771E9F7659001D4E46 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54A428751E9F7659001D4E46 /* CoreDataModel.xcdatamodeld */; };
+		54A4303B1EA756B0005BBCF6 /* TestKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A430371EA756B0005BBCF6 /* TestKVO.m */; };
+		54A430431EA7592C005BBCF6 /* TestKVOCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A4303E1EA7592C005BBCF6 /* TestKVOCell.m */; };
+		54A430441EA7592C005BBCF6 /* TestKVOCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A4303F1EA7592C005BBCF6 /* TestKVOCell.xib */; };
+		54A430451EA7592C005BBCF6 /* TestKVO1.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A430421EA7592C005BBCF6 /* TestKVO1.m */; };
+		54A4304A1EA759A6005BBCF6 /* TestKVO2.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A430491EA759A6005BBCF6 /* TestKVO2.m */; };
 		54B1B5131EA5AB0900B7047F /* Test14.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1B5121EA5AB0900B7047F /* Test14.m */; };
-		54B1B5171EA5B43000B7047F /* TestKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1B5161EA5B43000B7047F /* TestKVO.m */; };
 		54BF383E1E8E5678002A38DF /* BaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BF383D1E8E5678002A38DF /* BaseTest.m */; };
 		54C16E421E95E38E003F6BFA /* NSString+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C16E411E95E38E003F6BFA /* NSString+category.m */; };
 		54E152601E9F61CA0016771D /* BaseCoreDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1525F1E9F61CA0016771D /* BaseCoreDataModel.m */; };
@@ -114,10 +118,17 @@
 		5495B2E81E94F153000CEF45 /* TestThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestThree.h; sourceTree = "<group>"; };
 		5495B2E91E94F153000CEF45 /* TestThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestThree.m; sourceTree = "<group>"; };
 		54A428761E9F7659001D4E46 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
+		54A430361EA756B0005BBCF6 /* TestKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestKVO.h; sourceTree = "<group>"; };
+		54A430371EA756B0005BBCF6 /* TestKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestKVO.m; sourceTree = "<group>"; };
+		54A4303D1EA7592C005BBCF6 /* TestKVOCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestKVOCell.h; sourceTree = "<group>"; };
+		54A4303E1EA7592C005BBCF6 /* TestKVOCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestKVOCell.m; sourceTree = "<group>"; };
+		54A4303F1EA7592C005BBCF6 /* TestKVOCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestKVOCell.xib; sourceTree = "<group>"; };
+		54A430411EA7592C005BBCF6 /* TestKVO1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestKVO1.h; sourceTree = "<group>"; };
+		54A430421EA7592C005BBCF6 /* TestKVO1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestKVO1.m; sourceTree = "<group>"; };
+		54A430481EA759A6005BBCF6 /* TestKVO2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestKVO2.h; sourceTree = "<group>"; };
+		54A430491EA759A6005BBCF6 /* TestKVO2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestKVO2.m; sourceTree = "<group>"; };
 		54B1B5111EA5AB0900B7047F /* Test14.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test14.h; sourceTree = "<group>"; };
 		54B1B5121EA5AB0900B7047F /* Test14.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test14.m; sourceTree = "<group>"; };
-		54B1B5151EA5B43000B7047F /* TestKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestKVO.h; sourceTree = "<group>"; };
-		54B1B5161EA5B43000B7047F /* TestKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestKVO.m; sourceTree = "<group>"; };
 		54BF383C1E8E5677002A38DF /* BaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTest.h; path = ../BaseTest.h; sourceTree = "<group>"; };
 		54BF383D1E8E5678002A38DF /* BaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTest.m; path = ../BaseTest.m; sourceTree = "<group>"; };
 		54C16E401E95E38E003F6BFA /* NSString+category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+category.h"; sourceTree = "<group>"; };
@@ -323,11 +334,50 @@
 			path = Queue;
 			sourceTree = "<group>";
 		};
+		54A430351EA756B0005BBCF6 /* 控制器监听一个模型的改变，之后view刷新UI */ = {
+			isa = PBXGroup;
+			children = (
+				54A430361EA756B0005BBCF6 /* TestKVO.h */,
+				54A430371EA756B0005BBCF6 /* TestKVO.m */,
+			);
+			path = "控制器监听一个模型的改变，之后view刷新UI";
+			sourceTree = "<group>";
+		};
+		54A4303C1EA7592C005BBCF6 /* 测试模型数组 */ = {
+			isa = PBXGroup;
+			children = (
+				54A4303D1EA7592C005BBCF6 /* TestKVOCell.h */,
+				54A4303E1EA7592C005BBCF6 /* TestKVOCell.m */,
+				54A4303F1EA7592C005BBCF6 /* TestKVOCell.xib */,
+				54A430471EA7597A005BBCF6 /* 模型数组数目不变，里面的模型改变。 */,
+				54A430401EA7592C005BBCF6 /* 控制器监听模型数组的增加，之后cell刷新UI */,
+			);
+			path = "测试模型数组";
+			sourceTree = "<group>";
+		};
+		54A430401EA7592C005BBCF6 /* 控制器监听模型数组的增加，之后cell刷新UI */ = {
+			isa = PBXGroup;
+			children = (
+				54A430411EA7592C005BBCF6 /* TestKVO1.h */,
+				54A430421EA7592C005BBCF6 /* TestKVO1.m */,
+			);
+			path = "控制器监听模型数组的增加，之后cell刷新UI";
+			sourceTree = "<group>";
+		};
+		54A430471EA7597A005BBCF6 /* 模型数组数目不变，里面的模型改变。 */ = {
+			isa = PBXGroup;
+			children = (
+				54A430481EA759A6005BBCF6 /* TestKVO2.h */,
+				54A430491EA759A6005BBCF6 /* TestKVO2.m */,
+			);
+			path = "模型数组数目不变，里面的模型改变。";
+			sourceTree = "<group>";
+		};
 		54B1B5141EA5B42200B7047F /* KVO */ = {
 			isa = PBXGroup;
 			children = (
-				54B1B5151EA5B43000B7047F /* TestKVO.h */,
-				54B1B5161EA5B43000B7047F /* TestKVO.m */,
+				54A4303C1EA7592C005BBCF6 /* 测试模型数组 */,
+				54A430351EA756B0005BBCF6 /* 控制器监听一个模型的改变，之后view刷新UI */,
 			);
 			path = KVO;
 			sourceTree = "<group>";
@@ -470,6 +520,7 @@
 				54514FD81E8BB3D80067E7AF /* LaunchScreen.storyboard in Resources */,
 				54514FD51E8BB3D80067E7AF /* Assets.xcassets in Resources */,
 				54514FD31E8BB3D80067E7AF /* Main.storyboard in Resources */,
+				54A430441EA7592C005BBCF6 /* TestKVOCell.xib in Resources */,
 				5495B2EE1E94F153000CEF45 /* TestTen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,16 +602,19 @@
 				5495B2ED1E94F153000CEF45 /* TestTen.m in Sources */,
 				5495B2F51E94F153000CEF45 /* TestThree.m in Sources */,
 				5495B2F41E94F153000CEF45 /* TestSeven.m in Sources */,
+				54A4303B1EA756B0005BBCF6 /* TestKVO.m in Sources */,
 				54B1B5131EA5AB0900B7047F /* Test14.m in Sources */,
 				5495B2EA1E94F153000CEF45 /* Test11.m in Sources */,
 				5495B2F21E94F153000CEF45 /* TestTwo.m in Sources */,
+				54A4304A1EA759A6005BBCF6 /* TestKVO2.m in Sources */,
 				546F46861E96247200243CCE /* Const.m in Sources */,
 				5492F7051E9E2C4000B04424 /* TestCoreData.m in Sources */,
+				54A430451EA7592C005BBCF6 /* TestKVO1.m in Sources */,
 				5495B2EB1E94F153000CEF45 /* TestEight.m in Sources */,
 				542586031E9B6D2F0014D5E4 /* NSMutableArray+category.m in Sources */,
 				54A428771E9F7659001D4E46 /* CoreDataModel.xcdatamodeld in Sources */,
-				54B1B5171EA5B43000B7047F /* TestKVO.m in Sources */,
 				54EB681F1EA5F7EC00C13BB9 /* TestDynamicJson.m in Sources */,
+				54A430431EA7592C005BBCF6 /* TestKVOCell.m in Sources */,
 				54BF383E1E8E5678002A38DF /* BaseTest.m in Sources */,
 				5495B2F11E94F153000CEF45 /* TestSix.m in Sources */,
 				5495B2F01E94F153000CEF45 /* TestOne.m in Sources */,

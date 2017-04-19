@@ -4,7 +4,7 @@
 //
 //  Created by Jingnan Zhang on 2017/4/18.
 //  Copyright © 2017年 Jingnan Zhang. All rights reserved.
-//
+//  KVO监听模型的改变
 
 #import <UIKit/UIKit.h>
 
@@ -17,9 +17,11 @@
 @class TestKVO;
 /**测试viewModel里有个model，有个VC。初始化时，初始化model令VC成为model的observe即可。 */
 @interface TestViewModel : NSObject
-
+/**控制器对象*/
 @property (nonatomic, strong) TestKVO *vc;
+/**模型对象*/
 @property (nonatomic, strong) TestKVOModel *model;
+
 +(instancetype)initWithViewController:(TestKVO *)vc;
 
 @end

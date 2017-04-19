@@ -90,6 +90,8 @@
     
     // 3. 测试viewModel
     [self.viewModel.model setValue:dateStr forKey:@"name"];
+
+    
 }
 
 
@@ -107,7 +109,7 @@
 
 //    [self.model removeObserver:self forKeyPath:@"name" context:nil]; // 若此属性未被监听，则系统不会给之注册监听通知，故会直接crash
     
-    [self.model removeObserver:self forKeyPath:@"phone" context:nil];
+//    [self.model removeObserver:self forKeyPath:@"phone" context:nil];
 }
 
 @end
@@ -121,14 +123,18 @@
     TestViewModel *viewModel = [[TestViewModel alloc] init];
     viewModel.vc = vc;
     
-    viewModel.model = [[TestKVOModel alloc] init];
-    // 注册监听
+    // 1/ 注册监听
+        viewModel.model = [[TestKVOModel alloc] init];
     [viewModel.model addObserver:vc forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];
     
     return viewModel;
 }
 
-
+// 移除监听, 或写在控制器里
+- (void)dealloc
+{
+//    [self removeObserver:self.vc forKeyPath:@"models"];
+}
 
 @end
 
