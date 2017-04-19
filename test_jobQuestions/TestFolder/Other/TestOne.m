@@ -32,7 +32,6 @@
 
 
 -(void)doTest{
-    
 //    [self operateArray];
     [self selfRetainCount];
 }
