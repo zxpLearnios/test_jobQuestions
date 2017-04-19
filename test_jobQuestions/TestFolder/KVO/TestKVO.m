@@ -17,19 +17,38 @@
 
 #import "TestKVO.h"
 
+
 @interface TestKVO ()
 @property (nonatomic, strong) TestKVOModel *model;
 @property (nonatomic, strong) UILabel *lab;
+@property (nonatomic, strong) TestViewModel *viewModel;
 @end
+
 @implementation TestKVO
 
 -(void)viewDidLoad{
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     
+    // 0.
+    self.lab = [[UILabel alloc] init];
+    self.lab.center = self.view.center;
+    self.lab.bounds = CGRectMake(0, 0, 300, 30);
+    self.lab.numberOfLines = 0;
+    self.lab.textAlignment = NSTextAlignmentCenter;
+    self.lab.font = [UIFont systemFontOfSize:20];
+    self.lab.textColor = [UIColor redColor];
+    [self.view addSubview:self.lab];
+    self.lab.text = @"当模型的值改变时，此lab的值也变";
     
-    [self doTest];
+    self.viewModel = [TestViewModel initWithViewController:self];
+    
+    // 1.
+//    [self doTest];
 }
+
+
+
 
 -(void)doTest{
     // 0.
@@ -52,10 +71,12 @@
 
 -(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context{
     
+    // 在Viewmodle时也是好用的
     if ([object isKindOfClass:[TestKVOModel class]]) {
         NSString *newValue = change[NSKeyValueChangeNewKey];
         self.lab.text = newValue;
     }
+    
     
 }
 
@@ -65,7 +86,10 @@
 //    [self.model setValue:dateStr forKeyPath:@"name"];
     
     // 2. 执行了setter方法 给模型的属性phone赋值(由于外部不可以直接.语法来访问name，故这里测试phone属性).     只要遵循 KVO 的属性设置方式，都可以触发KVO机制。这里为了避免跟KVC混淆，故意不使用KVC的。而是使用了执行setter方法改变属性值来触发KVO
-    self.model.phone = dateStr;
+//    self.model.phone = dateStr;
+    
+    // 3. 测试viewModel
+    [self.viewModel.model setValue:dateStr forKey:@"name"];
 }
 
 
@@ -85,6 +109,26 @@
     
     [self.model removeObserver:self forKeyPath:@"phone" context:nil];
 }
+
+@end
+
+
+
+@implementation TestViewModel
+
+
++(instancetype)initWithViewController:(TestKVO *)vc{
+    TestViewModel *viewModel = [[TestViewModel alloc] init];
+    viewModel.vc = vc;
+    
+    viewModel.model = [[TestKVOModel alloc] init];
+    // 注册监听
+    [viewModel.model addObserver:vc forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];
+    
+    return viewModel;
+}
+
+
 
 @end
 

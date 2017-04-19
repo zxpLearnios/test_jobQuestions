@@ -19,6 +19,8 @@
 }
 
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *isTag;
+@property (nonatomic, copy) NSString *isTag; // tag _tag isTag _isTag 是等价的
 
 @end
+
+

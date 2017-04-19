@@ -23,6 +23,7 @@
 #import "Test13.h"
 #import "Test14.h"
 #import "TestKVO.h"
+#import "TestDynamicJson.h"
 
 
 @interface ViewController ()
@@ -100,18 +101,19 @@
         [self.navigationController pushViewController:td animated:YES];
         
     }else if (sender.tag == 11) { // 14
-        Test13 *tt = [Test13 alloc];
-        tt = [tt init];
-        [tt doTest];
-        
+//        Test13 *tt = [Test13 alloc];
+//        tt = [tt init];
+//        [tt doTest];
+//        
         
 //        Test14 *tt = [[Test14 alloc] init];
 //        [tt doTest];
         
-//        TestKVO *td = [[TestKVO alloc] init];
-//        [self.navigationController pushViewController:td animated:YES];
+        TestKVO *td = [[TestKVO alloc] init];
+        [self.navigationController pushViewController:td animated:YES];
         
-        
+//        TestDynamicJson *dj = [[TestDynamicJson alloc] init];
+//        [dj doTest];
         
         
         
