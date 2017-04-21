@@ -28,7 +28,7 @@
 #import "TestDynamicJson.h"
 #import "TestMyExtension.h"
 #import "TestBlockReference.h"
-
+#import "TestCellCacheMethod.h"
 
 @interface ViewController ()
 @end
@@ -106,13 +106,13 @@
         
     }else if (sender.tag == 11) { // 14
         
-        BaseTest *dj = [[BaseTest alloc] init];
-        dj = [[TestBlockReference alloc] init]; // Test13 Test14  TestDynamicJson  TestMyExtension  TestBlockReference
-        [dj doTest];
+//        BaseTest *dj = [[BaseTest alloc] init];
+//        dj = [[TestBlockReference alloc] init]; // Test13 Test14  TestDynamicJson  TestMyExtension  TestBlockReference
+//        [dj doTest];
         
-//        UIViewController *td = [[UIViewController alloc] init];
-//        td = [[TestKVO alloc] init]; // TestKVO TestKVO1 TestKVO2
-//        [self.navigationController pushViewController:td animated:YES];
+        UIViewController *td = [[UIViewController alloc] init];
+        td = [[TestCellCacheMethod alloc] init]; // TestKVO TestKVO1 TestKVO2  TestCellCacheMethod
+        [self.navigationController pushViewController:td animated:YES];
         
     }
     

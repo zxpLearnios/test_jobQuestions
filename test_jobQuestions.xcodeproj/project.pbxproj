@@ -46,6 +46,10 @@
 		54C16E421E95E38E003F6BFA /* NSString+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C16E411E95E38E003F6BFA /* NSString+category.m */; };
 		54E152601E9F61CA0016771D /* BaseCoreDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1525F1E9F61CA0016771D /* BaseCoreDataModel.m */; };
 		54EB681F1EA5F7EC00C13BB9 /* TestDynamicJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EB681E1EA5F7EC00C13BB9 /* TestDynamicJson.m */; };
+		54EFCE611EAA0AFC00DB218D /* LearnSDWebImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EFCE601EAA0AFC00DB218D /* LearnSDWebImage.m */; };
+		54EFCE651EAA0D2100DB218D /* TestCellCacheMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EFCE641EAA0D2100DB218D /* TestCellCacheMethod.m */; };
+		54EFCE691EAA0D9B00DB218D /* TestCellCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EFCE671EAA0D9B00DB218D /* TestCellCacheCell.m */; };
+		54EFCE6A1EAA0D9B00DB218D /* TestCellCacheCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EFCE681EAA0D9B00DB218D /* TestCellCacheCell.xib */; };
 		59E04B47E0EE7FD1394107BB /* Pods_test_jobQuestions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC97A314EFF12D4738A77E2 /* Pods_test_jobQuestions.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +148,13 @@
 		54E1525F1E9F61CA0016771D /* BaseCoreDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseCoreDataModel.m; sourceTree = "<group>"; };
 		54EB681D1EA5F7EC00C13BB9 /* TestDynamicJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestDynamicJson.h; sourceTree = "<group>"; };
 		54EB681E1EA5F7EC00C13BB9 /* TestDynamicJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestDynamicJson.m; sourceTree = "<group>"; };
+		54EFCE5F1EAA0AFC00DB218D /* LearnSDWebImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LearnSDWebImage.h; sourceTree = "<group>"; };
+		54EFCE601EAA0AFC00DB218D /* LearnSDWebImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LearnSDWebImage.m; sourceTree = "<group>"; };
+		54EFCE631EAA0D2100DB218D /* TestCellCacheMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCellCacheMethod.h; sourceTree = "<group>"; };
+		54EFCE641EAA0D2100DB218D /* TestCellCacheMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCellCacheMethod.m; sourceTree = "<group>"; };
+		54EFCE661EAA0D9B00DB218D /* TestCellCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCellCacheCell.h; sourceTree = "<group>"; };
+		54EFCE671EAA0D9B00DB218D /* TestCellCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCellCacheCell.m; sourceTree = "<group>"; };
+		54EFCE681EAA0D9B00DB218D /* TestCellCacheCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCellCacheCell.xib; sourceTree = "<group>"; };
 		B3ED4F0DEAC4C485576572C6 /* Pods-test_jobQuestions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test_jobQuestions.release.xcconfig"; path = "Pods/Target Support Files/Pods-test_jobQuestions/Pods-test_jobQuestions.release.xcconfig"; sourceTree = "<group>"; };
 		BDC97A314EFF12D4738A77E2 /* Pods_test_jobQuestions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_test_jobQuestions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -293,6 +304,8 @@
 				54C16E411E95E38E003F6BFA /* NSString+category.m */,
 				542586011E9B6D2F0014D5E4 /* NSMutableArray+category.h */,
 				542586021E9B6D2F0014D5E4 /* NSMutableArray+category.m */,
+				54EFCE621EAA0CE800DB218D /* Cell的缓存机制 */,
+				54EFCE5E1EAA0ADC00DB218D /* SDWebImage */,
 				548E633E1EA99EFB00158B7F /* Block */,
 				54EB681C1EA5F7EC00C13BB9 /* DynamicJsonDeSerializate */,
 				54B1B5141EA5B42200B7047F /* KVO */,
@@ -426,6 +439,27 @@
 			path = DynamicJsonDeSerializate;
 			sourceTree = "<group>";
 		};
+		54EFCE5E1EAA0ADC00DB218D /* SDWebImage */ = {
+			isa = PBXGroup;
+			children = (
+				54EFCE5F1EAA0AFC00DB218D /* LearnSDWebImage.h */,
+				54EFCE601EAA0AFC00DB218D /* LearnSDWebImage.m */,
+			);
+			path = SDWebImage;
+			sourceTree = "<group>";
+		};
+		54EFCE621EAA0CE800DB218D /* Cell的缓存机制 */ = {
+			isa = PBXGroup;
+			children = (
+				54EFCE631EAA0D2100DB218D /* TestCellCacheMethod.h */,
+				54EFCE641EAA0D2100DB218D /* TestCellCacheMethod.m */,
+				54EFCE661EAA0D9B00DB218D /* TestCellCacheCell.h */,
+				54EFCE671EAA0D9B00DB218D /* TestCellCacheCell.m */,
+				54EFCE681EAA0D9B00DB218D /* TestCellCacheCell.xib */,
+			);
+			path = "Cell的缓存机制";
+			sourceTree = "<group>";
+		};
 		BB573F3656A70CBA815F42A4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -547,6 +581,7 @@
 				54514FD51E8BB3D80067E7AF /* Assets.xcassets in Resources */,
 				54514FD31E8BB3D80067E7AF /* Main.storyboard in Resources */,
 				54A430441EA7592C005BBCF6 /* TestKVOCell.xib in Resources */,
+				54EFCE6A1EAA0D9B00DB218D /* TestCellCacheCell.xib in Resources */,
 				5495B2EE1E94F153000CEF45 /* TestTen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -637,11 +672,14 @@
 				5492F7051E9E2C4000B04424 /* TestCoreData.m in Sources */,
 				54A430451EA7592C005BBCF6 /* TestKVO1.m in Sources */,
 				5495B2EB1E94F153000CEF45 /* TestEight.m in Sources */,
+				54EFCE651EAA0D2100DB218D /* TestCellCacheMethod.m in Sources */,
 				54A08D321EA851EA0072B5B2 /* TestMyExtension.m in Sources */,
 				542586031E9B6D2F0014D5E4 /* NSMutableArray+category.m in Sources */,
 				54A428771E9F7659001D4E46 /* CoreDataModel.xcdatamodeld in Sources */,
 				54EB681F1EA5F7EC00C13BB9 /* TestDynamicJson.m in Sources */,
+				54EFCE691EAA0D9B00DB218D /* TestCellCacheCell.m in Sources */,
 				548E63411EA99F2200158B7F /* TestBlockReference.m in Sources */,
+				54EFCE611EAA0AFC00DB218D /* LearnSDWebImage.m in Sources */,
 				54A430431EA7592C005BBCF6 /* TestKVOCell.m in Sources */,
 				54BF383E1E8E5678002A38DF /* BaseTest.m in Sources */,
 				5495B2F11E94F153000CEF45 /* TestSix.m in Sources */,
