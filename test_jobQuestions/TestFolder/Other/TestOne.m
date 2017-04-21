@@ -32,8 +32,15 @@
 
 
 -(void)doTest{
+    [self updateNoMutableObject];
 //    [self operateArray];
-    [self selfRetainCount];
+//    [self selfRetainCount];
+}
+
+/**测试修改不可变的字典、数组*/
+-(void)updateNoMutableObject{
+    NSDictionary *dic = @{@"name": @"name"};
+    [dic setValue:@"newName" forKey:@"name"];
 }
 
 /** 1. 测试对数组一些操作肯出现的问题 */
@@ -44,7 +51,7 @@
 //    self.mAry = [NSMutableArray array];
     
     // 2.  _someArray是实例变量 参考TestFour，而此实例变量并没有 copy 修饰，指向的仍是定义的 NSMutableArray 类型。所以即使后面通过 self.someArray 使用 addObject 方法仍然可行，因为初始化赋值阶段获取的是NSMutableArray类型对象
-    _mAry = [NSMutableArray array];
+    _mAry = [NSMutableArray array]; // 因为NSArray遵循NSCopying协议
     
     [self.mAry addObject:@"1"];
     

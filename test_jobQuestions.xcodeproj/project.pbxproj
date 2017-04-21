@@ -20,6 +20,7 @@
 		54514FE31E8BB3D90067E7AF /* test_jobQuestionsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54514FE21E8BB3D90067E7AF /* test_jobQuestionsTests.m */; };
 		54514FEE1E8BB3D90067E7AF /* test_jobQuestionsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 54514FED1E8BB3D90067E7AF /* test_jobQuestionsUITests.m */; };
 		546F46861E96247200243CCE /* Const.m in Sources */ = {isa = PBXBuildFile; fileRef = 546F46851E96247200243CCE /* Const.m */; };
+		548E63411EA99F2200158B7F /* TestBlockReference.m in Sources */ = {isa = PBXBuildFile; fileRef = 548E63401EA99F2200158B7F /* TestBlockReference.m */; };
 		5492F7051E9E2C4000B04424 /* TestCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 5492F7041E9E2C4000B04424 /* TestCoreData.m */; };
 		5495B2EA1E94F153000CEF45 /* Test11.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2D21E94F153000CEF45 /* Test11.m */; };
 		5495B2EB1E94F153000CEF45 /* TestEight.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2D41E94F153000CEF45 /* TestEight.m */; };
@@ -33,6 +34,7 @@
 		5495B2F31E94F153000CEF45 /* TestFive.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2E51E94F153000CEF45 /* TestFive.m */; };
 		5495B2F41E94F153000CEF45 /* TestSeven.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2E71E94F153000CEF45 /* TestSeven.m */; };
 		5495B2F51E94F153000CEF45 /* TestThree.m in Sources */ = {isa = PBXBuildFile; fileRef = 5495B2E91E94F153000CEF45 /* TestThree.m */; };
+		54A08D321EA851EA0072B5B2 /* TestMyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A08D311EA851EA0072B5B2 /* TestMyExtension.m */; };
 		54A428771E9F7659001D4E46 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54A428751E9F7659001D4E46 /* CoreDataModel.xcdatamodeld */; };
 		54A4303B1EA756B0005BBCF6 /* TestKVO.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A430371EA756B0005BBCF6 /* TestKVO.m */; };
 		54A430431EA7592C005BBCF6 /* TestKVOCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A4303E1EA7592C005BBCF6 /* TestKVOCell.m */; };
@@ -92,6 +94,8 @@
 		545150001E8BBD220067E7AF /* prefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = prefixHeader.pch; sourceTree = "<group>"; };
 		546F46841E96247200243CCE /* Const.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Const.h; sourceTree = "<group>"; };
 		546F46851E96247200243CCE /* Const.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Const.m; sourceTree = "<group>"; };
+		548E633F1EA99F2200158B7F /* TestBlockReference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestBlockReference.h; sourceTree = "<group>"; };
+		548E63401EA99F2200158B7F /* TestBlockReference.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestBlockReference.m; sourceTree = "<group>"; };
 		5492F7031E9E2C4000B04424 /* TestCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCoreData.h; sourceTree = "<group>"; };
 		5492F7041E9E2C4000B04424 /* TestCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCoreData.m; sourceTree = "<group>"; };
 		5495B2D11E94F153000CEF45 /* Test11.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test11.h; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 		5495B2E71E94F153000CEF45 /* TestSeven.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSeven.m; sourceTree = "<group>"; };
 		5495B2E81E94F153000CEF45 /* TestThree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestThree.h; sourceTree = "<group>"; };
 		5495B2E91E94F153000CEF45 /* TestThree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestThree.m; sourceTree = "<group>"; };
+		54A08D301EA851EA0072B5B2 /* TestMyExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMyExtension.h; sourceTree = "<group>"; };
+		54A08D311EA851EA0072B5B2 /* TestMyExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMyExtension.m; sourceTree = "<group>"; };
 		54A428761E9F7659001D4E46 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
 		54A430361EA756B0005BBCF6 /* TestKVO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestKVO.h; sourceTree = "<group>"; };
 		54A430371EA756B0005BBCF6 /* TestKVO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestKVO.m; sourceTree = "<group>"; };
@@ -256,6 +262,15 @@
 			path = test_jobQuestionsUITests;
 			sourceTree = "<group>";
 		};
+		548E633E1EA99EFB00158B7F /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				548E633F1EA99F2200158B7F /* TestBlockReference.h */,
+				548E63401EA99F2200158B7F /* TestBlockReference.m */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
 		5492F6F31E9E2C2B00B04424 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
@@ -278,6 +293,7 @@
 				54C16E411E95E38E003F6BFA /* NSString+category.m */,
 				542586011E9B6D2F0014D5E4 /* NSMutableArray+category.h */,
 				542586021E9B6D2F0014D5E4 /* NSMutableArray+category.m */,
+				548E633E1EA99EFB00158B7F /* Block */,
 				54EB681C1EA5F7EC00C13BB9 /* DynamicJsonDeSerializate */,
 				54B1B5141EA5B42200B7047F /* KVO */,
 				5412D3BC1EA4C23000D40CFD /* ValueForKey& ValueForKeyPath */,
@@ -334,6 +350,15 @@
 			path = Queue;
 			sourceTree = "<group>";
 		};
+		54A08D2F1EA851C50072B5B2 /* KVC以及KVO，利用runtime实现字典转模型 */ = {
+			isa = PBXGroup;
+			children = (
+				54A08D301EA851EA0072B5B2 /* TestMyExtension.h */,
+				54A08D311EA851EA0072B5B2 /* TestMyExtension.m */,
+			);
+			path = "KVC以及KVO，利用runtime实现字典转模型";
+			sourceTree = "<group>";
+		};
 		54A430351EA756B0005BBCF6 /* 控制器监听一个模型的改变，之后view刷新UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,6 +401,7 @@
 		54B1B5141EA5B42200B7047F /* KVO */ = {
 			isa = PBXGroup;
 			children = (
+				54A08D2F1EA851C50072B5B2 /* KVC以及KVO，利用runtime实现字典转模型 */,
 				54A4303C1EA7592C005BBCF6 /* 测试模型数组 */,
 				54A430351EA756B0005BBCF6 /* 控制器监听一个模型的改变，之后view刷新UI */,
 			);
@@ -611,9 +637,11 @@
 				5492F7051E9E2C4000B04424 /* TestCoreData.m in Sources */,
 				54A430451EA7592C005BBCF6 /* TestKVO1.m in Sources */,
 				5495B2EB1E94F153000CEF45 /* TestEight.m in Sources */,
+				54A08D321EA851EA0072B5B2 /* TestMyExtension.m in Sources */,
 				542586031E9B6D2F0014D5E4 /* NSMutableArray+category.m in Sources */,
 				54A428771E9F7659001D4E46 /* CoreDataModel.xcdatamodeld in Sources */,
 				54EB681F1EA5F7EC00C13BB9 /* TestDynamicJson.m in Sources */,
+				548E63411EA99F2200158B7F /* TestBlockReference.m in Sources */,
 				54A430431EA7592C005BBCF6 /* TestKVOCell.m in Sources */,
 				54BF383E1E8E5678002A38DF /* BaseTest.m in Sources */,
 				5495B2F11E94F153000CEF45 /* TestSix.m in Sources */,

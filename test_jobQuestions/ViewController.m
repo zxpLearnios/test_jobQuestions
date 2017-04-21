@@ -25,8 +25,9 @@
 #import "TestKVO.h"
 #import "TestKVO1.h"
 #import "TestKVO2.h"
-
 #import "TestDynamicJson.h"
+#import "TestMyExtension.h"
+#import "TestBlockReference.h"
 
 
 @interface ViewController ()
@@ -105,15 +106,13 @@
         
     }else if (sender.tag == 11) { // 14
         
-//        BaseTest *dj = [[BaseTest alloc] init];
-//        dj = [[Test14 alloc] init]; // Test13 Test14  TestDynamicJson
-//        [dj doTest];
+        BaseTest *dj = [[BaseTest alloc] init];
+        dj = [[TestBlockReference alloc] init]; // Test13 Test14  TestDynamicJson  TestMyExtension  TestBlockReference
+        [dj doTest];
         
-        UIViewController *td = [[UIViewController alloc] init];
-        td = [[TestKVO2 alloc] init]; // TestKVO TestKVO1 TestKVO2
-        
-        [self.navigationController pushViewController:td animated:YES];
-        
+//        UIViewController *td = [[UIViewController alloc] init];
+//        td = [[TestKVO alloc] init]; // TestKVO TestKVO1 TestKVO2
+//        [self.navigationController pushViewController:td animated:YES];
         
     }
     
