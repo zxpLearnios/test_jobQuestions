@@ -29,7 +29,7 @@
     TestModel *tm = [[TestModel alloc] init];
     // 1.  验证setValue:forKey:确实会调用-set<Key>方法
 //    [tm setValue:@"问问" forKey:@"name"];
-    
+    [tm setValue:@"问问" forKeyPath:@"name"];
     // 2. 验证: 如果它的参数类型不是一个对象指针类型,但是却设置其值为nil, 就会执行setNilValueForKey:方法。setNilValueForKey: 方法的默认实现, 是产生一个NSInvalidArgumentException的异常，直接crash
 
     

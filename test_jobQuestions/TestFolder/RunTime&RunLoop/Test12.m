@@ -275,7 +275,7 @@
     
     
     // 2. NSBlockOperation
-    // 在主线程上头部执行
+    // 在主线程上同步执行
     NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
         NSLog(@"BlockOperation 1 begin");
         sleep(10);  // 加个睡眠模仿耗时操作
