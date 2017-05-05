@@ -21,6 +21,7 @@
     if (self) {
         self.backgroundColor = [UIColor grayColor];
         [self doThing];
+        
     }
     return self;
 }

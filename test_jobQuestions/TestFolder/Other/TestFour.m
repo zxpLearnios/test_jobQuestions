@@ -5,6 +5,7 @@
 //  Created by Jingnan Zhang on 2017/3/30.
 //  Copyright © 2017年 Jingnan Zhang. All rights reserved.
 //  测试atomic原子性访问修饰属性时，重写setter、getter方法
+//  @property 新增属性时，可以增加atomic选项，atomic会给对应对setter方法加锁，相当于
 
 #import "TestFour.h"
 

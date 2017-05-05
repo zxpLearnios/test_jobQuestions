@@ -5,9 +5,19 @@
 //  Created by Jingnan Zhang on 2017/4/10.
 //  Copyright © 2017年 Jingnan Zhang. All rights reserved.
 //  运行时  参考http://www.jianshu.com/p/59992507f875
-// http header请求头
+// http header请求头  NSBlockOperation
 
 /*
+ 
+ 1. 当operation有多个任务的时候会自动分配多个线程并发执行, 如果只有一个任务，会自动在主线程同步执行     2. iOS开发之网络错误分层处理，参考http://blog.csdn.net/moxi_wang/article/details/52638752   3. 使用URLSession的对象，调用其对象方法使用URLRequest来进行请求、上传、下载
+ 4. URLSession的设置：
+ 4.1 默认会话（Default Sessions）使用了持久的磁盘缓存，并且将证书存入用户的钥匙串中。
+ 4.2 临时会话（Ephemeral Session）没有向磁盘中存入任何数据，与该会话相关的证书、缓存等都会存在RAM中。因此当你的App临时会话无效时，证书以及缓存等数据就会被清除掉。
+ 4.3 后台会话（Background sessions）除了使用一个单独的线程来处理会话之外，与默认会话类似。不过要使用后台会话要有一些限制条件，比如会话必须提供事件交付的代理方法、只有HTTP和HTTPS协议支持后台会话、总是伴随着重定向。
+ 【仅仅在上传文件时才支持后台会话，当你上传二进制对象或者数据流时是不支持后台会话的。】
+ 当App进入后台时，后台传输就会被初始化。（需要注意的是iOS8和OS X 10.10之前的版本中后台会话是不支持数据任务（data task）的）。
+ 
+ 
  1. Objective-C是一门简单的语言，95%是C。只是在语言层面上加了些关键字和语法。真正让Objective-C如此强大的是它的运行时。它很小但却很强大。它的核心是消息分发。
  2. 大多数面向对象的语言里有 classes 和 objects 的概念。Objects通过Classes生成。但是在Objective-C中，classes本身也是objects，也可以处理消息，这也是为什么会有类方法和实例方法。具体来说，Objective-C中的Object是一个结构体(struct)，第一个成员是isa，指向自己的class。这是在objc/objc.h中定义的。
  3.  运行时能干什么？
@@ -70,11 +80,13 @@
  
  4. 动态语言调用一个没有的方法时，编译阶段也不不会报错,但程序一运行时便直接抛出异常闪退
  
- 
+ --------------------------  runloop ---------------------------- 
+ 不知道大家有没有想过这个问题，一个应用开始运行以后放在那里，如果不对它进行任何操作，这个应用就像静止了一样，不会自发的有任何动作发生，但是如果我们点击界面上的一个按钮，这个时候就会有对应的按钮响应事件发生。给我们的感觉就像应用一直处于随时待命的状态，在没人操作的时候它一直在休息，在让它干活的时候，它就能立刻响应。其实，这就是run loop的功劳。
  
  */
 
 #import "Test12.h"
+#import "NSString+category.h" // 测试runtime在分类里为系统原类新加属性
 
 
 @implementation Test12
@@ -236,11 +248,11 @@
      Host: 目标服务器的网络地址
      Accept: 让服务端知道客户端所能接收的数据类型，如text/html /
      Content-Type: body中的数据类型，如application/json; charset=UTF-8
+     Content-Length: body的长度，如果body为空则该字段值为0。该字段一般在POST请求中才会有。
      Accept-Language: 客户端的语言环境，如zh-cn
      Accept-Encoding: 客户端支持的数据压缩格式，如gzip
      User-Agent: 客户端的软件环境，我们可以更改该字段为自己客户端的名字，比如QQ music v1.11，比如浏览器Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_5) AppleWebKit/600.8.9 (KHTML, like Gecko) Maxthon/4.5.2
      Connection: keep-alive，该字段是从HTTP 1.1才开始有的，用来告诉服务端这是一个持久连接，“请服务端不要在发出响应后立即断开TCP连接”。关于该字段的更多解释将在后面的HTTP版本简介中展开。
-     Content-Length: body的长度，如果body为空则该字段值为0。该字段一般在POST请求中才会有。
      POST请求的body请求体也有可能是空的，因此POST中Content-Length也有可能为0
      
      Cookie: 记录 用户保存在本地的用户数据，如果有会被自动附上
@@ -276,34 +288,49 @@
     
     // 2. NSBlockOperation
     // 在主线程上同步执行
-    NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
-        NSLog(@"BlockOperation 1 begin");
-        sleep(10);  // 加个睡眠模仿耗时操作
-        NSLog(@"BlockOperation 1 currentThread = %@", [NSThread currentThread]);
-        NSLog(@"BlockOperation 1 mainThread    = %@", [NSThread mainThread]);
-        NSLog(@"BlockOperation 1 end");
-    }];
-    
-    // 异步执行的，并且会开辟新的线程
-    [op addExecutionBlock:^{
-        NSLog(@"BlockOperation 2 begin");
-        sleep(10);
-        NSLog(@"BlockOperation 2 currentThread = %@", [NSThread currentThread]);
-        NSLog(@"BlockOperation 2 mainThread    = %@", [NSThread mainThread]);
-        NSLog(@"BlockOperation 2 end");
-    }];
-    [op addExecutionBlock:^{
-        NSLog(@"BlockOperation 3 begin");
-        sleep(10);
-        NSLog(@"BlockOperation 3 currentThread = %@", [NSThread currentThread]);
-        NSLog(@"BlockOperation 3 mainThread    = %@", [NSThread mainThread]);
-        NSLog(@"BlockOperation 3 end");
-    }];
-    
-    NSLog(@"start before");
-    [op start];
+//    NSBlockOperation *op  = [NSBlockOperation blockOperationWithBlock:^{
+//        NSLog(@"BlockOperation 1 begin");
+//        sleep(2);  // 加个睡眠模仿耗时操作
+//        NSLog(@"BlockOperation 1 currentThread = %@", [NSThread currentThread]);
+//        NSLog(@"BlockOperation 1 mainThread    = %@", [NSThread mainThread]);
+//        NSLog(@"BlockOperation 1 end");
+//    }];
+//    
+//    // 异步执行的，并且会开辟新的线程
+//    [op addExecutionBlock:^{
+//        NSLog(@"BlockOperation 2 begin");
+//        sleep(10);
+//        NSLog(@"BlockOperation 2 currentThread = %@", [NSThread currentThread]);
+//        NSLog(@"BlockOperation 2 mainThread    = %@", [NSThread mainThread]);
+//        NSLog(@"BlockOperation 2 end");
+//    }];
+//    
+////    [op addExecutionBlock:^{
+////        NSLog(@"BlockOperation 3 begin");
+////        sleep(10);
+////        NSLog(@"BlockOperation 3 currentThread = %@", [NSThread currentThread]);
+////        NSLog(@"BlockOperation 3 mainThread    = %@", [NSThread mainThread]);
+////        NSLog(@"BlockOperation 3 end");
+////    }];
+////    
+////    NSLog(@"start before");
+//    
+//    // 不管用上面哪种，此句必须
+//    [op start];
     
     // 对于这两个 Operation ，如果仅使用同步执行操作，那么并没有多大的区别，一个是使用 selector 回调并可以传递参数进去，一个是使用 Block ，可根据实际情况选择。 但是如果想要使用多线程异步操作，则应该选择 NSBlockOperation，不过注意只有通过addExecutionBlock添加的操作才是多线程异步操作。
+    // 3.  NSOperation 无用，使用时，都是用NSBlockOperation的，来进行异步操作
+//    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
+//    queue.name = @"custom_queue";
+//    
+//    NSOperation *oprate = [[NSOperation alloc] init];
+    
+    // 4. 测试runtime通过分类为原类新加属性
+    NSString *str = @"sssddd";
+    str.type = @"runtime利用分类为系统原类新加属性";
+    
+    NSLog(@"%@", str.type);
+    
 }
 
 

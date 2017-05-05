@@ -32,6 +32,8 @@
 
 
 -(void)doTest{
+    NSArray *ary = [NSArray array];
+    
     [self updateNoMutableObject];
 //    [self operateArray];
 //    [self selfRetainCount];
@@ -48,9 +50,10 @@
     // 用(nonatomic, copy)或(atomic, copy)，在运行时mAry的类型已变成NSArray了，而NSArray是没有addObject方法的，故在运行时就会crash
     
     // 1. 下面这句会立即crash。 原因是，通过copy修饰的property，若通过self.someArray ＝来赋值初始化，则是通过系统合成setter方法实现，由于设置copy修饰词，则返回实际上是不可变数组（NSArray）,当调用addObject 方法会报错。应改为_mAry = [NSMutableArray array];
-//    self.mAry = [NSMutableArray array];
+    
     
     // 2.  _someArray是实例变量 参考TestFour，而此实例变量并没有 copy 修饰，指向的仍是定义的 NSMutableArray 类型。所以即使后面通过 self.someArray 使用 addObject 方法仍然可行，因为初始化赋值阶段获取的是NSMutableArray类型对象
+//    self.mAry = [NSMutableArray array]; // 会crash
     _mAry = [NSMutableArray array]; // 因为NSArray遵循NSCopying协议
     
     [self.mAry addObject:@"1"];

@@ -54,8 +54,8 @@
     
     NSMutableArray *models = [self.viewModel mutableArrayValueForKeyPath:@"models"];
     if (models != nil) {
-//        [models exchangeObjectAtIndex:0 withObjectAtIndex:2];
-        [models replaceObjectAtIndex:0 withObject:model];
+        [models exchangeObjectAtIndex:0 withObjectAtIndex:2];
+//        [models replaceObjectAtIndex:0 withObject:model];
     }
     
 }

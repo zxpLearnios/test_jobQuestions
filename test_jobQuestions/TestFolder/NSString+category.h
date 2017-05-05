@@ -7,8 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <objc/runtime.h>
 
 @interface NSString (category)
+/**利用runtime为原类新加属性, 必须实现set、get方法， 外部须导入此头文件才可以使用此新加属性*/
+@property (nonatomic, copy) NSString *type;
+
 
 +(NSString *)deleAllBlank:(NSString *)str; // 分类的方法可以不实现，但扩展里的方法必须实现
 

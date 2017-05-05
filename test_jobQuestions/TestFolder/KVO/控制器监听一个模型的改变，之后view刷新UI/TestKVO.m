@@ -126,8 +126,8 @@
 //    self.model.phone = dateStr;
     
     // 3. 测试viewModel
-    [self.viewModel.model setValue:dateStr forKey:@"name"];
-
+//    [self.viewModel.model setValue:dateStr forKey:@"name"];
+    self.viewModel.model.phone = dateStr;
     
 }
 
@@ -167,7 +167,7 @@
     viewModel.vc = vc;
     
     // 1/ 注册监听
-    [viewModel.model addObserver:vc forKeyPath:@"name" options:NSKeyValueObservingOptionNew context:nil];
+    [viewModel.model addObserver:vc forKeyPath:@"phone" options:NSKeyValueObservingOptionNew context:nil]; // name phone
     
     return viewModel;
 }

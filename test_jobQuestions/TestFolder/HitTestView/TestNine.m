@@ -22,7 +22,7 @@
     
 }
 
-/* 重写此法，将点击事件响应的view进行处理。这是最重要的方法 */
+/* 重写此法，将点击事件响应的view进行处理。这是最重要的方法(不重写，则按钮超出当前view的部分不会响应用户的点击) */
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     
 
@@ -30,7 +30,7 @@
         return nil;
     }
     
-    
+    // 遍历所有子view，当点击事件发生时并且子view包含了此点，则让子view成为hitTestView
     for (UIView *subview in [self.subviews reverseObjectEnumerator]) {
 //        NSLog(@"%@", subview);
         CGPoint convertedPoint = [subview convertPoint:point fromView:self];

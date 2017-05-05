@@ -17,7 +17,31 @@
          2.dispatch_barrier
          3.dispatch_semaphore
  
- 5.
+ 5.  NSOperation和GCD如何选择
+ 经过以上分析，我们大概对 NSOperation 和 GCD 都有了比较详细的了解，同时在亲自运用这两者的过程中有了自己的理解。
+ 
+ GCD以 block 为单位，代码简洁。同时 GCD 中的队列、组、信号量、source、barriers 都是组成并行编程的基本原语。对于一次性的计算，或是仅仅为了加快现有方法的运行速度，选择轻量化的 GCD 就更加方便。
+ 
+ 而 NSOperation 可以用来规划一组任务之间的依赖关系，设置它们的优先级，任务能被取消。队列可以暂停、恢复。NSOperation 还可以被子类化。这些都是 GCD 所不具备的。
+ 
+ 所以我们要记住的是：
+ NSOperation 和 GCD 并不是互斥的，有效地结合两者可以开发出更棒的应用
+ 
+ GCD进阶
+ NSOperation 有自己独特的优势，GCD 也有一些强大的特性。接下来我们由浅入深，讨论以下几个部分：
+ 
+ dispatch_suspend 和 dispatch_resume
+ dispathc_once
+ dispatch_barrier_async
+ dispatch_semaphore
+ dispatch_suspend和dispatch_resume
+ 我们知道NSOperationQueue有暂停(suspend)和恢复(resume)。其实GCD中的队列也有类似的功能。用法也非常简单：
+ dispatch_suspend(queue) //暂停某个队列
+ dispatch_resume(queue)  //恢复某个队列
+ 这些函数不会影响到队列中已经执行的任务，队列暂停后，已经添加到队列中但还没有执行的任务不会执行，直到队列被恢复。
+ 
+ dispathc_once
+ 首先我们来看一下最简单的 dispathc_once 函数，这在单例模式中被广泛使用。
  
  */
 

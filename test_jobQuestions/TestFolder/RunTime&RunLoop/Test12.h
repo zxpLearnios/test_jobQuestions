@@ -22,8 +22,9 @@
 +(NSArray *)getInstanceMethodListFromClass:(Class)cl;
 /**获取类的类方法*/
 +(NSArray *)getClassMethodListFromClass:(Class)cl;
-
-
+/**为类添加新的属性*/
++(BOOL)addNewPropertyForClass:(Class)cl;
++(void)noUse;
 @end
 
 

@@ -30,6 +30,7 @@
 #import "TestBlockReference.h"
 #import "TestCellCacheMethod.h"
 #import "TestCopy.h"
+#import "LearnSDWebImage.h"
 
 @interface ViewController ()
 @end
@@ -38,6 +39,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
+    NSArray *ary = @[@"1"];
+    
+    
+    NSMutableArray *mAry = [NSMutableArray array];
+    [mAry addObject:@(1)];
     
     
 }
@@ -98,8 +106,9 @@
         Test11 *t = [[Test11 alloc] initWithFrame:CGRectMake(50, 150, 300, 100)];
         [self.view addSubview:t];
     }else if (sender.tag == 9) { // 12
-        [Test12 getIvarListFromClass:[Student class]];
-        [Test12 getPropertyListFromClass:[Student class]];
+//        [Test12 getIvarListFromClass:[Student class]];
+//        [Test12 getPropertyListFromClass:[Student class]];
+        [Test12 noUse];
         
     }else if (sender.tag == 10) { // 13
         TestCoreData *td = [[TestCoreData alloc] init];
@@ -107,18 +116,19 @@
         
     }else if (sender.tag == 11) { // 14
         
-        BaseTest *dj = [[BaseTest alloc] init];
-        dj = [[TestCopy alloc] init]; // Test13 Test14  TestDynamicJson  TestMyExtension  TestBlockReference  TestCopy
-        [dj doTest];
+//        BaseTest *dj = [[BaseTest alloc] init];
+//        dj = [[LearnSDWebImage alloc] init]; // Test13 Test14  TestDynamicJson  TestMyExtension  TestBlockReference  TestCopy  LearnSDWebImage
+//        [dj doTest];
         
-//        UIViewController *td = [[UIViewController alloc] init];
-//        td = [[TestCellCacheMethod alloc] init]; // TestKVO TestKVO1 TestKVO2  TestCellCacheMethod
-//        [self.navigationController pushViewController:td animated:YES];
+        UIViewController *td = [[UIViewController alloc] init];
+        td = [[TestCellCacheMethod alloc] init]; // TestKVO TestKVO1 TestKVO2  TestCellCacheMethod
+        [self.navigationController pushViewController:td animated:YES];
         
     }
     
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

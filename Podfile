@@ -4,4 +4,6 @@ use_frameworks!
 
 target 'test_jobQuestions' do
     pod ‘MJExtension’
+    pod ‘SDWebImage’
+    pod ’AFNetworking’
 end

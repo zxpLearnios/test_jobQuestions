@@ -6,8 +6,8 @@
 //  Copyright © 2017年 Jingnan Zhang. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "BaseTest.h"
 
-@interface LearnSDWebImage : NSObject
+@interface LearnSDWebImage : BaseTest
 
 @end

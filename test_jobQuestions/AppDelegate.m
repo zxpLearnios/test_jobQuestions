@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "TestSaveDataMethod.h"
 
 @interface AppDelegate ()
 
@@ -26,8 +27,17 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    // 运行app你会发现Save只有在你第一次运行app时候打印，如果你把app删除后再运行，也不会清除数据。
+    KeychainManager *manager = [KeychainManager shareInstance];
+    NSString *data = [manager load:@"myName"];
+//    [manager delete:@"myName"]; // 删除数据
+    if (data == nil) {
+        NSLog(@"Save");
+        NSString *dataString = @"我是谁";
+        [manager save:@"myName" data:dataString];
+    }
+    NSLog(@"data = %@",data);
+
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {

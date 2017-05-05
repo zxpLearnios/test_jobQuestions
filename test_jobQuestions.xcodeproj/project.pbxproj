@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5412D3BB1EA4C21900D40CFD /* Test13.m in Sources */ = {isa = PBXBuildFile; fileRef = 5412D3BA1EA4C21900D40CFD /* Test13.m */; };
 		542585FD1E9B61880014D5E4 /* Test12.m in Sources */ = {isa = PBXBuildFile; fileRef = 542585FC1E9B61880014D5E4 /* Test12.m */; };
-		542586031E9B6D2F0014D5E4 /* NSMutableArray+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 542586021E9B6D2F0014D5E4 /* NSMutableArray+category.m */; };
 		5431C8051EA49B9200205963 /* TestCoreData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5431C8041EA49B9200205963 /* TestCoreData.xib */; };
 		54514FCA1E8BB3D80067E7AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54514FC91E8BB3D80067E7AF /* main.m */; };
 		54514FCD1E8BB3D80067E7AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54514FCC1E8BB3D80067E7AF /* AppDelegate.m */; };
@@ -44,6 +43,9 @@
 		54B1B5131EA5AB0900B7047F /* Test14.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1B5121EA5AB0900B7047F /* Test14.m */; };
 		54BF383E1E8E5678002A38DF /* BaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BF383D1E8E5678002A38DF /* BaseTest.m */; };
 		54C16E421E95E38E003F6BFA /* NSString+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C16E411E95E38E003F6BFA /* NSString+category.m */; };
+		54C551AB1EB9B94F00FFB583 /* TestSaveDataMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C551AA1EB9B94F00FFB583 /* TestSaveDataMethod.m */; };
+		54C551AF1EB9D14A00FFB583 /* TestGetUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C551AE1EB9D14A00FFB583 /* TestGetUUID.m */; };
+		54C551B41EB9D98000FFB583 /* TestMVVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C551B31EB9D98000FFB583 /* TestMVVM.m */; };
 		54DBA4141EAD9B3B00F2CE11 /* TestCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DBA4131EAD9B3B00F2CE11 /* TestCopy.m */; };
 		54E152601E9F61CA0016771D /* BaseCoreDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1525F1E9F61CA0016771D /* BaseCoreDataModel.m */; };
 		54EB681F1EA5F7EC00C13BB9 /* TestDynamicJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EB681E1EA5F7EC00C13BB9 /* TestDynamicJson.m */; };
@@ -78,7 +80,6 @@
 		542585FB1E9B61880014D5E4 /* Test12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test12.h; sourceTree = "<group>"; };
 		542585FC1E9B61880014D5E4 /* Test12.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test12.m; sourceTree = "<group>"; };
 		542586011E9B6D2F0014D5E4 /* NSMutableArray+category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+category.h"; sourceTree = "<group>"; };
-		542586021E9B6D2F0014D5E4 /* NSMutableArray+category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+category.m"; sourceTree = "<group>"; };
 		5431C8041EA49B9200205963 /* TestCoreData.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCoreData.xib; sourceTree = "<group>"; };
 		54514FC51E8BB3D80067E7AF /* test_jobQuestions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test_jobQuestions.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54514FC91E8BB3D80067E7AF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -144,6 +145,12 @@
 		54BF383D1E8E5678002A38DF /* BaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTest.m; path = ../BaseTest.m; sourceTree = "<group>"; };
 		54C16E401E95E38E003F6BFA /* NSString+category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+category.h"; sourceTree = "<group>"; };
 		54C16E411E95E38E003F6BFA /* NSString+category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+category.m"; sourceTree = "<group>"; };
+		54C551A91EB9B94F00FFB583 /* TestSaveDataMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSaveDataMethod.h; sourceTree = "<group>"; };
+		54C551AA1EB9B94F00FFB583 /* TestSaveDataMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSaveDataMethod.m; sourceTree = "<group>"; };
+		54C551AD1EB9D14A00FFB583 /* TestGetUUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestGetUUID.h; sourceTree = "<group>"; };
+		54C551AE1EB9D14A00FFB583 /* TestGetUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestGetUUID.m; sourceTree = "<group>"; };
+		54C551B21EB9D98000FFB583 /* TestMVVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMVVM.h; sourceTree = "<group>"; };
+		54C551B31EB9D98000FFB583 /* TestMVVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMVVM.m; sourceTree = "<group>"; };
 		54DBA4121EAD9B3B00F2CE11 /* TestCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCopy.h; sourceTree = "<group>"; };
 		54DBA4131EAD9B3B00F2CE11 /* TestCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCopy.m; sourceTree = "<group>"; };
 		54E1525C1E9F615A0016771D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -306,7 +313,9 @@
 				54C16E401E95E38E003F6BFA /* NSString+category.h */,
 				54C16E411E95E38E003F6BFA /* NSString+category.m */,
 				542586011E9B6D2F0014D5E4 /* NSMutableArray+category.h */,
-				542586021E9B6D2F0014D5E4 /* NSMutableArray+category.m */,
+				54C551B11EB9D97600FFB583 /* MVVM设计模式 */,
+				54C551AC1EB9D13F00FFB583 /* 获取设备唯一标识问题 */,
+				54C551A81EB9B93A00FFB583 /* SaveDataMethods */,
 				54DBA4111EAD9B2900F2CE11 /* Copy&MutableCopy */,
 				54EFCE621EAA0CE800DB218D /* Cell的缓存机制 */,
 				54EFCE5E1EAA0ADC00DB218D /* SDWebImage */,
@@ -423,6 +432,33 @@
 				54A430351EA756B0005BBCF6 /* 控制器监听一个模型的改变，之后view刷新UI */,
 			);
 			path = KVO;
+			sourceTree = "<group>";
+		};
+		54C551A81EB9B93A00FFB583 /* SaveDataMethods */ = {
+			isa = PBXGroup;
+			children = (
+				54C551A91EB9B94F00FFB583 /* TestSaveDataMethod.h */,
+				54C551AA1EB9B94F00FFB583 /* TestSaveDataMethod.m */,
+			);
+			path = SaveDataMethods;
+			sourceTree = "<group>";
+		};
+		54C551AC1EB9D13F00FFB583 /* 获取设备唯一标识问题 */ = {
+			isa = PBXGroup;
+			children = (
+				54C551AD1EB9D14A00FFB583 /* TestGetUUID.h */,
+				54C551AE1EB9D14A00FFB583 /* TestGetUUID.m */,
+			);
+			path = "获取设备唯一标识问题";
+			sourceTree = "<group>";
+		};
+		54C551B11EB9D97600FFB583 /* MVVM设计模式 */ = {
+			isa = PBXGroup;
+			children = (
+				54C551B21EB9D98000FFB583 /* TestMVVM.h */,
+				54C551B31EB9D98000FFB583 /* TestMVVM.m */,
+			);
+			path = "MVVM设计模式";
 			sourceTree = "<group>";
 		};
 		54DBA4111EAD9B2900F2CE11 /* Copy&MutableCopy */ = {
@@ -669,8 +705,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5495B2EC1E94F153000CEF45 /* TestNine.m in Sources */,
+				54C551AF1EB9D14A00FFB583 /* TestGetUUID.m in Sources */,
+				54C551AB1EB9B94F00FFB583 /* TestSaveDataMethod.m in Sources */,
 				54514FD01E8BB3D80067E7AF /* ViewController.m in Sources */,
 				54514FCD1E8BB3D80067E7AF /* AppDelegate.m in Sources */,
+				54C551B41EB9D98000FFB583 /* TestMVVM.m in Sources */,
 				5412D3BB1EA4C21900D40CFD /* Test13.m in Sources */,
 				5495B2EF1E94F153000CEF45 /* TestFour.m in Sources */,
 				5495B2ED1E94F153000CEF45 /* TestTen.m in Sources */,
@@ -688,7 +727,6 @@
 				54DBA4141EAD9B3B00F2CE11 /* TestCopy.m in Sources */,
 				54EFCE651EAA0D2100DB218D /* TestCellCacheMethod.m in Sources */,
 				54A08D321EA851EA0072B5B2 /* TestMyExtension.m in Sources */,
-				542586031E9B6D2F0014D5E4 /* NSMutableArray+category.m in Sources */,
 				54A428771E9F7659001D4E46 /* CoreDataModel.xcdatamodeld in Sources */,
 				54EB681F1EA5F7EC00C13BB9 /* TestDynamicJson.m in Sources */,
 				54EFCE691EAA0D9B00DB218D /* TestCellCacheCell.m in Sources */,

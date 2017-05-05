@@ -47,7 +47,51 @@
  */
 
 #import "LearnSDWebImage.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIView+WebCache.h>
 
-@implementation LearnSDWebImage
+@interface LearnSDWebImage ()
 
 @end
+@implementation LearnSDWebImage
+
+-(void)doTest{
+    
+    UIView *container = [[UIView alloc] initWithFrame:kbounds];
+    container.backgroundColor = [UIColor whiteColor];
+    
+    NSArray *urls = @[@"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg"
+                      , @"https://c2.staticflickr.com/4/3345/5832660048_55f8b0935b.jpg",
+                      @"http://7xk68o.com1.z0.glb.clouddn.com/1.jpg",
+                      @"http://7xk68o.com1.z0.glb.clouddn.com/2.jpg"
+                      ,@"http://7xk68o.com1.z0.glb.clouddn.com/3.jpg",
+                      @"http://7xk68o.com1.z0.glb.clouddn.com/4.jpg"
+                      ];
+    
+    UIImage *placeholderImg = [UIImage imageNamed:@"2"];
+    
+    for (int i = 0; i < urls.count; i++) {
+        
+        CGFloat width = 100;
+        CGFloat x = i%3 * width + 5;
+        CGFloat y = i/3 * width + 15;
+        
+        UIImageView *imgV = [[UIImageView alloc] initWithFrame:CGRectMake(x, y, width, width)];
+        
+        NSURL *url = [NSURL URLWithString:urls[i]];
+        
+        [container addSubview:imgV];
+        
+        // 添加默认进度
+//        [imgV sd_setShowActivityIndicatorView:YES];
+//        [imgV sd_setIndicatorStyle:UIActivityIndicatorViewStyleWhite];
+        [imgV sd_setImageWithURL:url placeholderImage:placeholderImg options:SDWebImageCacheMemoryOnly];
+    }
+    
+    
+    [kwindow addSubview:container];
+    
+}
+
+@end
+

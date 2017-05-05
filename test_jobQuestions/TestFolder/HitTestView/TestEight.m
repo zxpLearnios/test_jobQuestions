@@ -30,13 +30,13 @@
 /**
  * 1. 更改按钮的响应区域，会使按钮的x、y方向各增、减n
  */
-//-(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{
-//    CGRect newB = self.bounds;
-//    // 扩大点击区域，想缩小就将负值设为正值
-//    newB = CGRectInset(newB, -40, -20);
-//    
-//    return CGRectContainsPoint(newB, point);
-//}
+-(BOOL)pointInside:(CGPoint)point withEvent:(UIEvent *)event{
+    CGRect newB = self.bounds;
+    // 扩大点击区域，想缩小就将负值设为正值
+    newB = CGRectInset(newB, -40, -20);
+    
+    return CGRectContainsPoint(newB, point);
+}
 
 /**
  * 2. 更改按钮的响应区域，会使按钮的x或y的正方向或负方向改变n

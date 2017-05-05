@@ -30,9 +30,9 @@
 
 @interface TestKVOModel : NSObject
 {
-    NSString *isName; // name _name isName _isName 是等价的。外部不可直接访问
+    NSString *isName; // name _name isName _isName 是等价的。外部不可直接访问 
 }
-@property (nonatomic, copy) NSString *phone;
+@property (nonatomic, copy) NSString *phone; // 外部直接 kvoModel.phone = @"newVaule', 即可被监听到
 
 @end
 

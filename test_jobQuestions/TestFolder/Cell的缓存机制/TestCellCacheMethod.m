@@ -68,8 +68,9 @@ static  NSString const * _Nonnull cellId = @"TestCellCacheCell";
     
     
     if (!cell) { // cell会这届从缓存池里取
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier: cellId];
         NSLog(@"cell为空 ---- %ld", count ++);
-        cell = [TestCellCacheCell cacheCell];
+//        cell = [TestCellCacheCell cacheCell];
     }
     return cell;
 }
