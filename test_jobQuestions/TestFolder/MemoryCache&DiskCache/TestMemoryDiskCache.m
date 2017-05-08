@@ -4,7 +4,7 @@
 //
 //  Created by Jingnan Zhang on 2017/5/8.
 //  Copyright © 2017年 Jingnan Zhang. All rights reserved.
-//
+
 /*
  内存缓存 常见第三方
  通常一个缓存是由内存缓存和磁盘缓存组成，内存缓存提供容量小但高速的存取功能，磁盘缓存提供大容量但低速的持久化存储。相对于磁盘缓存来说，内存缓存的设计要更简单些，下面是我调查的一些常见的内存缓存。
@@ -29,12 +29,18 @@
      3、缓存数据的读取为：判断NSCache 中是否有缓存数据——>（若没有缓存数据）读取文件当中的数据
  】
 
- 
+ 3. 磁盘存储都存储到沙盒里了。 应用沙盒目录：
+ Application Bundle:包含应用可执行文件和所有资源文件，只读。
+     Document/ 存放应用运行时生成的并且需要保存的数据。iTunes或iCloud同步设备时备份该目录。
+     Library/Caches/ 存放应用运行时生成的并且需要保存的数据。iTunes或iCloud不同步。
+     Library/Preferences/ 存放偏好设置。ios的偏好设置（settings）应用也会在该目录查找应用的设置信息。NSUserDefaults保存在该目录下。iTunes或iCloud同步设备时备份该目录。
+     temp/ 存放应用运行时所需的临时数据。当某个应用没运行时，ios系统可能会清除该目录下的文件。但不可依赖这种自动清除机制，应该及时手动清除。
+     NSSearchPathForDirectoriesInDomains返回值是NsArray而不是NSString。因为Mac Os X中可能获得多个符合的结果。ios中只有1个结果，所以得到的数组取下标为0的即可。
  
  */
 
 #import "TestMemoryDiskCache.h"
-#import "PINCache.h"
+#import <PINCache/PINCache.h>
 
 @interface TestMemoryDiskCache () <NSCacheDelegate>
 @property (nonatomic, strong) UIImageView *imgV;
@@ -43,6 +49,7 @@
 @property (nonatomic, strong) NSCache *cache;
 
 @end
+
 @implementation TestMemoryDiskCache
 
 -(void)viewDidLoad{

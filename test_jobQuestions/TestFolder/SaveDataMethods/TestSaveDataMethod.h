@@ -4,7 +4,7 @@
 //
 //  Created by Jingnan Zhang on 2017/5/3.
 //  Copyright © 2017年 Jingnan Zhang. All rights reserved.
-//
+//  存储数据，比如删除应用后，再次安装同一个应用后，会自动带出用户名和密码，就需要用到此种存储方式
 
 #import "BaseTest.h"
 
