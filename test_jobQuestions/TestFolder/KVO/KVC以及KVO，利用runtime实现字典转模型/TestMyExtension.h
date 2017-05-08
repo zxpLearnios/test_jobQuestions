@@ -29,6 +29,6 @@
 
 
 /**字典转模型，jsonDic须为一个字典*/
-+(id)my_objectWithJsonDictionary:(id)jsonDic;
+//+(id)my_objectWithJsonDictionary:(id)jsonDic;
 @end
 

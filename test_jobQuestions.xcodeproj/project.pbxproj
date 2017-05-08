@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5412D3BB1EA4C21900D40CFD /* Test13.m in Sources */ = {isa = PBXBuildFile; fileRef = 5412D3BA1EA4C21900D40CFD /* Test13.m */; };
 		542585FD1E9B61880014D5E4 /* Test12.m in Sources */ = {isa = PBXBuildFile; fileRef = 542585FC1E9B61880014D5E4 /* Test12.m */; };
 		5431C8051EA49B9200205963 /* TestCoreData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5431C8041EA49B9200205963 /* TestCoreData.xib */; };
 		54514FCA1E8BB3D80067E7AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54514FC91E8BB3D80067E7AF /* main.m */; };
@@ -40,12 +39,16 @@
 		54A430441EA7592C005BBCF6 /* TestKVOCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A4303F1EA7592C005BBCF6 /* TestKVOCell.xib */; };
 		54A430451EA7592C005BBCF6 /* TestKVO1.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A430421EA7592C005BBCF6 /* TestKVO1.m */; };
 		54A4304A1EA759A6005BBCF6 /* TestKVO2.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A430491EA759A6005BBCF6 /* TestKVO2.m */; };
-		54B1B5131EA5AB0900B7047F /* Test14.m in Sources */ = {isa = PBXBuildFile; fileRef = 54B1B5121EA5AB0900B7047F /* Test14.m */; };
 		54BF383E1E8E5678002A38DF /* BaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BF383D1E8E5678002A38DF /* BaseTest.m */; };
 		54C16E421E95E38E003F6BFA /* NSString+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C16E411E95E38E003F6BFA /* NSString+category.m */; };
 		54C551AB1EB9B94F00FFB583 /* TestSaveDataMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C551AA1EB9B94F00FFB583 /* TestSaveDataMethod.m */; };
 		54C551AF1EB9D14A00FFB583 /* TestGetUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C551AE1EB9D14A00FFB583 /* TestGetUUID.m */; };
 		54C551B41EB9D98000FFB583 /* TestMVVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C551B31EB9D98000FFB583 /* TestMVVM.m */; };
+		54D9254A1EC020660042D438 /* NSArray+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D925471EC020660042D438 /* NSArray+extension.m */; };
+		54D9254B1EC020660042D438 /* NSMutableArray+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D925491EC020660042D438 /* NSMutableArray+extension.m */; };
+		54D925511EC020A00042D438 /* Test13.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D9254E1EC020A00042D438 /* Test13.m */; };
+		54D925521EC020A00042D438 /* Test14.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D925501EC020A00042D438 /* Test14.m */; };
+		54D925561EC020EB0042D438 /* TestMemoryDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D925551EC020EB0042D438 /* TestMemoryDiskCache.m */; };
 		54DBA4141EAD9B3B00F2CE11 /* TestCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DBA4131EAD9B3B00F2CE11 /* TestCopy.m */; };
 		54E152601E9F61CA0016771D /* BaseCoreDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1525F1E9F61CA0016771D /* BaseCoreDataModel.m */; };
 		54EB681F1EA5F7EC00C13BB9 /* TestDynamicJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EB681E1EA5F7EC00C13BB9 /* TestDynamicJson.m */; };
@@ -75,8 +78,6 @@
 
 /* Begin PBXFileReference section */
 		4797361ED16B0B9C6E843CB7 /* Pods-test_jobQuestions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test_jobQuestions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test_jobQuestions/Pods-test_jobQuestions.debug.xcconfig"; sourceTree = "<group>"; };
-		5412D3B91EA4C21900D40CFD /* Test13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Test13.h; path = ../Test13.h; sourceTree = "<group>"; };
-		5412D3BA1EA4C21900D40CFD /* Test13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Test13.m; path = ../Test13.m; sourceTree = "<group>"; };
 		542585FB1E9B61880014D5E4 /* Test12.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test12.h; sourceTree = "<group>"; };
 		542585FC1E9B61880014D5E4 /* Test12.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test12.m; sourceTree = "<group>"; };
 		542586011E9B6D2F0014D5E4 /* NSMutableArray+category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+category.h"; sourceTree = "<group>"; };
@@ -139,8 +140,6 @@
 		54A430421EA7592C005BBCF6 /* TestKVO1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestKVO1.m; sourceTree = "<group>"; };
 		54A430481EA759A6005BBCF6 /* TestKVO2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestKVO2.h; sourceTree = "<group>"; };
 		54A430491EA759A6005BBCF6 /* TestKVO2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestKVO2.m; sourceTree = "<group>"; };
-		54B1B5111EA5AB0900B7047F /* Test14.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test14.h; sourceTree = "<group>"; };
-		54B1B5121EA5AB0900B7047F /* Test14.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test14.m; sourceTree = "<group>"; };
 		54BF383C1E8E5677002A38DF /* BaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTest.h; path = ../BaseTest.h; sourceTree = "<group>"; };
 		54BF383D1E8E5678002A38DF /* BaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTest.m; path = ../BaseTest.m; sourceTree = "<group>"; };
 		54C16E401E95E38E003F6BFA /* NSString+category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+category.h"; sourceTree = "<group>"; };
@@ -151,6 +150,16 @@
 		54C551AE1EB9D14A00FFB583 /* TestGetUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestGetUUID.m; sourceTree = "<group>"; };
 		54C551B21EB9D98000FFB583 /* TestMVVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMVVM.h; sourceTree = "<group>"; };
 		54C551B31EB9D98000FFB583 /* TestMVVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMVVM.m; sourceTree = "<group>"; };
+		54D925461EC020660042D438 /* NSArray+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+extension.h"; sourceTree = "<group>"; };
+		54D925471EC020660042D438 /* NSArray+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+extension.m"; sourceTree = "<group>"; };
+		54D925481EC020660042D438 /* NSMutableArray+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+extension.h"; sourceTree = "<group>"; };
+		54D925491EC020660042D438 /* NSMutableArray+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+extension.m"; sourceTree = "<group>"; };
+		54D9254D1EC020A00042D438 /* Test13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test13.h; sourceTree = "<group>"; };
+		54D9254E1EC020A00042D438 /* Test13.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test13.m; sourceTree = "<group>"; };
+		54D9254F1EC020A00042D438 /* Test14.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test14.h; sourceTree = "<group>"; };
+		54D925501EC020A00042D438 /* Test14.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test14.m; sourceTree = "<group>"; };
+		54D925541EC020EB0042D438 /* TestMemoryDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMemoryDiskCache.h; sourceTree = "<group>"; };
+		54D925551EC020EB0042D438 /* TestMemoryDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMemoryDiskCache.m; sourceTree = "<group>"; };
 		54DBA4121EAD9B3B00F2CE11 /* TestCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCopy.h; sourceTree = "<group>"; };
 		54DBA4131EAD9B3B00F2CE11 /* TestCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCopy.m; sourceTree = "<group>"; };
 		54E1525C1E9F615A0016771D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -195,17 +204,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5412D3BC1EA4C23000D40CFD /* ValueForKey& ValueForKeyPath */ = {
-			isa = PBXGroup;
-			children = (
-				5412D3B91EA4C21900D40CFD /* Test13.h */,
-				5412D3BA1EA4C21900D40CFD /* Test13.m */,
-				54B1B5111EA5AB0900B7047F /* Test14.h */,
-				54B1B5121EA5AB0900B7047F /* Test14.m */,
-			);
-			path = "ValueForKey& ValueForKeyPath";
-			sourceTree = "<group>";
-		};
 		542585FA1E9B615B0014D5E4 /* RunTime&RunLoop */ = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +311,8 @@
 				54C16E401E95E38E003F6BFA /* NSString+category.h */,
 				54C16E411E95E38E003F6BFA /* NSString+category.m */,
 				542586011E9B6D2F0014D5E4 /* NSMutableArray+category.h */,
+				54D925531EC020D70042D438 /* MemoryCache&DiskCache */,
+				54D925451EC020660042D438 /* Runtime解决数组越界、字典key为nil */,
 				54C551B11EB9D97600FFB583 /* MVVM设计模式 */,
 				54C551AC1EB9D13F00FFB583 /* 获取设备唯一标识问题 */,
 				54C551A81EB9B93A00FFB583 /* SaveDataMethods */,
@@ -322,7 +322,7 @@
 				548E633E1EA99EFB00158B7F /* Block */,
 				54EB681C1EA5F7EC00C13BB9 /* DynamicJsonDeSerializate */,
 				54B1B5141EA5B42200B7047F /* KVO */,
-				5412D3BC1EA4C23000D40CFD /* ValueForKey& ValueForKeyPath */,
+				54D9254C1EC020A00042D438 /* ValueForKey& ValueForKeyPath */,
 				5492F6F31E9E2C2B00B04424 /* CoreData */,
 				542585FA1E9B615B0014D5E4 /* RunTime&RunLoop */,
 				5495B2D01E94F153000CEF45 /* HitTestView */,
@@ -459,6 +459,37 @@
 				54C551B31EB9D98000FFB583 /* TestMVVM.m */,
 			);
 			path = "MVVM设计模式";
+			sourceTree = "<group>";
+		};
+		54D925451EC020660042D438 /* Runtime解决数组越界、字典key为nil */ = {
+			isa = PBXGroup;
+			children = (
+				54D925461EC020660042D438 /* NSArray+extension.h */,
+				54D925471EC020660042D438 /* NSArray+extension.m */,
+				54D925481EC020660042D438 /* NSMutableArray+extension.h */,
+				54D925491EC020660042D438 /* NSMutableArray+extension.m */,
+			);
+			path = "Runtime解决数组越界、字典key为nil";
+			sourceTree = "<group>";
+		};
+		54D9254C1EC020A00042D438 /* ValueForKey& ValueForKeyPath */ = {
+			isa = PBXGroup;
+			children = (
+				54D9254D1EC020A00042D438 /* Test13.h */,
+				54D9254E1EC020A00042D438 /* Test13.m */,
+				54D9254F1EC020A00042D438 /* Test14.h */,
+				54D925501EC020A00042D438 /* Test14.m */,
+			);
+			path = "ValueForKey& ValueForKeyPath";
+			sourceTree = "<group>";
+		};
+		54D925531EC020D70042D438 /* MemoryCache&DiskCache */ = {
+			isa = PBXGroup;
+			children = (
+				54D925541EC020EB0042D438 /* TestMemoryDiskCache.h */,
+				54D925551EC020EB0042D438 /* TestMemoryDiskCache.m */,
+			);
+			path = "MemoryCache&DiskCache";
 			sourceTree = "<group>";
 		};
 		54DBA4111EAD9B2900F2CE11 /* Copy&MutableCopy */ = {
@@ -704,26 +735,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54D925561EC020EB0042D438 /* TestMemoryDiskCache.m in Sources */,
 				5495B2EC1E94F153000CEF45 /* TestNine.m in Sources */,
 				54C551AF1EB9D14A00FFB583 /* TestGetUUID.m in Sources */,
 				54C551AB1EB9B94F00FFB583 /* TestSaveDataMethod.m in Sources */,
 				54514FD01E8BB3D80067E7AF /* ViewController.m in Sources */,
 				54514FCD1E8BB3D80067E7AF /* AppDelegate.m in Sources */,
+				54D925511EC020A00042D438 /* Test13.m in Sources */,
 				54C551B41EB9D98000FFB583 /* TestMVVM.m in Sources */,
-				5412D3BB1EA4C21900D40CFD /* Test13.m in Sources */,
 				5495B2EF1E94F153000CEF45 /* TestFour.m in Sources */,
 				5495B2ED1E94F153000CEF45 /* TestTen.m in Sources */,
 				5495B2F51E94F153000CEF45 /* TestThree.m in Sources */,
 				5495B2F41E94F153000CEF45 /* TestSeven.m in Sources */,
 				54A4303B1EA756B0005BBCF6 /* TestKVO.m in Sources */,
-				54B1B5131EA5AB0900B7047F /* Test14.m in Sources */,
 				5495B2EA1E94F153000CEF45 /* Test11.m in Sources */,
+				54D9254B1EC020660042D438 /* NSMutableArray+extension.m in Sources */,
 				5495B2F21E94F153000CEF45 /* TestTwo.m in Sources */,
 				54A4304A1EA759A6005BBCF6 /* TestKVO2.m in Sources */,
 				546F46861E96247200243CCE /* Const.m in Sources */,
 				5492F7051E9E2C4000B04424 /* TestCoreData.m in Sources */,
 				54A430451EA7592C005BBCF6 /* TestKVO1.m in Sources */,
 				5495B2EB1E94F153000CEF45 /* TestEight.m in Sources */,
+				54D925521EC020A00042D438 /* Test14.m in Sources */,
 				54DBA4141EAD9B3B00F2CE11 /* TestCopy.m in Sources */,
 				54EFCE651EAA0D2100DB218D /* TestCellCacheMethod.m in Sources */,
 				54A08D321EA851EA0072B5B2 /* TestMyExtension.m in Sources */,
@@ -734,6 +767,7 @@
 				54EFCE611EAA0AFC00DB218D /* LearnSDWebImage.m in Sources */,
 				54A430431EA7592C005BBCF6 /* TestKVOCell.m in Sources */,
 				54BF383E1E8E5678002A38DF /* BaseTest.m in Sources */,
+				54D9254A1EC020660042D438 /* NSArray+extension.m in Sources */,
 				5495B2F11E94F153000CEF45 /* TestSix.m in Sources */,
 				5495B2F01E94F153000CEF45 /* TestOne.m in Sources */,
 				54514FCA1E8BB3D80067E7AF /* main.m in Sources */,

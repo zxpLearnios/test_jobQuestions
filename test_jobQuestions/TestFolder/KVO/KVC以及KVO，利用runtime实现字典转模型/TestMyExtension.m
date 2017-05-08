@@ -33,7 +33,7 @@
     
     NSString *jsonStr = @"{\"name\": \"huweiruheriughiuhgeriu\", \"phone\": \"13244564656\", \"height\": nil }";
     // 测试字典转模型
-    TestMyExtensionModel *tm = [TestMyExtensionModel my_objectWithJsonDictionary:jsonStr];
+//    TestMyExtensionModel *tm = [TestMyExtensionModel my_objectWithJsonDictionary:jsonStr];
     
     
 }
@@ -114,13 +114,13 @@
 
 // ---------------------- 重写方法  --------------------- //
 
--(void)setNilValueForKey:(NSString *)key{
-    NSLog(@"%@类的属性%@不能被设置为nil!", [self class], key);
-}
-
--(void)setValue:(id)value forUndefinedKey:(NSString *)key{
-    NSLog(@"%@类不存在属性%@", [self class], key);
-}
+//-(void)setNilValueForKey:(NSString *)key{
+//    NSLog(@"%@类的属性%@不能被设置为nil!", [self class], key);
+//}
+//
+//-(void)setValue:(id)value forUndefinedKey:(NSString *)key{
+//    NSLog(@"%@类不存在属性%@", [self class], key);
+//}
 
 @end
 

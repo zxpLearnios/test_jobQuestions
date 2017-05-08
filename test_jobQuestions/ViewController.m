@@ -31,6 +31,7 @@
 #import "TestCellCacheMethod.h"
 #import "TestCopy.h"
 #import "LearnSDWebImage.h"
+#import "TestMemoryDiskCache.h"
 
 @interface ViewController ()
 @end
@@ -43,9 +44,11 @@
     
     NSArray *ary = @[@"1"];
     
-    
+    // 测试runtime解决数组越界等问题
     NSMutableArray *mAry = [NSMutableArray array];
     [mAry addObject:@(1)];
+    
+//    NSString *str = [mAry objectAtIndex:12];
     
     
 }
@@ -121,7 +124,7 @@
 //        [dj doTest];
         
         UIViewController *td = [[UIViewController alloc] init];
-        td = [[TestCellCacheMethod alloc] init]; // TestKVO TestKVO1 TestKVO2  TestCellCacheMethod
+        td = [[TestMemoryDiskCache alloc] init]; // TestKVO TestKVO1 TestKVO2  TestCellCacheMethod  TestMemoryDiskCache
         [self.navigationController pushViewController:td animated:YES];
         
     }
