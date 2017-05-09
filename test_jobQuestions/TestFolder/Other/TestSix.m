@@ -62,6 +62,7 @@
 
 -(void)doTest{
 //    [self smaphoreTask];
+    [self smaphoreTask2];
     NSLog(@"%@", [self smaphoreTaskOne].debugDescription); // 可能刚开始获取的数组为空，是因为数组里加数据时是异步操作
     
 }
@@ -76,7 +77,7 @@
     
     for (int i = 0; i < 10; i++)
     {   // 由于是异步执行的，所以每次循环Block里面的dispatch_semaphore_signal根本还没有执行就会执行dispatch_semaphore_wait，从而semaphore-1.当循环10此后，semaphore等于0，则会阻塞线程，直到执行了Block的dispatch_semaphore_signal 才会继续执行
-        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER);
+        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER); // 这个时间参数。好像是
         
         dispatch_group_async(group, queue, ^{
             NSLog(@"%i",i);
@@ -140,6 +141,33 @@
     MyLog(@"网络请求有返回了！");
     
     
+}
+
+
+-(void)smaphoreTask2{
+    dispatch_semaphore_t signal = dispatch_semaphore_create(0); //传入值必须 >=0, 若传入为0则阻塞线程并等待timeout,时间到后会执行其后的语句
+    // 若信号创建时位0，延迟3s，则3s后会重新发送信号，使信号量+1；时间参数有用
+    dispatch_time_t overTime = dispatch_time(DISPATCH_TIME_NOW, 3.0f * NSEC_PER_SEC);  // DISPATCH_TIME_FOREVER
+    
+    //线程1
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"线程1 等待ing");
+        dispatch_semaphore_wait(signal, overTime); //signal 值 -1
+        NSLog(@"线程1");
+        dispatch_semaphore_signal(signal); //signal 值 +1
+        NSLog(@"线程1 发送信号");
+        NSLog(@"--------------------------------------------------------");
+    });
+    
+    //线程2
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSLog(@"线程2 等待ing");
+        dispatch_semaphore_wait(signal, overTime);
+        NSLog(@"线程2");
+        dispatch_semaphore_signal(signal);
+        NSLog(@"线程2 发送信号");
+    });
+
 }
 
 @end

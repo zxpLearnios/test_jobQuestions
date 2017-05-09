@@ -33,6 +33,9 @@
 #define kheight  [UIScreen mainScreen].bounds.size.height
 #define kcenter   CGPointMake(kwidth/2, kheight/2)
 #define kwindow  [UIApplication sharedApplication].keyWindow
+#define ksystemVersion [[UIDevice currentDevice].systemVersion doubleValue]
+#define kappication [UIApplication sharedApplication] 
+#define kappDelegate [UIApplication sharedApplication].delegate
 
 #ifdef DEBUG
 

@@ -39,6 +39,9 @@
 		54A430441EA7592C005BBCF6 /* TestKVOCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54A4303F1EA7592C005BBCF6 /* TestKVOCell.xib */; };
 		54A430451EA7592C005BBCF6 /* TestKVO1.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A430421EA7592C005BBCF6 /* TestKVO1.m */; };
 		54A4304A1EA759A6005BBCF6 /* TestKVO2.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A430491EA759A6005BBCF6 /* TestKVO2.m */; };
+		54BEDA671EC15D750036DF30 /* TestLocalNotificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BEDA661EC15D750036DF30 /* TestLocalNotificate.m */; };
+		54BEDA6A1EC15D820036DF30 /* TestRemoteNotificate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BEDA691EC15D820036DF30 /* TestRemoteNotificate.m */; };
+		54BEDA6C1EC1A6C90036DF30 /* general.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54BEDA6B1EC1A6C90036DF30 /* general.jpg */; };
 		54BF383E1E8E5678002A38DF /* BaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 54BF383D1E8E5678002A38DF /* BaseTest.m */; };
 		54C16E421E95E38E003F6BFA /* NSString+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C16E411E95E38E003F6BFA /* NSString+category.m */; };
 		54C551AB1EB9B94F00FFB583 /* TestSaveDataMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C551AA1EB9B94F00FFB583 /* TestSaveDataMethod.m */; };
@@ -49,6 +52,7 @@
 		54D925511EC020A00042D438 /* Test13.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D9254E1EC020A00042D438 /* Test13.m */; };
 		54D925521EC020A00042D438 /* Test14.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D925501EC020A00042D438 /* Test14.m */; };
 		54D925561EC020EB0042D438 /* TestMemoryDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D925551EC020EB0042D438 /* TestMemoryDiskCache.m */; };
+		54D9255A1EC06EB00042D438 /* TestLocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D925591EC06EB00042D438 /* TestLocks.m */; };
 		54DBA4141EAD9B3B00F2CE11 /* TestCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54DBA4131EAD9B3B00F2CE11 /* TestCopy.m */; };
 		54E152601E9F61CA0016771D /* BaseCoreDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 54E1525F1E9F61CA0016771D /* BaseCoreDataModel.m */; };
 		54EB681F1EA5F7EC00C13BB9 /* TestDynamicJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EB681E1EA5F7EC00C13BB9 /* TestDynamicJson.m */; };
@@ -140,6 +144,11 @@
 		54A430421EA7592C005BBCF6 /* TestKVO1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestKVO1.m; sourceTree = "<group>"; };
 		54A430481EA759A6005BBCF6 /* TestKVO2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestKVO2.h; sourceTree = "<group>"; };
 		54A430491EA759A6005BBCF6 /* TestKVO2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestKVO2.m; sourceTree = "<group>"; };
+		54BEDA651EC15D750036DF30 /* TestLocalNotificate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLocalNotificate.h; sourceTree = "<group>"; };
+		54BEDA661EC15D750036DF30 /* TestLocalNotificate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestLocalNotificate.m; sourceTree = "<group>"; };
+		54BEDA681EC15D820036DF30 /* TestRemoteNotificate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRemoteNotificate.h; sourceTree = "<group>"; };
+		54BEDA691EC15D820036DF30 /* TestRemoteNotificate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRemoteNotificate.m; sourceTree = "<group>"; };
+		54BEDA6B1EC1A6C90036DF30 /* general.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = general.jpg; sourceTree = "<group>"; };
 		54BF383C1E8E5677002A38DF /* BaseTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseTest.h; path = ../BaseTest.h; sourceTree = "<group>"; };
 		54BF383D1E8E5678002A38DF /* BaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseTest.m; path = ../BaseTest.m; sourceTree = "<group>"; };
 		54C16E401E95E38E003F6BFA /* NSString+category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+category.h"; sourceTree = "<group>"; };
@@ -160,6 +169,8 @@
 		54D925501EC020A00042D438 /* Test14.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test14.m; sourceTree = "<group>"; };
 		54D925541EC020EB0042D438 /* TestMemoryDiskCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMemoryDiskCache.h; sourceTree = "<group>"; };
 		54D925551EC020EB0042D438 /* TestMemoryDiskCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMemoryDiskCache.m; sourceTree = "<group>"; };
+		54D925581EC06EB00042D438 /* TestLocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestLocks.h; sourceTree = "<group>"; };
+		54D925591EC06EB00042D438 /* TestLocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestLocks.m; sourceTree = "<group>"; };
 		54DBA4121EAD9B3B00F2CE11 /* TestCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCopy.h; sourceTree = "<group>"; };
 		54DBA4131EAD9B3B00F2CE11 /* TestCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCopy.m; sourceTree = "<group>"; };
 		54E1525C1E9F615A0016771D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -243,6 +254,7 @@
 				54514FCE1E8BB3D80067E7AF /* ViewController.h */,
 				54514FCF1E8BB3D80067E7AF /* ViewController.m */,
 				54514FD11E8BB3D80067E7AF /* Main.storyboard */,
+				54BEDA6B1EC1A6C90036DF30 /* general.jpg */,
 				54514FD41E8BB3D80067E7AF /* Assets.xcassets */,
 				54514FD61E8BB3D80067E7AF /* LaunchScreen.storyboard */,
 				546F46841E96247200243CCE /* Const.h */,
@@ -311,6 +323,8 @@
 				54C16E401E95E38E003F6BFA /* NSString+category.h */,
 				54C16E411E95E38E003F6BFA /* NSString+category.m */,
 				542586011E9B6D2F0014D5E4 /* NSMutableArray+category.h */,
+				54BEDA641EC15D610036DF30 /* LocalAndRemoteNotificate */,
+				54D925571EC06EA40042D438 /* iOS里各种锁 */,
 				54D925531EC020D70042D438 /* MemoryCache&DiskCache */,
 				54D925451EC020660042D438 /* Runtime解决数组越界、字典key为nil */,
 				54C551B11EB9D97600FFB583 /* MVVM设计模式 */,
@@ -434,6 +448,17 @@
 			path = KVO;
 			sourceTree = "<group>";
 		};
+		54BEDA641EC15D610036DF30 /* LocalAndRemoteNotificate */ = {
+			isa = PBXGroup;
+			children = (
+				54BEDA651EC15D750036DF30 /* TestLocalNotificate.h */,
+				54BEDA661EC15D750036DF30 /* TestLocalNotificate.m */,
+				54BEDA681EC15D820036DF30 /* TestRemoteNotificate.h */,
+				54BEDA691EC15D820036DF30 /* TestRemoteNotificate.m */,
+			);
+			path = LocalAndRemoteNotificate;
+			sourceTree = "<group>";
+		};
 		54C551A81EB9B93A00FFB583 /* SaveDataMethods */ = {
 			isa = PBXGroup;
 			children = (
@@ -490,6 +515,15 @@
 				54D925551EC020EB0042D438 /* TestMemoryDiskCache.m */,
 			);
 			path = "MemoryCache&DiskCache";
+			sourceTree = "<group>";
+		};
+		54D925571EC06EA40042D438 /* iOS里各种锁 */ = {
+			isa = PBXGroup;
+			children = (
+				54D925581EC06EB00042D438 /* TestLocks.h */,
+				54D925591EC06EB00042D438 /* TestLocks.m */,
+			);
+			path = "iOS里各种锁";
 			sourceTree = "<group>";
 		};
 		54DBA4111EAD9B2900F2CE11 /* Copy&MutableCopy */ = {
@@ -620,6 +654,11 @@
 					54514FC41E8BB3D80067E7AF = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = QQLB9MPJWR;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+						};
 					};
 					54514FDD1E8BB3D90067E7AF = {
 						CreatedOnToolsVersion = 7.3;
@@ -658,6 +697,7 @@
 			files = (
 				5431C8051EA49B9200205963 /* TestCoreData.xib in Resources */,
 				54514FD81E8BB3D80067E7AF /* LaunchScreen.storyboard in Resources */,
+				54BEDA6C1EC1A6C90036DF30 /* general.jpg in Resources */,
 				54514FD51E8BB3D80067E7AF /* Assets.xcassets in Resources */,
 				54514FD31E8BB3D80067E7AF /* Main.storyboard in Resources */,
 				54A430441EA7592C005BBCF6 /* TestKVOCell.xib in Resources */,
@@ -741,8 +781,10 @@
 				54C551AB1EB9B94F00FFB583 /* TestSaveDataMethod.m in Sources */,
 				54514FD01E8BB3D80067E7AF /* ViewController.m in Sources */,
 				54514FCD1E8BB3D80067E7AF /* AppDelegate.m in Sources */,
+				54D9255A1EC06EB00042D438 /* TestLocks.m in Sources */,
 				54D925511EC020A00042D438 /* Test13.m in Sources */,
 				54C551B41EB9D98000FFB583 /* TestMVVM.m in Sources */,
+				54BEDA6A1EC15D820036DF30 /* TestRemoteNotificate.m in Sources */,
 				5495B2EF1E94F153000CEF45 /* TestFour.m in Sources */,
 				5495B2ED1E94F153000CEF45 /* TestTen.m in Sources */,
 				5495B2F51E94F153000CEF45 /* TestThree.m in Sources */,
@@ -765,6 +807,7 @@
 				54EFCE691EAA0D9B00DB218D /* TestCellCacheCell.m in Sources */,
 				548E63411EA99F2200158B7F /* TestBlockReference.m in Sources */,
 				54EFCE611EAA0AFC00DB218D /* LearnSDWebImage.m in Sources */,
+				54BEDA671EC15D750036DF30 /* TestLocalNotificate.m in Sources */,
 				54A430431EA7592C005BBCF6 /* TestKVOCell.m in Sources */,
 				54BF383E1E8E5678002A38DF /* BaseTest.m in Sources */,
 				54D9254A1EC020660042D438 /* NSArray+extension.m in Sources */,

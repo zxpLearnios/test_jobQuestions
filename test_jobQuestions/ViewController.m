@@ -32,6 +32,7 @@
 #import "TestCopy.h"
 #import "LearnSDWebImage.h"
 #import "TestMemoryDiskCache.h"
+#import "TestLocalNotificate.h"
 
 @interface ViewController ()
 @end
@@ -47,9 +48,8 @@
     // 测试runtime解决数组越界等问题
     NSMutableArray *mAry = [NSMutableArray array];
     [mAry addObject:@(1)];
-    
 //    NSString *str = [mAry objectAtIndex:12];
-    
+        
     
 }
 
@@ -119,13 +119,15 @@
         
     }else if (sender.tag == 11) { // 14
         
-//        BaseTest *dj = [[BaseTest alloc] init];
-//        dj = [[LearnSDWebImage alloc] init]; // Test13 Test14  TestDynamicJson  TestMyExtension  TestBlockReference  TestCopy  LearnSDWebImage
-//        [dj doTest];
+        // 1.
+        BaseTest *dj = [[BaseTest alloc] init];
+        dj = [[TestLocalNotificate alloc] init]; // Test13 Test14  TestDynamicJson  TestMyExtension  TestBlockReference  TestCopy  LearnSDWebImage   TestLocalNotificate
+        [dj doTest];
         
-        UIViewController *td = [[UIViewController alloc] init];
-        td = [[TestMemoryDiskCache alloc] init]; // TestKVO TestKVO1 TestKVO2  TestCellCacheMethod  TestMemoryDiskCache
-        [self.navigationController pushViewController:td animated:YES];
+        // 2.
+//        UIViewController *td = [[UIViewController alloc] init];
+//        td = [[TestMemoryDiskCache alloc] init]; // TestKVO TestKVO1 TestKVO2  TestCellCacheMethod  TestMemoryDiskCache
+//        [self.navigationController pushViewController:td animated:YES];
         
     }
     
