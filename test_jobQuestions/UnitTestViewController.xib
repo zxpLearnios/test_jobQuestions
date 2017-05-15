@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="UnitTestViewController">
+            <connections>
+                <outlet property="resultLab" destination="y7b-Em-Rtu" id="Fui-L9-mAG"/>
+                <outlet property="textField" destination="CVY-V4-adr" id="509-Dr-Zy0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="密码：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M60-6t-mza">
+                    <rect key="frame" x="44" y="59" width="52" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CVY-V4-adr">
+                    <rect key="frame" x="121" y="55" width="97" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="97" id="F1q-Pp-xHO"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="X3x-hb-5SQ"/>
+                    </connections>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="agG-eA-avU">
+                    <rect key="frame" x="154" y="179" width="31" height="30"/>
+                    <state key="normal" title="登录"/>
+                    <connections>
+                        <action selector="btnAction:" destination="-1" eventType="touchUpInside" id="o1a-1G-B7e"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---------" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y7b-Em-Rtu">
+                    <rect key="frame" x="137" y="252" width="69" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="CVY-V4-adr" firstAttribute="leading" secondItem="M60-6t-mza" secondAttribute="trailing" constant="25" id="Tdn-IL-0AD"/>
+                <constraint firstItem="CVY-V4-adr" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="55" id="eYb-Yo-ub2"/>
+                <constraint firstItem="CVY-V4-adr" firstAttribute="centerX" secondItem="agG-eA-avU" secondAttribute="centerX" id="fAk-QQ-o0G"/>
+                <constraint firstItem="y7b-Em-Rtu" firstAttribute="top" secondItem="agG-eA-avU" secondAttribute="bottom" constant="43" id="hhC-7A-jBL"/>
+                <constraint firstItem="M60-6t-mza" firstAttribute="centerY" secondItem="CVY-V4-adr" secondAttribute="centerY" id="ibh-q4-tAF"/>
+                <constraint firstItem="y7b-Em-Rtu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="137" id="rAx-4m-E1Z"/>
+                <constraint firstItem="M60-6t-mza" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="44" id="txq-N0-dBc"/>
+                <constraint firstItem="agG-eA-avU" firstAttribute="top" secondItem="CVY-V4-adr" secondAttribute="bottom" constant="94" id="ub4-1m-wOa"/>
+            </constraints>
+            <point key="canvasLocation" x="138.5" y="54.5"/>
+        </view>
+    </objects>
+</document>

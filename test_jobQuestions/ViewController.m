@@ -33,8 +33,13 @@
 #import "LearnSDWebImage.h"
 #import "TestMemoryDiskCache.h"
 #import "TestLocalNotificate.h"
+#import "UnitTestViewController.h"
+#import "MyPageViewController.h"
+#import "TestSendInfoVCOne.h"
+
 
 @interface ViewController ()
+
 @end
 
 @implementation ViewController
@@ -67,6 +72,13 @@
     TestTwo *tt = [[TestTwo alloc] init];
     tt.view.backgroundColor = [UIColor blueColor];
     [self.navigationController pushViewController:tt animated:YES];
+    
+}
+
+#pragma mark - 单元测试
+- (IBAction)gotoUnitTestVC:(id)sender {
+    UnitTestViewController *vc = [[UnitTestViewController alloc] init];
+    [self presentViewController:vc animated:YES completion:nil];
     
 }
 
@@ -120,14 +132,14 @@
     }else if (sender.tag == 11) { // 14
         
         // 1.
-        BaseTest *dj = [[BaseTest alloc] init];
-        dj = [[TestLocalNotificate alloc] init]; // Test13 Test14  TestDynamicJson  TestMyExtension  TestBlockReference  TestCopy  LearnSDWebImage   TestLocalNotificate
-        [dj doTest];
+//        BaseTest *dj = [[BaseTest alloc] init];
+//        dj = [[TestLocalNotificate alloc] init]; // Test13 Test14  TestDynamicJson  TestMyExtension  TestBlockReference  TestCopy  LearnSDWebImage   TestLocalNotificate
+//        [dj doTest];
         
         // 2.
-//        UIViewController *td = [[UIViewController alloc] init];
-//        td = [[TestMemoryDiskCache alloc] init]; // TestKVO TestKVO1 TestKVO2  TestCellCacheMethod  TestMemoryDiskCache
-//        [self.navigationController pushViewController:td animated:YES];
+        UIViewController *td = [[UIViewController alloc] init];
+        td = [[TestSendInfoVCOne alloc] init]; // TestKVO TestKVO1 TestKVO2  TestCellCacheMethod  TestMemoryDiskCache   MyPageViewController  TestSendInfoVCOne
+        [self.navigationController pushViewController:td animated:YES];
         
     }
     

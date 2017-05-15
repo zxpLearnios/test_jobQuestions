@@ -4,10 +4,11 @@
 //
 //  Created by Jingnan Zhang on 2017/3/29.
 //  Copyright © 2017年 Jingnan Zhang. All rights reserved.
-//
+//  远程推送时，须先申请 证书
 
 #import "AppDelegate.h"
 #import "TestSaveDataMethod.h"
+#import <UserNotifications/UserNotifications.h>
 
 @interface AppDelegate () <UIAlertViewDelegate>
 @property (nonatomic, strong) UIUserNotificationSettings *localNotiSet;
@@ -17,32 +18,70 @@
 
 @implementation AppDelegate
 
+#pragma mark - 获取Token的方法在10中被保留，不做修改。
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    MyLog(@"获取到deviceToken：%@", deviceToken);
+    
+}
+
+// 获得Device Token失败
+- (void)application:(UIApplication *)application
+didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    
+    MyLog(@"获取到deviceToken失败");
+}
+
 #pragma mark - 收到通知后，若程序被杀死，则点击通知进入程序会触发此法
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    
+    
     // 0. 收到通知
-    UILocalNotification *localNoti = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey];
+//    UILocalNotification *localNoti = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey];
+//    
+//    NSString *show = @"程序被杀死，收到通知后点击通知进入程序，会调用didFinishLaunchingWithOptions";
+//    if (!self.alert) {
+//        self.alert = [[UIAlertView alloc] initWithTitle:nil message:show delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
+//    }
+//    
+//    
+//    if (localNoti) {
+//        [self.alert show];
+//        MyLog(@"%@", show);
+//        
+//        // 取消本地通知
+//        [application cancelAllLocalNotifications];
+//    }
+//    
+//    // 1. 注册本地通知  >= ios8 & < ios10
+//    if (!self.localNotiSet) {
+//        self.localNotiSet = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert categories:nil];
+//    }
+//    
+//    [application registerUserNotificationSettings:self.localNotiSet];
     
-    NSString *show = @"程序被杀死，收到通知后点击通知进入程序，会调用didFinishLaunchingWithOptions";
-    if (!self.alert) {
-        self.alert = [[UIAlertView alloc] initWithTitle:nil message:show delegate:self cancelButtonTitle:@"取消" otherButtonTitles:@"确定", nil];
-    }
+    // 2. 注册远程通知
+//    if (ksystemVersion >= 10) { // 注册远程通知 >=ios10
+//        UNUserNotificationCenter *center = [UNUserNotificationCenter currentNotificationCenter];
+//        [center requestAuthorizationWithOptions:UNAuthorizationOptionSound | UNAuthorizationOptionBadge | UNAuthorizationOptionAlert completionHandler:^(BOOL granted, NSError * _Nullable error) {
+//            
+//            if (granted) {
+//                MyLog(@"ios10远程推送授权成功！")
+//            }else{
+//                MyLog(@"ios10远程推送授权失败！")
+//            }
+//        }];
+//        
+//        
+//    }else{ // 注册远程通知 >=ios8。比注册本地通知时多了一行
+//        
+//        UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeSound | UIUserNotificationTypeBadge | UIUserNotificationTypeAlert categories:nil];
+//        
+//        [kappication registerUserNotificationSettings:settings];
+//        [kappication registerForRemoteNotifications];
+//    }
     
     
-    if (localNoti) {
-        [self.alert show];
-        MyLog(@"%@", show);
-        
-        // 取消本地通知
-        [application cancelAllLocalNotifications];
-    }
-    
-    // 1. 注册本地通知  >= ios8 & < ios10
-    if (!self.localNotiSet) {
-        self.localNotiSet = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeBadge | UIUserNotificationTypeSound | UIUserNotificationTypeAlert categories:nil];
-    }
-    
-    [application registerUserNotificationSettings:self.localNotiSet];
     
     return YES;
 }

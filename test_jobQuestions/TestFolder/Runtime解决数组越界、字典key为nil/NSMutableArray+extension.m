@@ -26,7 +26,8 @@
             
             return nil;
         }
-        @finally {}
+        @finally {
+        }
     } // 如果没有问题，则正常进行方法调用
     else {
         return [self ex_objectAtIndex:index];

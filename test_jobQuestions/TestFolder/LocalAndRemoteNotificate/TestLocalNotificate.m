@@ -103,12 +103,11 @@
             }];
             
         }
-
         
     }else{
-        if ([[UIDevice currentDevice].systemVersion doubleValue] >= 8) {
+        if (ksystemVersion >= 8) {
             // 执行本地通知
-            [[UIApplication sharedApplication] scheduleLocalNotification:_localNoti];
+            [kappication scheduleLocalNotification:_localNoti];
         }
     }
     
@@ -133,6 +132,12 @@
 //    }
 //    
 //    completionHandler(UIBackgroundFetchResultNewData);
+    
+    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        NSLog(@"iOS10 前台收到远程通知");
+    }else{
+        NSLog(@"iOS10 前台收到本地通知");
+    }
     
     UNNotification *noti = response.notification;
     NSInteger badge = [noti.request.content.badge integerValue];

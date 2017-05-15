@@ -40,7 +40,8 @@
             
             return nil;
         }
-        @finally {}
+        @finally {
+        }
     }else { // 如果没有问题，则正常进行方法调用
         return [self ex_objectAtIndex:index];
     }

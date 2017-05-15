@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface ViewController : UIViewController
-
+/**用于单元测试的*/
+@property (nonatomic, assign) BOOL isForUnitTest;
 
 @end
 
