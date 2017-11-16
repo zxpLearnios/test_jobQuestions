@@ -4,7 +4,7 @@
 //
 //  Created by Jingnan Zhang on 2027/4/29.
 //  Copyright © 2027年 Jingnan Zhang. All rights reserved.
-//
+
 
 #import "TestKVO2.h"
 #import "TestKVOCell.h"
@@ -40,6 +40,9 @@
     [self.viewModel.models addObject:model1];
     [self.viewModel.models addObject:model2];
     
+    
+    NSLog(@"旧的数组 %@," , self.viewModel.models);
+    
 }
 
 -(void)itemClick:(UIBarButtonItem *)item{
@@ -58,6 +61,7 @@
 //        [models replaceObjectAtIndex:0 withObject:model];
     }
     
+    NSLog(@"新的数组 %@," , models);
 }
 
 

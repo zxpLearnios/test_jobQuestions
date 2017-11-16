@@ -29,7 +29,8 @@
 //    base = 0;
 //    NSLog(@"%ld\n", sum(1, 2));   // 这里输出是103，而不是3, 因为块内base为拷贝的常量 100
     
-
+    
+    
     TestBlockObject *bo = [[TestBlockObject alloc] init];
     bo.name = @"srgrgg"; // 访问对象的属性（包括block类型的属性），都不会造成引用计数+1
     

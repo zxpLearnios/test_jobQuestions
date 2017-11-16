@@ -40,9 +40,9 @@
 //    NSNumber *heightNumber = [kvcModel valueForKey:@"height"]; // 0
 //    NSString *name = [kvcModel valueForKey:@"name"]; // nil
 //    
-//    [kvcModel setValue:@(173) forKey:@"height"];
-//    NSNumber *heightNumber1 = [kvcModel valueForKey:@"height"]; // 173
-//    
+    [kvcModel setValue:@(173) forKey:@"height"];
+    NSNumber *heightNumber1 = [kvcModel valueForKey:@"height"]; // 173
+//
 //    [kvcModel setValue:@"周三" forKey:@"name"];
 //    NSString *name1 = [kvcModel valueForKey:@"name"];
     

@@ -30,6 +30,8 @@
     // 1.  验证setValue:forKey:确实会调用-set<Key>方法
 //    [tm setValue:@"问问" forKey:@"name"];
     [tm setValue:@"问问" forKeyPath:@"name"];
+    NSString *name = [tm valueForKey:@"name"];
+    
     // 2. 验证: 如果它的参数类型不是一个对象指针类型,但是却设置其值为nil, 就会执行setNilValueForKey:方法。setNilValueForKey: 方法的默认实现, 是产生一个NSInvalidArgumentException的异常，直接crash
 
     
@@ -68,21 +70,28 @@
 
 @implementation TestModel
 
+// 测试setValueForkey\keyPath确实会调setkey 方法。
 -(void)setName:(NSString *)name{
     _name = name;
     NSLog(@"-----------setName");
 }
 
+// 测试ValueForkey\keyPath确实会调相应的get方法。
 -(NSString *)name{
+    NSLog(@"-----------getName");
     return _name;
 }
 
+
+// 测试setValueForkey\keyPath确实会调setkey 方法。
 -(void)setHeight:(double)height{
     _height = height;
     NSLog(@"-----------setHeight");
 }
 
+// 测试ValueForkey\keyPath确实会调相应的get方法。
 -(double)height{
+    NSLog(@"-----------getHeight");
     return _height;
 }
 

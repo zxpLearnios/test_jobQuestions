@@ -39,7 +39,7 @@
 //    [self selfRetainCount];
 }
 
-/**测试修改不可变的字典、数组*/
+/**测试修改不可变的字典、数组. 会crash*/
 -(void)updateNoMutableObject{
     NSDictionary *dic = @{@"name": @"name"};
     [dic setValue:@"newName" forKey:@"name"];
@@ -81,3 +81,5 @@
 
 
 @end
+
+

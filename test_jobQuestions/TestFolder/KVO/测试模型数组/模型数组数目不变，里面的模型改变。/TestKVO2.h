@@ -20,7 +20,7 @@
 @interface TestViewModel2 : NSObject
 
 /**模型数组*/
-@property (nonatomic, strong) NSMutableArray<TestKVOModel2 *> *models; //
+@property (nonatomic, strong) NSMutableArray<TestKVOModel2 *> *models; 
 +(instancetype)initWithViewController:(TestKVO2 *)vc;
 
 @end

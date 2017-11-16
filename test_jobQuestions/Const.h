@@ -9,7 +9,13 @@
 #import <Foundation/Foundation.h>
 
 @interface Const : NSObject
+/**
+ *  documentPath
+ */
++(NSString *)documentPath;
 
++ (double)availableMemory;
++ (double)usedMemory;
 @end
 
 
@@ -42,7 +48,7 @@
  
  5. AFN和SDWebimage 在图片缓存上的区别：
     SDWebImage 中的图片缓存 在memory上使用的是 NSCache,在disk 是则用到的是  NSFileManager。AFNetWorking 的图片缓存，在在memory上使用的是 NSCache，没有磁盘缓存。
- 
+ sdwebimage： 把图片url用MD5 加密成文件名
  
  6. CoreData:
  Undefined: 默认值，参与编译会报错
@@ -120,7 +126,8 @@
     2、组织（Organizations）  
         组织类又分为2个小类：
         （1）公司（Company）（2）企业（Enterprise）3、教育机构（Educational Institutions）
-    我们经常最关注的是个人、公司、企业这3类，公司和企业都属于“组织”大类，下面对这3个做下简单对比：1、个人（Individual）：
+    我们经常最关注的是个人、公司、企业这3类，公司和企业都属于“组织”大类，下面对这3个做下简单对比：
+        1、个人（Individual）：
         （1）费用：99美元一年
         （2）App Store上架：是
         （3）最大uuid支持数：100
@@ -133,7 +140,11 @@
         （1）费用：299美元一年
         （2）App Store上架：否         即该账号开发应用不能发布到App Store，只能企业内部应用。
         （3）最大uuid支持数：不限制
-        （4）协作人数：多人费用：299美元一年说明：需要注意的是，企业账号开发的应用不能上线App Store，适合那些不希望公开发布应用的企业。同样，申请时也需要公司的邓白氏编码（DUNS Number）。
+        （4）协作人数：多人。费用：299美元一年说明：需要注意的是，企业账号开发的应用不能上线App Store，适合那些不希望公开发布应用的企业。同样，申请时也需要公司的邓白氏编码（DUNS Number）。
+ 
+ 
+  13.1  开发者账号共享： 
+ 
  
  // 14.
      我们团队之前用的是Umeng，现在已经逐步切换到Bugly。
@@ -155,6 +166,13 @@
  16. runtime ：  关于数组越界目前大概有两种方式，一种是通过分类添加安全的索引方法，第二种就是Runtime实现，第一种如果是个人开发比较建议，如果是团队开发很难得到保证和推动，关于Runtime处理数组越界网上有人说是在iOS7及以上有软键盘输入的地方按Home键退出，会出现崩溃，测试过两台手机iOS8.1和iOS9.3暂时没有出现问题，如果之后出现问题会更新文章。
     
  Runtime解决数据越界及字典key或value为nil的情况，主要通过Runtime的方法交换实现
+ 
+ 
+ 17. 因为try catch无法捕获UncaughtException，而oc中大部分crash如：内存溢出、野指针等都是无法捕获的，而能捕获的只是像数组越界之类（这真心需要catch么？），所以try catch对于oc来说，比较鸡肋。
+ 
+ 18.  苹果禁止热更新，可能设计到的第三方框架\SDK有： JSPatch、weex、个推（第三方推送）、友盟、RN(react native)等。RN好像可以使用
+ 
+ 
  
  
  

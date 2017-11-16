@@ -59,7 +59,7 @@
     CGContextAddLineToPoint(ctx, 100, 50);
     
     // 这两句，哪个在前面，就只执行；后面的那个不会被执行
-    CGContextStrokePath(ctx);
+//    CGContextStrokePath(ctx);
     
 //    CGContextSetFillColorWithColor(ctx,  [UIColor purpleColor].CGColor);
 //    CGContextFillPath(ctx);

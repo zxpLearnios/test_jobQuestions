@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Jingnan Zhang. All rights reserved.
 //  运行时  参考http://www.jianshu.com/p/59992507f875
 // http header请求头  NSBlockOperation
-
+// 网络请求  NSURLConnection  NSURLSession
 /*
  
  1. 当operation有多个任务的时候会自动分配多个线程并发执行, 如果只有一个任务，会自动在主线程同步执行     2. iOS开发之网络错误分层处理，参考http://blog.csdn.net/moxi_wang/article/details/52638752   3. 使用URLSession的对象，调用其对象方法使用URLRequest来进行请求、上传、下载

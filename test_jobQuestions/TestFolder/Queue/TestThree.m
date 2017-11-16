@@ -6,7 +6,7 @@
 //  Copyright © 2017年 Jingnan Zhang. All rights reserved.
 //  多线程
 
-
+// NSOperationqueue加dispatch_semaphore_t 就可以实现（不同优先级队列的执行，以及各个队列进行网络请求时返回结果的先后顺序不一定与队列的优先级顺序一样，故须用二者结合来实现）
 /*  1.  dispatch_group_notify(group, queue, ^{ }) 解释：将任务加入到了队列queue中执行，然后队列和group关联当队列queue上任务执行完毕时group会进行同步;        当队列dispatch_queue_t queue上的所有任务执行完毕时会执行dispatch_group_notify里的dispatch_block_t block的代码。若queue里执行的是同步操作，则会在queue里的操作完成后来执行dispatch_group_notify里的block； 若queue里执行的为异步操作，则有时 会在queue里的异步操作完成前就调用dispatch_group_notify，并执行dispatch_group_notify里的block。 dispatch_group_notify(group, queue, ^{ }) 里的block的执行，与它的放置顺序【在【dispatch_group_enter  dispatch_group_leave】块外前、块中、块外后】无关，但为了规范最好还是别放在中间 --->具体请参看第二组情况:
 
 // 2. dispatch_group_enter(group) dispatch_group_leave(group).  和内存管理的引用计数类似，我们可以认为group也持有一个整形变量(只是假设)，当调用enter时计数加1，调用leave时计数减1，当计数为0时会调用dispatch_group_notify并且dispatch_group_wait会停止等待；
@@ -23,6 +23,8 @@
 //  7. 在GCD中你可以使用dispatch_set_target_queue()函数为你自己创建的队列指定优先级，
 //    dispatch_set_target_queue(<#dispatch_object_t  _Nonnull object#>, <#dispatch_queue_t  _Nullable queue#>), 不过还不如用NSOperationQueue呢
 // 8. NSOperation是一个抽象的类，不具备封装操作的能力，必须使用其子类。 NSOperation默认是同步执行的。
+ 
+// NSOperationqueue加dispatch_semaphore_t 就可以实现（不同优先级队列的执行，以及各个队列进行网络请求时返回结果的先后顺序不一定与队列的优先级顺序一样，故须用二者结合来实现）
 // 9. 多线程编程技术的优缺点比较
 
 NSThread (抽象层次：低)
@@ -113,12 +115,16 @@ typedef enum : NSUInteger {
 -(void)testOperateGroup{
     // 全局队列是并行队列，故它的同步、异步操作和并行队列一样，同步操作时不会造成死锁
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0);
+    
     dispatch_queue_t queue1 = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0); // 而flag作为保留字段备用（一般为0）
     
     dispatch_group_t group = dispatch_group_create();
+    
+//    NSLog(@"queue= %@，queue1=%@", queue, queue1);
+    
     // 1.
     dispatch_group_async(group, queue1, ^{ // 会 自动关联队列与任务组
-        [NSThread sleepForTimeInterval:4];
+        [NSThread sleepForTimeInterval:1];
         NSLog(@"----%@---0", [NSThread currentThread]);
     });
     
@@ -145,11 +151,14 @@ typedef enum : NSUInteger {
     dispatch_group_wait(group, DISPATCH_TIME_FOREVER); // DISPATCH_TIME_FOREVER， 时间必须得超大才可以达到阻塞的目的
     NSLog(@"在dispatch_group_wait之后的");
     
-    // 将queue换成dispatch_get_main_queue 即可得知，dispatch_group_notify的作用是：当与group相关联的所有队列（不一定含有当前这个queue）里的操作都执行完毕，才会调用此函数，此函数在将block里的操作放在参数queue里执行，故会造成此参数不同（主队列、子队列）时打印内容不同
-    dispatch_group_notify(group, queue, ^{ //
+    // 将queue换成dispatch_get_main_queue 即可得知，dispatch_group_notify的作用是：当与group相关联的所有队列（不一定含有当前这个queue）里的操作都执行完毕，才会调用此函数，故会造成此参数不同（主队列、子队列）时打印内容不同.然后，在一个新的queue（不一定是这个传入的queue）里执行block.
+//     当传入的queue ！= dispatch_get_main_queue时，结果不太符合期望
+    dispatch_group_notify(group, dispatch_get_main_queue(), ^{ //
             NSLog(@"group里的一句执行完毕！, %@",  [NSThread currentThread]);
     });
     NSLog(@"hahahahahahaha");
+    NSLog(@"99999");
+    NSLog(@"22222222");
     
 }
 
@@ -164,7 +173,7 @@ typedef enum : NSUInteger {
     NSString *dataStr = [data description];
     const char *queueName = [dataStr UTF8String];
     
-    
+
     // 并行队列
     dispatch_queue_t queue =  dispatch_queue_create(queueName, DISPATCH_QUEUE_CONCURRENT);
     // 创建一个group
@@ -199,11 +208,11 @@ typedef enum : NSUInteger {
    
     // dispatch_group_notify放在块外前、块中、块外后 结果都一样
 //    dispatch_group_enter(group);
-//    
+//
 //    dispatch_group_notify(group, queue, ^{ // 这句代码的放置顺序 不会影响到最终的结果
 //        MyLog(@"---------2");
 //    });
-//    
+//
 //     //同步
 //    dispatch_sync(queue, ^{
 //        MyLog(@"----------4"); // -----4
@@ -213,13 +222,13 @@ typedef enum : NSUInteger {
 //    dispatch_async(queue, ^{
 //        MyLog(@"---------3");
 //    });
-//    
+//
 //    dispatch_group_async(group, queue, ^{ // block里若执行的是异步请求，有时可能达不到预期效果，即可能不等group里所有的任务都执行完毕就会调用dispatch_group_notify了，
 //        [NSThread sleepForTimeInterval:1];
 //        MyLog(@"----------33");
 //
 //    });
-////
+//
 //    dispatch_group_leave(group);
     
    

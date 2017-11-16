@@ -37,9 +37,15 @@
 #import "MyPageViewController.h"
 #import "TestSendInfoVCOne.h"
 
+#import "TestAlgorithm.h" // 算法
+#import "TestSaveData.h" // 数据存储方式
+#import "TestNewKl.h" // 其他知识
+#import "TestAutoReleaspool.h" // 释放池
 
 @interface ViewController ()
-
+{
+     __weak UIViewController *wself;
+}
 @end
 
 @implementation ViewController
@@ -54,7 +60,10 @@
     NSMutableArray *mAry = [NSMutableArray array];
     [mAry addObject:@(1)];
 //    NSString *str = [mAry objectAtIndex:12];
-        
+    
+    // 出了这个函数后，wself就会立即被释放 变为nil
+    UIViewController *vc= [[UIViewController alloc] init];
+    wself = vc;
     
 }
 
@@ -132,14 +141,14 @@
     }else if (sender.tag == 11) { // 14
         
         // 1.
-//        BaseTest *dj = [[BaseTest alloc] init];
-//        dj = [[TestLocalNotificate alloc] init]; // Test13 Test14  TestDynamicJson  TestMyExtension  TestBlockReference  TestCopy  LearnSDWebImage   TestLocalNotificate
-//        [dj doTest];
+        BaseTest *dj = [[BaseTest alloc] init];
+        dj = [[TestMyExtension alloc] init]; // Test13 Test14  TestDynamicJson  TestMyExtension  TestBlockReference  TestCopy  LearnSDWebImage   TestLocalNotificate  TestAlgorithm  TestSaveData  TestNewKl  TestAutoReleaspool
+        [dj doTest];
         
         // 2.
-        UIViewController *td = [[UIViewController alloc] init];
-        td = [[TestSendInfoVCOne alloc] init]; // TestKVO TestKVO1 TestKVO2  TestCellCacheMethod  TestMemoryDiskCache   MyPageViewController  TestSendInfoVCOne
-        [self.navigationController pushViewController:td animated:YES];
+//        UIViewController *td = [[UIViewController alloc] init];
+//        td = [[TestSendInfoVCOne alloc] init]; // TestKVO TestKVO1 TestKVO2  TestCellCacheMethod  TestMemoryDiskCache   MyPageViewController  TestSendInfoVCOne
+//        [self.navigationController pushViewController:td animated:YES];
         
     }
     

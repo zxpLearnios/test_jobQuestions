@@ -21,7 +21,9 @@
  
  1、应用程序调用UIImageView (WebCache)类别的各种sd_setImageWithURL版本方法，最终都会调用到自己的方法- (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(UIImage *)placeholder options:(SDWebImageOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageCompletionBlock)completedBlock
  
- 2、1中的调用接着路由到SDWebImageManager类实例方法- (id)downloadImageWithURL:(NSURL *)url options:(SDWebImageOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageCompletionWithFinishedBlock)completedBlock; 本方法首先会根据传入的url查看内存或者本地磁盘（先查内存再查本地）有没有相对应的图片，如果有并且SDWebImageOptions参数不为SDWebImageRefreshCached，则直接把UIImage返回给上层调用；否则直接进行下面3中的操作
+ 2、1中的调用接着路由到SDWebImageManager类实例方法- (id)downloadImageWithURL:(NSURL *)url options:(SDWebImageOptions)options progress:(SDWebImageDownloader=ProgressBlock)progressBlock completed:(SDWebImageCompletionWithFinishedBlock)completedBlock; 
+ 
+ 本方法首先会根据传入的url查看内存或者本地磁盘（先查内存再查本地）有没有相对应的图片，如果有并且SDWebImageOptions参数不为SDWebImageRefreshCached，则直接把UIImage返回给上层调用；否则直接进行下面3中的操作
  
  3、SDWebImageDownloader实例方法- (id)downloadImageWithURL:(NSURL *)url options:(SDWebImageDownloaderOptions)options progress:(SDWebImageDownloaderProgressBlock)progressBlock completed:(SDWebImageDownloaderCompletedBlock)completedBlock 调用SDWebImageDownloaderOperation类的initWithRequest方法生成对象operation，并加入到downloadQueue操作队列中
  

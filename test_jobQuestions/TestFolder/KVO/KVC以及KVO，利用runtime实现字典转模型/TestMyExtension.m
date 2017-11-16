@@ -34,7 +34,11 @@
     NSString *jsonStr = @"{\"name\": \"huweiruheriughiuhgeriu\", \"phone\": \"13244564656\", \"height\": nil }";
     // 测试字典转模型
 //    TestMyExtensionModel *tm = [TestMyExtensionModel my_objectWithJsonDictionary:jsonStr];
+
+    TestMyExtensionModel *tm = [[TestMyExtensionModel alloc] init];
+    tm.name = @"sdfdsf";
     
+    NSData *dt = [NSData alloc] initWithCoder:[NSCoder alloc] in];
     
 }
 

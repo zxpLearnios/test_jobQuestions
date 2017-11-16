@@ -18,34 +18,34 @@
 
 // Swizzling核心代码
 // 需要注意的是，在下面的load方法中，不应该调用父类的load方法。
-+ (void)load {
-    Method fromMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(objectAtIndex:));
-    Method toMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(ex_objectAtIndex:));
-    method_exchangeImplementations(fromMethod, toMethod);
-}
-
-// 为了避免和系统的方法冲突，我一般都会在swizzling方法前面加前缀
-- (id)ex_objectAtIndex:(NSUInteger)index {
-    
-    if (self.count-1 < index) { // 判断下标是否越界，如果越界就进入异常拦截
-        @try {
-            return [self ex_objectAtIndex:index];
-        }
-        
-        @catch (NSException *exception) {
-            // 在崩溃后会打印崩溃信息。
-            NSLog(@"---------- %s Crash Because Method %s  ----------\n", class_getName(self.class), __func__);
-            NSLog(@"%@", [exception callStackSymbols]);
-            
-            
-            return nil;
-        }
-        @finally {
-        }
-    }else { // 如果没有问题，则正常进行方法调用
-        return [self ex_objectAtIndex:index];
-    }
-}
+//+ (void)load {
+//    Method fromMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(objectAtIndex:));
+//    Method toMethod = class_getInstanceMethod(objc_getClass("__NSArrayI"), @selector(ex_objectAtIndex:));
+//    method_exchangeImplementations(fromMethod, toMethod);
+//}
+//
+//// 为了避免和系统的方法冲突，我一般都会在swizzling方法前面加前缀
+//- (id)ex_objectAtIndex:(NSUInteger)index {
+//    
+//    if (self.count-1 < index) { // 判断下标是否越界，如果越界就进入异常拦截
+//        @try {
+//            return [self ex_objectAtIndex:index];
+//        }
+//        
+//        @catch (NSException *exception) {
+//            // 在崩溃后会打印崩溃信息。
+//            NSLog(@"---------- %s Crash Because Method %s  ----------\n", class_getName(self.class), __func__);
+//            NSLog(@"%@", [exception callStackSymbols]);
+//            
+//            
+//            return nil;
+//        }
+//        @finally {
+//        }
+//    }else { // 如果没有问题，则正常进行方法调用
+//        return [self ex_objectAtIndex:index];
+//    }
+//}
 
 @end
 

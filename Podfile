@@ -9,5 +9,5 @@ target 'test_jobQuestions' do
     pod ‘SDWebImage’
     pod ’AFNetworking’
     pod ’PINCache’ #国外的
-    pod ’YYCache’ #国内一个90后大牛写的
+    # pod ’YYCache’ #国内一个90后大牛写的
 end

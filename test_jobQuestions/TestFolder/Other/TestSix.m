@@ -7,6 +7,9 @@
 //  信号量---------> 实现GCD线程同步
 
 /***
+ 
+// 0.  NSOperationqueue加dispatch_semaphore_t 就可以实现（不同优先级队列的执行，以及各个队列进行网络请求时返回结果的先后顺序不一定与队列的优先级顺序一样，故须用二者结合来实现）
+ 
  1. 解释信号量：  信号量就是一个资源计数器，对信号量有两个操作来达到互斥，分别是P和V操作。 一般情况是这样进行临界访问或互斥访问的： 设信号量值为1， 当一个进程1运行是，使用资源，进行P操作，即对信号量值减1，也就是资源数少了1个。这是信号量值为0。系统中规定当信号量值为0时，必须等待，直到信号量值不为零才能继续操作。 这时如果进程2想要运行，那么也必须进行P操作，但是此时信号量为0，所以无法减1，即不能P操作，也就阻塞。这样就到到了进程1 排他访问。 当进程1运行结束后，释放资源，进行V操作。资源数重新加1，这时信号量的值变为1. 这时进程2发现资源数不为0，信号量能进行P操作了，立即执行P操作。信号量值又变为0.此时进程2占有资源，排他访问资源。 这就是信号量来控制互斥的原理.  pv是荷兰语好像，p是表示通过 ，v表示阻塞，p对信号进行减一操作
  
  2. 简单来讲 信号量为0则阻塞当前线程，大于0则不会阻塞。则我们通过改变信号量的值，来控制是否阻塞当前线程，从而达到线程同步。
@@ -54,6 +57,7 @@
 
 -(instancetype)init{
     self = [super init];
+    
     if (self) {
     }
     return self;
@@ -61,30 +65,54 @@
 
 
 -(void)doTest{
-//    [self smaphoreTask];
-    [self smaphoreTask2];
-    NSLog(@"%@", [self smaphoreTaskOne].debugDescription); // 可能刚开始获取的数组为空，是因为数组里加数据时是异步操作
+    [self smaphoreTask];
+//    [self smaphoreTask1]; // smaphoreTask2
+//    NSLog(@"%@", [self smaphoreTaskOne].debugDescription); // 可能刚开始获取的数组为空，是因为数组里加数据时是异步操作
     
 }
 
 
 -(void)smaphoreTask{
+    // 1.
     // 创建队列组
-    dispatch_group_t group = dispatch_group_create();
-    // 创建信号量，并且设置值为10
-    dispatch_semaphore_t semaphore = dispatch_semaphore_create(10);
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+////     创建信号量，并且设置值为10
+    dispatch_semaphore_t semaphore = dispatch_semaphore_create(1); // 17.9.1测试时发现 信号量 >= 循环次数时，都会crash
+//    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
-    for (int i = 0; i < 10; i++)
-    {   // 由于是异步执行的，所以每次循环Block里面的dispatch_semaphore_signal根本还没有执行就会执行dispatch_semaphore_wait，从而semaphore-1.当循环10此后，semaphore等于0，则会阻塞线程，直到执行了Block的dispatch_semaphore_signal 才会继续执行
-        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER); // 这个时间参数。好像是
-        
-        dispatch_group_async(group, queue, ^{
-            NSLog(@"%i",i);
-            sleep(2);             // 每次发送信号则semaphore会+1，
-            dispatch_semaphore_signal(semaphore);
-        });
-    }
+    dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER); // 这个时
+//    for (int i = 0; i < 10; i++)
+//    {   // 由于是异步执行的，所以每次循环Block里面的dispatch_semaphore_signal根本还没有执行就会执行dispatch_semaphore_wait，从而semaphore-1.当循环10此后，semaphore等于0，则会阻塞线程，直到执行了Block的dispatch_semaphore_signal 才会继续执行
+////        dispatch_semaphore_wait(semaphore, DISPATCH_TIME_FOREVER); // 这个时间参数。好像是
+//        
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            NSLog(@"%i",i);
+//            sleep(2);             // 每次发送信号则semaphore会+1，
+////            dispatch_semaphore_signal(semaphore);
+//        });
+//    }
+    
+    // 2.
+//    int data = 3;
+//    __block int mainData = 0;
+//    __block dispatch_semaphore_t sem = dispatch_semaphore_create(1);
+//    dispatch_queue_t queue = dispatch_queue_create("StudyBlocks", NULL);
+//    
+//    dispatch_async(queue, ^(void) {
+//        
+//        int sum = 0;
+//        
+//        for(int i = 0; i < 5; i++){
+//            sum += data;
+//            NSLog(@" >> Sum: %d", sum);
+//        }
+//        dispatch_semaphore_signal(sem);
+//    });
+//    
+//    dispatch_semaphore_wait(sem, DISPATCH_TIME_FOREVER);
+//    for(int j=0;j<5;j++){
+//        mainData++;
+//        NSLog(@">> Main Data: %d",mainData);
+//    }
 }
 
 /**可能刚开始获取的数组为空，是因为数组里加数据时是异步操作*/
@@ -119,11 +147,7 @@
 //    __weak TestSix *wSelf = self;
 //    typeof(TestSix) *ws = self;
     
-    [UIView animateWithDuration:1 animations:^{
-        
-    }];
-    
-    dispatch_semaphore_t sema = dispatch_semaphore_create(0);
+    dispatch_semaphore_t sema = dispatch_semaphore_create(1);
     
 //    Engine *engine = [[Engine alloc] init];
 //    [engine queryCompletion:^(BOOL isOpen) {
@@ -135,25 +159,30 @@
 //    }];
     
     // 等待信号触发： 若信号sema的总量不为0则会执行这句代码后面的代码，否则，就会一直等待。这里，刚开始新浪sema的总量为0，故到这里后，就会阻塞当前线程不会执行下面打代码；只有当网络请求返回成功或失败时，才会发送一个信号使sema的总量+1，才会执行这句后面的代码
-    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
+    dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER); // DISPATCH_TIME_FOREVER
     
     // 根据网络请求的结果来进行需要的处理
     MyLog(@"网络请求有返回了！");
+    dispatch_semaphore_signal(sema);
     
     
 }
 
 
 -(void)smaphoreTask2{
-    dispatch_semaphore_t signal = dispatch_semaphore_create(0); //传入值必须 >=0, 若传入为0则阻塞线程并等待timeout,时间到后会执行其后的语句
+    dispatch_semaphore_t signal = dispatch_semaphore_create(0); //传入值必须 >=0, 若传入为0则阻塞线程并等待timeout,时间到后，会执行其后的语句
     // 若信号创建时位0，延迟3s，则3s后会重新发送信号，使信号量+1；时间参数有用
     dispatch_time_t overTime = dispatch_time(DISPATCH_TIME_NOW, 3.0f * NSEC_PER_SEC);  // DISPATCH_TIME_FOREVER
+    
     
     //线程1
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSLog(@"线程1 等待ing");
-        dispatch_semaphore_wait(signal, overTime); //signal 值 -1
+        // dispatch_semaphore_wait这个函数会使传入的信号量的值减1
+        dispatch_semaphore_wait(signal, overTime); //signal 值-1
         NSLog(@"线程1");
+        
+        // dispatch_semaphore_signal这个函数会使传入的信号量的值+1；
         dispatch_semaphore_signal(signal); //signal 值 +1
         NSLog(@"线程1 发送信号");
         NSLog(@"--------------------------------------------------------");

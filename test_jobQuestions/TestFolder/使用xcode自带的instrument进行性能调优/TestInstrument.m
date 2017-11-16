@@ -21,4 +21,9 @@
 
 @implementation TestInstrument
 
+-(void)ff{
+    NSArray *ary = [NSArray arrayWithObjects:@"c", @(1), nil];
+    
+}
+
 @end

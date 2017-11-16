@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "TestSaveDataMethod.h"
 #import <UserNotifications/UserNotifications.h>
+#import "MainModel.h"
+
 
 @interface AppDelegate () <UIAlertViewDelegate>
 @property (nonatomic, strong) UIUserNotificationSettings *localNotiSet;
@@ -81,7 +83,19 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
 //        [kappication registerForRemoteNotifications];
 //    }
     
+    // 测试模型自述、模型里包含模型
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"main.json" ofType:nil];
+    NSData *jsonData = [NSData dataWithContentsOfFile:path];
+    NSArray *jsonAry = [NSJSONSerialization  JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
     
+    NSArray<MainModel*> *models = [MainModel mj_objectArrayWithKeyValuesArray:jsonAry];
+    
+    MainModel *ml= [[MainModel alloc] init];
+    ml.idno = 1;
+    ml.name = @"222";
+    ml.city.idno = 11;
+    ml.city.name = @"2222222";
+
     
     return YES;
 }
