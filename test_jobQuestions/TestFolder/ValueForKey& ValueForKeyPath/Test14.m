@@ -24,13 +24,11 @@
 
 
 -(void)doTest{
-    
-    
     TestModel *tm = [[TestModel alloc] init];
     // 1.  验证setValue:forKey:确实会调用-set<Key>方法
 //    [tm setValue:@"问问" forKey:@"name"];
-    [tm setValue:@"问问" forKeyPath:@"name"];
-    NSString *name = [tm valueForKey:@"name"];
+    [tm setValue:@"问问" forKeyPath:@"age"]; // name age
+    NSString *name = [tm valueForKey:@"age"];
     
     // 2. 验证: 如果它的参数类型不是一个对象指针类型,但是却设置其值为nil, 就会执行setNilValueForKey:方法。setNilValueForKey: 方法的默认实现, 是产生一个NSInvalidArgumentException的异常，直接crash
 
@@ -71,6 +69,7 @@
 @implementation TestModel
 
 // 测试setValueForkey\keyPath确实会调setkey 方法。
+/// observe一个对象的属性时，必须实现observeValueForKeyPath方法否则报错：observeValueForKeyPath:ofObject:change:context: message was received but not handled
 -(void)setName:(NSString *)name{
     _name = name;
     NSLog(@"-----------setName");

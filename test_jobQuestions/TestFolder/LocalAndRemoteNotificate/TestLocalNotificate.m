@@ -144,7 +144,9 @@
     
     if (badge != 0 ){
         badge -- ;
-        [kappication cancelAllLocalNotifications];
+        // 在每次不需要或者重新刷新所有的本地通知之前，必须先取消所有的本地通知，不然会有重复的相同的通知
+//        [kappication cancelLocalNotification:notificationA]
+//        [kappication cancelAllLocalNotifications];
         MyLog(@"ios10 收到本地通知了");
         completionHandler(UNNotificationPresentationOptionAlert);
     }else{

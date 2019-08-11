@@ -72,9 +72,38 @@ typedef enum : NSUInteger {
 }
 
 -(void)doTest{
+//    [self testOperateQueue];
 //    [self testDelay];
 //    [self testOperateGroup];
     [self testGcdGroupCrashAndOther];
+}
+
+-(void)testOperateQueue {
+    
+    dispatch_queue_t mainqueue =  dispatch_get_main_queue();
+    
+    MyLog(@"mainqueue--sync0");
+    // 1. 直接卡死
+//    dispatch_sync(mainqueue, ^{
+//        MyLog(@"mainqueue--sync1");
+//    });
+//    dispatch_sync(mainqueue, ^{
+//        MyLog(@"mainqueue--sync2");
+//    });
+    
+    // 2. 串行队列--异步操作  会新开线程，各操作顺序执行
+    dispatch_async(mainqueue, ^{
+        MyLog(@"mainqueue--async3");
+    });
+    dispatch_async(mainqueue, ^{
+        for (int i=0; i<199991; i++) {
+            MyLog(@"mainqueue--async1");
+        }
+    });
+    dispatch_async(mainqueue, ^{
+        MyLog(@"mainqueue--async2");
+    });
+    
 }
 
 /**
@@ -179,7 +208,7 @@ typedef enum : NSUInteger {
     // 创建一个group
     dispatch_group_t group = dispatch_group_create();
 
-    // 0. 第零组： 会立即crash掉。信号量的数值溢出，从而进入了Crash分支。因为进入组和离开组必须成对出现, 否则会造成死锁
+    // 0. 第零组： 会立即crash掉。信号量的数值溢出，从而进入了Crash分支。因为进入组和离开组必须成对出现, 否则会造成死锁.  病不能保证网络请求
 //    dispatch_group_leave(group);
     
 //    // 1. 第一组情况  打印结果为 ---1---2---3; 与第二组类似
@@ -192,13 +221,14 @@ typedef enum : NSUInteger {
 //    dispatch_group_async(group, queue, ^{
 //        // 执行请求2...
 //        dispatch_async(queue, ^{
+////            sleep(2);
 //            MyLog(@"----------3");
 //        });
 //    });
-//    
+//
 //    // 这句放到前、中、后不影响结果
 //    dispatch_group_notify(group, dispatch_get_main_queue(), ^{
-//        NSLog(@"全部请求执行完毕!");
+//        MyLog(@"全部请求执行完毕!");
 //    });
    // 当dispatch_group_async的block里面执行的是异步任务，如果还是使用上面的方法你会发现 有时异步任务还没跑完就已经进入到了dispatch_group_notify方法里面了，类似于第二组的
     
@@ -207,6 +237,7 @@ typedef enum : NSUInteger {
     // 进入组和离开组必须成对出现, 否则会造成死锁。 dispatch_group_notify放在【dispatch_group_enter  dispatch_group_leave】块外前、块中、块外后，结果都一样
    
     // dispatch_group_notify放在块外前、块中、块外后 结果都一样
+    
 //    dispatch_group_enter(group);
 //
 //    dispatch_group_notify(group, queue, ^{ // 这句代码的放置顺序 不会影响到最终的结果
@@ -217,26 +248,76 @@ typedef enum : NSUInteger {
 //    dispatch_sync(queue, ^{
 //        MyLog(@"----------4"); // -----4
 //    });
-//    
+//
 //     // 异步
 //    dispatch_async(queue, ^{
+//        // 这里的延时，仍被看作立即执行成功了
+////        [NSThread sleepForTimeInterval:2];
 //        MyLog(@"---------3");
 //    });
 //
 //    dispatch_group_async(group, queue, ^{ // block里若执行的是异步请求，有时可能达不到预期效果，即可能不等group里所有的任务都执行完毕就会调用dispatch_group_notify了，
-//        [NSThread sleepForTimeInterval:1];
+//
+//        // 这里的延时，是有效的
+//        [NSThread sleepForTimeInterval:3];
 //        MyLog(@"----------33");
 //
 //    });
 //
 //    dispatch_group_leave(group);
     
-   
+//    // 1.1  dispatch_group_leave 必须写在具体的操作执行完之后的地方
+//    dispatch_group_enter(group);
+//    dispatch_async(queue, ^{
+//        [NSThread sleepForTimeInterval:2];
+//        MyLog(@"11111");
+//        dispatch_group_leave(group);
+//    });
+//
+//    dispatch_group_enter(group);
+//    dispatch_async(queue, ^{
+//        [NSThread sleepForTimeInterval:1];
+//        MyLog(@"22222");
+//        dispatch_group_leave(group);
+//    });
+//
+//
+//    dispatch_group_notify(group, queue, ^{ // 这句代码的放置顺序 不会影响到最终的结果
+//        MyLog(@"执行结束");
+//    });
+    
+    // 1.2  多个queue加入同一个group
+//    const char queue1Name = [@"queue1Name" UTF8String];
+//    dispatch_queue_t queue1 =  dispatch_queue_create(queue1Name, DISPATCH_QUEUE_CONCURRENT);
+//    
+////    dispatch_group_enter(group);
+////    dispatch_async(queue, ^{
+////        [NSThread sleepForTimeInterval:2];
+////        MyLog(@"queue----11111");
+////        dispatch_group_leave(group);
+////    });
+////
+////    dispatch_group_enter(group);
+////    dispatch_async(queue, ^{
+////        [NSThread sleepForTimeInterval:1];
+////        MyLog(@"queue---22222");
+////        dispatch_group_leave(group);
+////    });
+//    
+//    
+//    
+//    dispatch_group_notify(group, queue, ^{ // 这句代码的放置顺序 不会影响到最终的结果
+//        MyLog(@"执行结束");
+//    });
+
+    
+    
+//
 
     // 2. 第三组情况：【dispatch_group_enter  dispatch_group_leave】块里的dispatch_group_async和dispatch_async也可以和dispatch_group_notify一样放在块外前、块中、块外后，不影响结果
   
 //    dispatch_group_enter(group);
-//    
+//
 //    dispatch_async(queue, ^{ // 打印 --1--3--2
 //            MyLog(@"----------3");
 //    });
@@ -246,11 +327,11 @@ typedef enum : NSUInteger {
 ////        MyLog(@"----------4");
 //       dispatch_async(queue, ^{
 ////           [self virtual];
-//           
-//           MyLog(@"----------4");
+//
+//           MyLog(@"----------44");
 //       });
 //    });
-//    
+//
 //    dispatch_group_leave(group);
 //
 //    // 若这里用这句而注释掉下面那句，则会由于此是异步操作，故其即可能会在主线程阻塞前还没被执行完就触发 dispatch_group_notify，
@@ -260,13 +341,13 @@ typedef enum : NSUInteger {
 //    });
 //
 //    // 使用dispatch_group_notify,增加监听，当group内的block全部执行完时，再执行该函数指定的block
-    
+//
 //    dispatch_group_notify(group, queue, ^{ // dispatch_get_main_queue()  queue
 //        MyLog(@"---------2");
 //    });
-    
-    
-    // 3. 这里会立即造成死锁，故 --4--5不会被打印
+//
+//
+//    // 3. 这里会立即造成死锁，故 --4--5不会被打印
 //    dispatch_sync(dispatch_get_main_queue(), ^{
 //        MyLog(@"----------4");
 //    });

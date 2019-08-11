@@ -37,6 +37,15 @@
 
 //  深拷贝、浅拷贝操作后，所得的对象的类型
 -(void)doTest{
+    // 0. 不可变集合类和可变集合类对象在相互转化时的情况
+    // NSArray赋值给NSMutableArray时，类似于深拷贝，重新开辟了新的内存空间
+    NSArray *ary = [NSArray arrayWithObjects:@"1", @"2", nil];
+    NSMutableArray *mAry = [NSMutableArray arrayWithArray:ary];
+    // NSMutableArray赋值给NSMutableArray时，是浅拷贝
+    NSMutableArray *mAry1 = mAry;
+    // NSMutableArray赋值给NSArray时，也是深拷贝
+    NSArray *ary1 = mAry1;
+    mAry[1] = @"3";
     
     // 1. 对NSArray的 copy&mutableCopy
 //    NSArray *ary = [NSArray arrayWithObjects:@(0), @(1), @(2), nil]; // 0x7fe5abd23390
@@ -50,10 +59,8 @@
 //    NSMutableArray *newmAry1 = [mAry mutableCopy]; // copy后是NSMutableArray  0x7ffc9a423530
 //    [newmAry1 addObject:@"sdgdfgdfg"];
 //    
-//    NSMutableString *str = @"string"; // 换成NSString的话，给执行再次赋值会直接crash；若为NSMutableString，则不会，且再次赋值后，str 指针所指的对象的地址也会改变
-//    str = @"newString";
-    
-    
+    NSMutableString *str = @"string"; // 换成NSString的话，给执行再次赋值会直接crash；若为NSMutableString，则不会，且再次赋值后，str 指针所指的对象的地址也会改变. 可以通过 p str 打印
+    str = @"newString";
     // 3. 集合元素进行深浅拷贝时，集合内部的元素是否也进行了深浅拷贝
     NSString *obj = @"000-";
     

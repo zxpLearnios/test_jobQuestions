@@ -35,12 +35,12 @@
     bo.name = @"srgrgg"; // 访问对象的属性（包括block类型的属性），都不会造成引用计数+1
     
     // 1. 系统会自动提示，此时会造成循环引用
-//    bo.voidBlock = ^(){
-////        bo.name = @""; // 1. 只写此句 也会循环引用的
-//        NSLog(@"%@", bo.name); // 2.
-//        NSLog(@"TestBlockObject的引用计数为 %ld", CFGetRetainCount((__bridge CFTypeRef)(bo))); // 3.
-//        // 只有bo的block里强引用了bo的（n个）属性，则执行完block后，bo的引用计数为3
-//    };
+    bo.voidBlock = ^(){
+//        bo.name = @""; // 1. 只写此句 也会循环引用的
+        NSLog(@"%@", bo.name); // 2.
+        NSLog(@"TestBlockObject的引用计数为 %ld", CFGetRetainCount((__bridge CFTypeRef)(bo))); // 3.
+        // 只有bo的block里强引用了bo的（n个）属性，则执行完block后，bo的引用计数为3
+    };
 
     // 2. 此时是OK的
 //    __block __weak typeof(bo) weakBo = bo; //(__block: 此对象可以在block内被修改，__weak：弱引用  typeof返回对象的类的类型)

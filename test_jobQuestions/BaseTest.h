@@ -10,8 +10,11 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseTest : NSObject
+/// 自己runtime实现
++(instancetype)shared;
 
 /**交由子类去实现*/
++(void)doClassTest;
 -(void)doTest;
 @end
 

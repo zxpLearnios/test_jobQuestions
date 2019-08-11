@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface Const : NSObject
 /**
  *  documentPath
@@ -77,14 +78,19 @@
  
  9. 将可能发生异常的代码，放入@try{可能发生异常的代码} @catch{捕获异常，异常的名字、原因、详细信息} @finally{不管是否有异常，在（可能发生异常的代码）执行完后，都会进入这里}。 Test14里有
  
- 10.  __block typeof(self) wSelf = self;    typeof(a) 获取a的类型并返回, 用weakself作为self，防止在block内圆使用self时出现内存泄漏。
+ 10.  __block typeof(self) wSelf = self;    typeof(a) 获取a的类型并返回, 用weakself作为self，防止在block内圆使用self时出现内存泄漏。再者 __block int a = 0;
+ NSLog(@"定义前：%p", &a);         //栈区  定义前：0x16fda86f8
+ void (^foo)(void) = ^{ block内部： 0x155b22fc8
+ a = 1;
+ NSLog(@"block内部：%p", &a);    //堆区 定义后：0x155b22fc8
+ }; a 在定义前是栈区，但只要进入了 block 区域(即比如在block内使用了a)，就变成了堆区。这才是 __block 关键字的真正作用。因为堆地址要小于栈地址，又因为iOS中一个进程的栈区内存只有1M，Mac也只有8M，显然a已经是在堆区了
  
  11.  & 位运算符。 如 if (options & SDWebImageAvoidAutoSetImage) {}表示若options参数是SDWebImageAvoidAutoSetImage，则执行{}
  
  12.. weak 的实现原理可以概括一下三步：
  
      1、初始化时：runtime会调用objc_initWeak函数，初始化一个新的weak指针指向对象的地址。
-     
+ 
      2、添加引用时：objc_initWeak函数会调用 objc_storeWeak() 函数， objc_storeWeak() 的作用是更新指针指向，创建对应的弱引用表。
      
      3、释放时，调用clearDeallocating函数。clearDeallocating函数首先根据对象地址获取所有weak指针地址的数组，然后遍历这个数组把其中的数据设为nil，最后把这个entry从weak表中删除，最后清理对象的记录。

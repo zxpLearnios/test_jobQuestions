@@ -326,10 +326,13 @@
 //    NSOperation *oprate = [[NSOperation alloc] init];
     
     // 4. 测试runtime通过分类为原类新加属性
-    NSString *str = @"sssddd";
-    str.type = @"runtime利用分类为系统原类新加属性";
+//    NSString *str = @"sssddd";
+//    str.type = @"runtime利用分类为系统原类新加属性";
+//    
+//    NSLog(@"%@", str.type);
     
-    NSLog(@"%@", str.type);
+    Student *stu = [[Student alloc] init];
+    stu.dynamicname = @"234534";
     
 }
 
@@ -356,5 +359,10 @@
 +(instancetype)initWithType{
     return [[Student alloc] init];
 }
+
+@end
+
+
+@implementation Student (TestDynomic)
 
 @end

@@ -11,9 +11,9 @@
 #import "BaseTest.h"
 
 @interface Test12 : NSObject
-/**获取对象的所有成员变量*/
+/**获取对象的所有成员变量，包含所有的属性.获取的私有变量的名和定义的名一模一样。获取的属性的名前面都添加了下划线*/
 +(NSArray *)getIvarListFromClass:(Class)cl;
-/** 获取对象的所有成员属性*/
+/** 获取对象的所有成员属性，获取的属性名和你代码写的一样,获取出来的属性名不自动添加下划线*/
 +(NSArray *)getPropertyListFromClass:(Class)cl;
 
 /**获取类名*/
@@ -42,5 +42,8 @@
 +(instancetype)initWithType;
 @end
 
-
+/// 为Student扩展
+@interface Student (TestDynomic)
+@property (nonatomic, strong) NSString *dynamicname;
+@end
 

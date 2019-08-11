@@ -25,6 +25,9 @@
 #import "TestKVO.h"
 #import "TestKVO1.h"
 #import "TestKVO2.h"
+#import "TestKVOObjectManager.h"
+#import "TestThreeTypeBlock.h"
+
 #import "TestDynamicJson.h"
 #import "TestMyExtension.h"
 #import "TestBlockReference.h"
@@ -33,26 +36,35 @@
 #import "LearnSDWebImage.h"
 #import "TestMemoryDiskCache.h"
 #import "TestLocalNotificate.h"
+
+#import "TestConstPointer.h" // 指针常量、常量指针
+
 #import "UnitTestViewController.h"
 #import "MyPageViewController.h"
 #import "TestSendInfoVCOne.h"
+#import "TestUpdateUI.h"
+#import "TestManualTriggerKVOViewController.h"
 
 #import "TestAlgorithm.h" // 算法
 #import "TestSaveData.h" // 数据存储方式
 #import "TestNewKl.h" // 其他知识
 #import "TestAutoReleaspool.h" // 释放池
+#import <CoreFoundation/CoreFoundation.h>
+#import "TestRunTimePeople.h"
+#import "TestRetainCycleInBlock.h"
+
 
 @interface ViewController ()
 {
      __weak UIViewController *wself;
 }
+//@property (nonatomic, strong) NSThread *td;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     
     NSArray *ary = @[@"1"];
     
@@ -64,13 +76,60 @@
     // 出了这个函数后，wself就会立即被释放 变为nil
     UIViewController *vc= [[UIViewController alloc] init];
     wself = vc;
+//    [self testRunloopAndThread];
+//    [self testRunloopObserver];
     
+    double result = [self getresult:100];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        NSLog(@"%f", result);
+    });
+}
+
+double result;
+-(double)getresult:(double)num {
+    if (num == 1) {
+        result = 1;
+    } else {
+        result = [self getresult:(num - 1)] + num;
+    }
+    return result;
+}
+
+/*
+ runloop 与 线程
+ 1. 每个线程都有唯一的runloop与之对应，他们的对应关系由系统自行存储在一个(未知的)字典里
+ 2. 主线程的runloop默认开启
+ 3. 子线程里默认无runloop， 即不开启runloop。只有在子线程里主动获取runloop时，这时才会创建一个runloop，此runloop会在线程销毁时被回收
+ */
+-(void)testRunloopAndThread {
+    NSThread *td = [[NSThread alloc] initWithTarget:self selector:@selector(sAction) object:nil];
+    [td start];
+}
+
+-(void)sAction {
+    
+    NSRunLoop *rp = [NSRunLoop currentRunLoop];
+    
+}
+
+
+-(void)testRunloopObserver {
+    CFRunLoopObserverRef rpObserverRef = CFRunLoopObserverCreateWithHandler(CFAllocatorGetDefault(), kCFRunLoopAllActivities, YES, 0, ^(CFRunLoopObserverRef observer, CFRunLoopActivity activity) {
+
+        // 监听main runloop的状态
+        NSLog(@"当前mainRunloop的状态为：%lu", activity);
+        
+    });
+    
+    CFRunLoopAddObserver(CFRunLoopGetCurrent(), rpObserverRef, kCFRunLoopDefaultMode);
+    CFRelease(rpObserverRef);
 }
 
 - (IBAction)testoneAction:(UIButton *)sender {
     
     //1. TestOne作为局部变量，在初始化后调用方法1时，很快就会被释放；但若在初始化后调用方法2时，则不会被释放
-    TestOne *to = [[TestOne alloc] init];
+    TestOne *to = TestOne.shared; // [[TestOne alloc] init];
     [to doTest];
 }
 
@@ -83,6 +142,8 @@
     [self.navigationController pushViewController:tt animated:YES];
     
 }
+
+
 
 #pragma mark - 单元测试
 - (IBAction)gotoUnitTestVC:(id)sender {
@@ -142,14 +203,21 @@
         
         // 1.
         BaseTest *dj = [[BaseTest alloc] init];
-        dj = [[TestMyExtension alloc] init]; // Test13 Test14  TestDynamicJson  TestMyExtension  TestBlockReference  TestCopy  LearnSDWebImage   TestLocalNotificate  TestAlgorithm  TestSaveData  TestNewKl  TestAutoReleaspool
+        dj = [[TestThreeTypeBlock alloc]init];  // TestKVOObjectManager.shared; // [[TestKVOObjectManager alloc] init]; // Test13 Test14  TestDynamicJson  TestMyExtension  TestBlockReference  TestCopy  LearnSDWebImage   TestLocalNotificate  TestAlgorithm  TestSaveData  TestNewKl  TestAutoReleaspool  TestKVOObjectManager TestCopyAndStrongModifyString  TestConstPointer  TestRetainCycleInBlockA
         [dj doTest];
+        
+        // 1.1 类方法
+//        [TestKVOObjectManager doClassTest];
+        
         
         // 2.
 //        UIViewController *td = [[UIViewController alloc] init];
-//        td = [[TestSendInfoVCOne alloc] init]; // TestKVO TestKVO1 TestKVO2  TestCellCacheMethod  TestMemoryDiskCache   MyPageViewController  TestSendInfoVCOne
+//        td = [[TestManualTriggerKVOViewController alloc] init]; // TestKVO TestKVO1 TestKVO2  TestCellCacheMethod  TestMemoryDiskCache   MyPageViewController  TestSendInfoVCOne TestCoreData TestUpdateUI  TestKVO2
 //        [self.navigationController pushViewController:td animated:YES];
         
+        // 测试外部调用objc的对象方法时，发生了啥,objc_msgsend(id tagert, string methodname)
+//        TestRunTimePeople *trtP = [[TestRunTimePeople alloc] init];
+//        [trtP performSelector:@selector(speak)];
     }
     
     

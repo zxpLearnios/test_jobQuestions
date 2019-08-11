@@ -10,6 +10,11 @@
 #import "TestSaveDataMethod.h"
 #import <UserNotifications/UserNotifications.h>
 #import "MainModel.h"
+#import "TestWindow.h"
+#import "TestWindowViewController.h"
+#import "TestKVOObjectManager.h"
+#import "TestGetOtherInfo.h"
+#import "UIDevice+category.h"
 
 
 @interface AppDelegate () <UIAlertViewDelegate>
@@ -36,6 +41,8 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
 #pragma mark - 收到通知后，若程序被杀死，则点击通知进入程序会触发此法
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    
+    NSArray *ary = [[UIDevice currentDevice] runningProcesses];
     
     
     // 0. 收到通知
@@ -96,7 +103,17 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     ml.city.idno = 11;
     ml.city.name = @"2222222";
 
-    
+    // 全app的
+//    TestWindow *tw = [[TestWindow alloc] init];
+//    tw.rootViewController = [[TestWindowViewController alloc] init];
+//    [tw makeKeyAndVisible];
+//    tw.alpha = 0;
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        [tw resignKeyWindow];
+//        tw.hidden = YES;
+//    });
+//
+   
     return YES;
 }
 
@@ -139,7 +156,7 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
     MyLog(@"%@", showStr);
 }
 
-#pragma mark - ios8 收到远程推送
+#pragma mark - <ios10 收到远程推送，点击通知消息；如果app未运行的话会先走didFinishLaunchingWithOptions再走此法
 -(void)application:(UIApplication *)application didReceiveRemoteNotification:(nonnull NSDictionary *)userInfo{
 
 }

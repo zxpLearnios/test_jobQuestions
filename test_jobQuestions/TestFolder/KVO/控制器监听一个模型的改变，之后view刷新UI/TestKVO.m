@@ -9,8 +9,6 @@
  
     2. 在 MVC 设计架构下的项目，KVO机制很适合实现mode模型和view视图之间的通讯。
     例如：代码中，在模型类A创建属性数据，在控制器中创建观察者，一旦属性数据发生改变就收到观察者收到通知，通过KVO再在控制器使用回调方法处理实现视图B的更新；(本文中的应用就是这样的例子.)
-    3. KVO 的实现依赖于 Objective-C 强大的 Runtime，从以上Apple 的文档可以看出苹果对于KVO机制的实现是一笔带过，而具体的细节没有过多的描述，但是我们可以通过Runtime的所提供的方法去探索
- 
  
     
  4. KVO 的实现依赖于 Objective-C 强大的 Runtime【可参考：Runtime的几个小例子】 ，从以上Apple 的文档可以看出苹果对于KVO机制的实现是一笔带过，而具体的细节没有过多的描述，但是我们可以通过Runtime的所提供的方法去探索，关于KVO机制的底层实现原理。
@@ -127,7 +125,23 @@
     
     // 3. 测试viewModel
 //    [self.viewModel.model setValue:dateStr forKey:@"name"];
-    self.viewModel.model.phone = dateStr;
+//    self.viewModel.model.phone = dateStr;
+ 
+    // 4. 在子线程更改keyPath. KVO经测试好像是线程不太安全有点延迟，故KVO的操作都须在一个线程里进行
+    /**
+     并发是两个任务可以在重叠的时间段内启动，运行和完成。并行是任务在同一时间运行，例如，在多核处理器上。
+     并发是独立执行过程的组合，而并行是同时执行（可能相关的）计算。
+     并发是一次处理很多事情，并行是同时做很多事情。
+     应用程序可以是并发的，但不是并行的，这意味着它可以同时处理多个任务，但是没有两个任务在同一时刻执行。
+     应用程序可以是并行的，但不是并发的，这意味着它同时处理多核CPU中的任务的多个子任务。
+     一个应用程序可以即不是并行的，也不是并发的，这意味着它一次一个地处理所有任务。
+     应用程序可以即是并行的也是并发的，这意味着它同时在多核CPU中同时处理多个任务。
+     */
+//     dispatch_queue_t serialQueue = dispatch_queue_create("com.example.SerialQueue", NULL)
+    dispatch_queue_t globelQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(globelQueue, ^{
+        self.viewModel.model.phone = dateStr;
+    });
     
 }
 
@@ -144,7 +158,7 @@
 // KVO以及通知的注销，一般是在-(void)dealloc中编写。 至于很多小伙伴问为什么要在didReceiveMemoryWarning？因为这个例子是在书本上看到的，所以试着使用它的例子。 但小编还是推荐把注销行为放在-(void)dealloc中
 -(void)dealloc{
 
-//    [self.model removeObserver:self forKeyPath:@"name" context:nil]; // 若此属性未被监听，则系统不会给之注册监听通知，故会直接crash
+//    [self.model removeObserver:self forKeyPath:@"name1234" context:nil]; // 若此属性未被监听，则系统不会给之注册监听通知，故会直接crash
     
 //    [self.model removeObserver:self forKeyPath:@"phone" context:nil];
 }

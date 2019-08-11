@@ -38,10 +38,11 @@
     TestKVCModel *kvcModel = [[TestKVCModel alloc] init];
     // 1.valueForKey
 //    NSNumber *heightNumber = [kvcModel valueForKey:@"height"]; // 0
+//    kvcModel.name = @"wer23";
 //    NSString *name = [kvcModel valueForKey:@"name"]; // nil
-//    
-    [kvcModel setValue:@(173) forKey:@"height"];
-    NSNumber *heightNumber1 = [kvcModel valueForKey:@"height"]; // 173
+//
+//    [kvcModel setValue:@(173) forKey:@"height"];
+//    NSNumber *heightNumber1 = [kvcModel valueForKey:@"height"]; // 173
 //
 //    [kvcModel setValue:@"周三" forKey:@"name"];
 //    NSString *name1 = [kvcModel valueForKey:@"name"];
@@ -49,7 +50,7 @@
     // 2. valueForKeyPath
 //    NSNumber *heightNumber = [kvcModel valueForKeyPath:@"height"]; // 0
 //    NSString *name = [kvcModel valueForKeyPath:@"name"]; // nil
-//    
+////
 //    [kvcModel setValue:@(173) forKeyPath:@"height"];
 //    NSNumber *heightNumber1 = [kvcModel valueForKeyPath:@"height"]; // 173
 //    
@@ -63,26 +64,26 @@
 //    dogWeight = [kvcModel valueForKeyPath:@"dog.weight"]; // 22.5
 
     // 2.2  valueForKeyPath还有一个比较牛逼的 是取得一些特殊的值，如：avg、sum
-//    DogModel *dog1 = [[DogModel alloc] init];
-//    dog1.tag = @"dog1_tag";
-//    dog1.age = 3;
-//    
-//    DogModel *dog2 = [[DogModel alloc] init];
-//    dog2.tag = @"dog2_tag";
-//    dog2.age = 4;
-//    
-//    kvcModel.dogs = @[dog1, dog2];
-//    
-//    NSNumber *dogAge =  [kvcModel valueForKeyPath:@"dogs.@avg.age"]; // age的平均数
-//    NSNumber *sumAge = [kvcModel valueForKeyPath:@"dogs.@sum.age"]; // age的和
+    DogModel *dog1 = [[DogModel alloc] init];
+    dog1.tag = @"dog1_tag";
+    dog1.age = 3;
+    
+    DogModel *dog2 = [[DogModel alloc] init];
+    dog2.tag = @"dog2_tag";
+    dog2.age = 4;
+    
+    kvcModel.dogs = @[dog1, dog2];
+
+    NSNumber *dogAge =  [kvcModel valueForKeyPath:@"dogs.@avg.age"]; // age的平均数
+    NSNumber *sumAge = [kvcModel valueForKeyPath:@"dogs.@sum.age"]; // age的和
     
 //    if (1 <= 2) {
 //        [NSException exceptionWithName:@"异常" reason:@"测试异常" userInfo:@{}];
 //    }
     
     // 3. 像height这样的外部不可直接访问的成员变量，若不setValue：forKey 的话，用valueForKey无法获取值的。但属性不setValue：forKey 的话，用valueForKey仍然可以获取值
-    kvcModel.name = @"kvcModel----";
-    NSString *name = [kvcModel valueForKey:@"name"];
+//    kvcModel.name = @"kvcModel----";
+//    NSString *name = [kvcModel valueForKey:@"name"];
 }
 
 
