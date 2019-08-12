@@ -22,6 +22,8 @@
 #import "TestCoreData.h"
 #import "Test13.h"
 #import "Test14.h"
+#import "TestCatagoryClass.h"
+
 #import "TestKVO.h"
 #import "TestKVO1.h"
 #import "TestKVO2.h"
@@ -203,7 +205,8 @@ double result;
         
         // 1.
         BaseTest *dj = [[BaseTest alloc] init];
-        dj = [[TestThreeTypeBlock alloc]init];  // TestKVOObjectManager.shared; // [[TestKVOObjectManager alloc] init]; // Test13 Test14  TestDynamicJson  TestMyExtension  TestBlockReference  TestCopy  LearnSDWebImage   TestLocalNotificate  TestAlgorithm  TestSaveData  TestNewKl  TestAutoReleaspool  TestKVOObjectManager TestCopyAndStrongModifyString  TestConstPointer  TestRetainCycleInBlockA
+        
+        dj = [[TestCatagoryClass alloc]init];  // TestKVOObjectManager.shared; // [[TestKVOObjectManager alloc] init]; // Test13 Test14  TestDynamicJson  TestMyExtension  TestBlockReference  TestCopy  LearnSDWebImage   TestLocalNotificate  TestAlgorithm  TestSaveData  TestNewKl  TestAutoReleaspool  TestKVOObjectManager TestCopyAndStrongModifyString  TestConstPointer  TestRetainCycleInBlockA TestThreeTypeBlock  TestCatagoryClass
         [dj doTest];
         
         // 1.1 类方法

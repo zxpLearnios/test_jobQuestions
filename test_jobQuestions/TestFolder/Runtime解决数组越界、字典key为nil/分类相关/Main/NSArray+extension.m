@@ -1,7 +1,10 @@
 
 
 #import "NSArray+extension.h"
-#import <objc/runtime.h>
+//#import <objc/runtime.h>
+
+//  分类\类目不要重写原类的方法，否则会导致原类的方法无法调用
+
 
 /** 
  在iOS中NSNumber、NSArray、NSDictionary等这些类都是类簇，一个NSArray的实现可能由多个类组成。
@@ -46,6 +49,14 @@
 //        return [self ex_objectAtIndex:index];
 //    }
 //}
+
+
+//---------------------- 分类重写原类方法  ------------------
+/// 外部使用[ary contains: obj] 时，这个方法会触发11次之多，天哪
+-(BOOL)containsObject:(id)anObject {
+    MyLog(@"打印了NSArray+extension的containsObject");
+    return NO;
+}
 
 @end
 

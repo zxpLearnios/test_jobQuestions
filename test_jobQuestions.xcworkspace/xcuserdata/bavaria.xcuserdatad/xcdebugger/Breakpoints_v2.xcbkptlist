@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   type = "1"
+   type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
@@ -9,30 +9,24 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "test_jobQuestions/TestFolder/CoreData/TestCoreData.m"
-            timestampString = "514109727.444671"
+            filePath = "test_jobQuestions/TestFolder/Runtime&#x89e3;&#x51b3;&#x6570;&#x7ec4;&#x8d8a;&#x754c;&#x3001;&#x5b57;&#x5178;key&#x4e3a;nil/&#x5206;&#x7c7b;&#x76f8;&#x5173;/TestCatagoryClass.m"
+            timestampString = "587296867.5411969"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "-addPartEntity"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "-doTest"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "test_jobQuestions/TestFolder/DynamicJsonDeSerializate/TestJson.m"
-            timestampString = "514193398.551628"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "-doTest"
-            landmarkType = "7">
+            scope = "0"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

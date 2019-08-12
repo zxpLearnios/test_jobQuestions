@@ -55,12 +55,17 @@ id ForwardingTarget_dynamicMethod(id self, SEL _cmd) {
 - (void)forwardInvocation:(NSInvocation *)anInvocation {
   
     SEL selector = [anInvocation selector];
-    // 新建需要转发消息的对象
+    // 新建需要转发消息的对象, 可以是多个对象
     TestRunTimeMsgForwarding *msgForwarding = [[TestRunTimeMsgForwarding alloc] init];
+//    OtherClass *obj = [[OtherClass alloc] init];
     if ([msgForwarding respondsToSelector:selector]) {
         // 唤醒这个方法
         [anInvocation invokeWithTarget:msgForwarding];
     }
+//    if ([obj respondsToSelector:selector]) {
+//        // 唤醒这个方法
+//        [anInvocation invokeWithTarget:obj];
+//    }
 }
 
 // 5.

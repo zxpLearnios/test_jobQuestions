@@ -7,9 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4603CD752154DCA10040599F /* NSObject+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 4603CD742154DCA10040599F /* NSObject+category.m */; };
+		4603CD782154E7AA0040599F /* TestKVOObjectManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4603CD772154E7AA0040599F /* TestKVOObjectManager.m */; };
+		4634CEF121DF149800635E8E /* TestManualTriggerKVOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4634CEF021DF149800635E8E /* TestManualTriggerKVOViewController.m */; };
+		46480C94215A193F00A4DF13 /* TestCopyAndStrongModifyString.m in Sources */ = {isa = PBXBuildFile; fileRef = 46480C93215A193F00A4DF13 /* TestCopyAndStrongModifyString.m */; };
+		46480C9B215BA56D00A4DF13 /* TestCustomeKvoObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 46480C9A215BA56D00A4DF13 /* TestCustomeKvoObject.m */; };
+		46480CA2215C6C3F00A4DF13 /* TestLoadAndInitializeFunc.m in Sources */ = {isa = PBXBuildFile; fileRef = 46480CA1215C6C3F00A4DF13 /* TestLoadAndInitializeFunc.m */; };
+		46A8A66A216CA41C00FAE06C /* TestGetOtherInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A8A669216CA41C00FAE06C /* TestGetOtherInfo.m */; };
+		46A8A66D216CA63600FAE06C /* UIDevice+category.m in Sources */ = {isa = PBXBuildFile; fileRef = 46A8A66C216CA63600FAE06C /* UIDevice+category.m */; };
+		46C259E121EC7117006B4D83 /* TestThreeTypeBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C259E021EC7117006B4D83 /* TestThreeTypeBlock.m */; };
+		46D0059421BE007300F8C3B1 /* TestUpdateUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D0059321BE007300F8C3B1 /* TestUpdateUI.m */; };
+		46D0059821BE529100F8C3B1 /* TestConstPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D0059721BE529100F8C3B1 /* TestConstPointer.m */; };
+		46D0074121D0DF1700F8C3B1 /* TestBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D0074021D0DF1700F8C3B1 /* TestBlock.m */; };
+		46D0074E21D71D7D00F8C3B1 /* TestRunTimePeople.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D0074A21D71D7C00F8C3B1 /* TestRunTimePeople.m */; };
+		46D0074F21D71D7D00F8C3B1 /* TestRunTimeMsgForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D0074B21D71D7C00F8C3B1 /* TestRunTimeMsgForwarding.m */; };
+		46D0075221DCA4FD00F8C3B1 /* TestRetainCycleInBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 46D0075121DCA4FD00F8C3B1 /* TestRetainCycleInBlock.m */; };
 		5412CE3B1EC9A77200ED6241 /* TestInstrument.m in Sources */ = {isa = PBXBuildFile; fileRef = 5412CE3A1EC9A77200ED6241 /* TestInstrument.m */; };
 		542585FD1E9B61880014D5E4 /* Test12.m in Sources */ = {isa = PBXBuildFile; fileRef = 542585FC1E9B61880014D5E4 /* Test12.m */; };
 		5431C8051EA49B9200205963 /* TestCoreData.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5431C8041EA49B9200205963 /* TestCoreData.xib */; };
+		543B4B0E23017CAB008F32EE /* TestWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 543B4B0B23017CAB008F32EE /* TestWindow.m */; };
+		543B4B0F23017CAB008F32EE /* TestWindowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 543B4B0C23017CAB008F32EE /* TestWindowViewController.m */; };
+		543B4B3623017EA8008F32EE /* NSArray+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 543B4B3523017EA8008F32EE /* NSArray+extension.m */; };
 		543C8D571F5D22A600D1571C /* TestWeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 543C8D561F5D22A600D1571C /* TestWeView.m */; };
 		54514FCA1E8BB3D80067E7AF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 54514FC91E8BB3D80067E7AF /* main.m */; };
 		54514FCD1E8BB3D80067E7AF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 54514FCC1E8BB3D80067E7AF /* AppDelegate.m */; };
@@ -63,7 +81,6 @@
 		54C551AB1EB9B94F00FFB583 /* TestSaveDataMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C551AA1EB9B94F00FFB583 /* TestSaveDataMethod.m */; };
 		54C551AF1EB9D14A00FFB583 /* TestGetUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C551AE1EB9D14A00FFB583 /* TestGetUUID.m */; };
 		54C551B41EB9D98000FFB583 /* TestMVVM.m in Sources */ = {isa = PBXBuildFile; fileRef = 54C551B31EB9D98000FFB583 /* TestMVVM.m */; };
-		54D9254A1EC020660042D438 /* NSArray+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D925471EC020660042D438 /* NSArray+extension.m */; };
 		54D9254B1EC020660042D438 /* NSMutableArray+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D925491EC020660042D438 /* NSMutableArray+extension.m */; };
 		54D925511EC020A00042D438 /* Test13.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D9254E1EC020A00042D438 /* Test13.m */; };
 		54D925521EC020A00042D438 /* Test14.m in Sources */ = {isa = PBXBuildFile; fileRef = 54D925501EC020A00042D438 /* Test14.m */; };
@@ -78,6 +95,9 @@
 		54EFCE651EAA0D2100DB218D /* TestCellCacheMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EFCE641EAA0D2100DB218D /* TestCellCacheMethod.m */; };
 		54EFCE691EAA0D9B00DB218D /* TestCellCacheCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 54EFCE671EAA0D9B00DB218D /* TestCellCacheCell.m */; };
 		54EFCE6A1EAA0D9B00DB218D /* TestCellCacheCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54EFCE681EAA0D9B00DB218D /* TestCellCacheCell.xib */; };
+		54F208D223016F41002B7166 /* TestCatagoryClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F208D123016F41002B7166 /* TestCatagoryClass.m */; };
+		54F208D823017155002B7166 /* UIView+catagory.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F208D723017155002B7166 /* UIView+catagory.m */; };
+		54F208DB230174FD002B7166 /* NSArray+extension1.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F208DA230174FD002B7166 /* NSArray+extension1.m */; };
 		54F31FA81F6B811B00BC8AB4 /* TestSaveData.m in Sources */ = {isa = PBXBuildFile; fileRef = 54F31FA71F6B811B00BC8AB4 /* TestSaveData.m */; };
 		59E04B47E0EE7FD1394107BB /* Pods_test_jobQuestions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDC97A314EFF12D4738A77E2 /* Pods_test_jobQuestions.framework */; };
 /* End PBXBuildFile section */
@@ -100,6 +120,38 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4603CD732154DCA10040599F /* NSObject+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+category.h"; sourceTree = "<group>"; };
+		4603CD742154DCA10040599F /* NSObject+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+category.m"; sourceTree = "<group>"; };
+		4603CD762154E7AA0040599F /* TestKVOObjectManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestKVOObjectManager.h; sourceTree = "<group>"; };
+		4603CD772154E7AA0040599F /* TestKVOObjectManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestKVOObjectManager.m; sourceTree = "<group>"; };
+		4634CEEF21DF149800635E8E /* TestManualTriggerKVOViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestManualTriggerKVOViewController.h; sourceTree = "<group>"; };
+		4634CEF021DF149800635E8E /* TestManualTriggerKVOViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestManualTriggerKVOViewController.m; sourceTree = "<group>"; };
+		46480C92215A193F00A4DF13 /* TestCopyAndStrongModifyString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCopyAndStrongModifyString.h; sourceTree = "<group>"; };
+		46480C93215A193F00A4DF13 /* TestCopyAndStrongModifyString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCopyAndStrongModifyString.m; sourceTree = "<group>"; };
+		46480C99215BA56D00A4DF13 /* TestCustomeKvoObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCustomeKvoObject.h; sourceTree = "<group>"; };
+		46480C9A215BA56D00A4DF13 /* TestCustomeKvoObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCustomeKvoObject.m; sourceTree = "<group>"; };
+		46480CA0215C6C3F00A4DF13 /* TestLoadAndInitializeFunc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestLoadAndInitializeFunc.h; sourceTree = "<group>"; };
+		46480CA1215C6C3F00A4DF13 /* TestLoadAndInitializeFunc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestLoadAndInitializeFunc.m; sourceTree = "<group>"; };
+		46A8A668216CA41C00FAE06C /* TestGetOtherInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestGetOtherInfo.h; sourceTree = "<group>"; };
+		46A8A669216CA41C00FAE06C /* TestGetOtherInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestGetOtherInfo.m; sourceTree = "<group>"; };
+		46A8A66B216CA63600FAE06C /* UIDevice+category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+category.h"; sourceTree = "<group>"; };
+		46A8A66C216CA63600FAE06C /* UIDevice+category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+category.m"; sourceTree = "<group>"; };
+		46C259DF21EC7117006B4D83 /* TestThreeTypeBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestThreeTypeBlock.h; sourceTree = "<group>"; };
+		46C259E021EC7117006B4D83 /* TestThreeTypeBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestThreeTypeBlock.m; sourceTree = "<group>"; };
+		46C259E221EC7CF1006B4D83 /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		46D0059221BE007300F8C3B1 /* TestUpdateUI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestUpdateUI.h; sourceTree = "<group>"; };
+		46D0059321BE007300F8C3B1 /* TestUpdateUI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestUpdateUI.m; sourceTree = "<group>"; };
+		46D0059621BE529100F8C3B1 /* TestConstPointer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestConstPointer.h; sourceTree = "<group>"; };
+		46D0059721BE529100F8C3B1 /* TestConstPointer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestConstPointer.m; sourceTree = "<group>"; };
+		46D0073F21D0DF1700F8C3B1 /* TestBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestBlock.h; sourceTree = "<group>"; };
+		46D0074021D0DF1700F8C3B1 /* TestBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestBlock.m; sourceTree = "<group>"; };
+		46D0074221D32F2300F8C3B1 /* test_jobQuestions.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = test_jobQuestions.entitlements; sourceTree = "<group>"; };
+		46D0074A21D71D7C00F8C3B1 /* TestRunTimePeople.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRunTimePeople.m; sourceTree = "<group>"; };
+		46D0074B21D71D7C00F8C3B1 /* TestRunTimeMsgForwarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestRunTimeMsgForwarding.m; sourceTree = "<group>"; };
+		46D0074C21D71D7C00F8C3B1 /* TestRunTimeMsgForwarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRunTimeMsgForwarding.h; sourceTree = "<group>"; };
+		46D0074D21D71D7C00F8C3B1 /* TestRunTimePeople.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestRunTimePeople.h; sourceTree = "<group>"; };
+		46D0075021DCA4FD00F8C3B1 /* TestRetainCycleInBlock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestRetainCycleInBlock.h; sourceTree = "<group>"; };
+		46D0075121DCA4FD00F8C3B1 /* TestRetainCycleInBlock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestRetainCycleInBlock.m; sourceTree = "<group>"; };
 		4797361ED16B0B9C6E843CB7 /* Pods-test_jobQuestions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test_jobQuestions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-test_jobQuestions/Pods-test_jobQuestions.debug.xcconfig"; sourceTree = "<group>"; };
 		5412CE391EC9A77200ED6241 /* TestInstrument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestInstrument.h; sourceTree = "<group>"; };
 		5412CE3A1EC9A77200ED6241 /* TestInstrument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestInstrument.m; sourceTree = "<group>"; };
@@ -107,6 +159,12 @@
 		542585FC1E9B61880014D5E4 /* Test12.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test12.m; sourceTree = "<group>"; };
 		542586011E9B6D2F0014D5E4 /* NSMutableArray+category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+category.h"; sourceTree = "<group>"; };
 		5431C8041EA49B9200205963 /* TestCoreData.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCoreData.xib; sourceTree = "<group>"; };
+		543B4B0A23017CAB008F32EE /* TestWindowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestWindowViewController.h; sourceTree = "<group>"; };
+		543B4B0B23017CAB008F32EE /* TestWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestWindow.m; sourceTree = "<group>"; };
+		543B4B0C23017CAB008F32EE /* TestWindowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestWindowViewController.m; sourceTree = "<group>"; };
+		543B4B0D23017CAB008F32EE /* TestWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestWindow.h; sourceTree = "<group>"; };
+		543B4B3423017EA8008F32EE /* NSArray+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+extension.h"; sourceTree = "<group>"; };
+		543B4B3523017EA8008F32EE /* NSArray+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+extension.m"; sourceTree = "<group>"; };
 		543C8D551F5D22A600D1571C /* TestWeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestWeView.h; sourceTree = "<group>"; };
 		543C8D561F5D22A600D1571C /* TestWeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestWeView.m; sourceTree = "<group>"; };
 		54514FC51E8BB3D80067E7AF /* test_jobQuestions.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test_jobQuestions.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -206,8 +264,6 @@
 		54C551AE1EB9D14A00FFB583 /* TestGetUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestGetUUID.m; sourceTree = "<group>"; };
 		54C551B21EB9D98000FFB583 /* TestMVVM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestMVVM.h; sourceTree = "<group>"; };
 		54C551B31EB9D98000FFB583 /* TestMVVM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestMVVM.m; sourceTree = "<group>"; };
-		54D925461EC020660042D438 /* NSArray+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+extension.h"; sourceTree = "<group>"; };
-		54D925471EC020660042D438 /* NSArray+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+extension.m"; sourceTree = "<group>"; };
 		54D925481EC020660042D438 /* NSMutableArray+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+extension.h"; sourceTree = "<group>"; };
 		54D925491EC020660042D438 /* NSMutableArray+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+extension.m"; sourceTree = "<group>"; };
 		54D9254D1EC020A00042D438 /* Test13.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test13.h; sourceTree = "<group>"; };
@@ -236,6 +292,12 @@
 		54EFCE661EAA0D9B00DB218D /* TestCellCacheCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCellCacheCell.h; sourceTree = "<group>"; };
 		54EFCE671EAA0D9B00DB218D /* TestCellCacheCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCellCacheCell.m; sourceTree = "<group>"; };
 		54EFCE681EAA0D9B00DB218D /* TestCellCacheCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestCellCacheCell.xib; sourceTree = "<group>"; };
+		54F208D023016F41002B7166 /* TestCatagoryClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCatagoryClass.h; sourceTree = "<group>"; };
+		54F208D123016F41002B7166 /* TestCatagoryClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCatagoryClass.m; sourceTree = "<group>"; };
+		54F208D623017155002B7166 /* UIView+catagory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+catagory.h"; sourceTree = "<group>"; };
+		54F208D723017155002B7166 /* UIView+catagory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+catagory.m"; sourceTree = "<group>"; };
+		54F208D9230174FD002B7166 /* NSArray+extension1.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+extension1.h"; sourceTree = "<group>"; };
+		54F208DA230174FD002B7166 /* NSArray+extension1.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+extension1.m"; sourceTree = "<group>"; };
 		54F31FA61F6B811B00BC8AB4 /* TestSaveData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSaveData.h; sourceTree = "<group>"; };
 		54F31FA71F6B811B00BC8AB4 /* TestSaveData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSaveData.m; sourceTree = "<group>"; };
 		B3ED4F0DEAC4C485576572C6 /* Pods-test_jobQuestions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-test_jobQuestions.release.xcconfig"; path = "Pods/Target Support Files/Pods-test_jobQuestions/Pods-test_jobQuestions.release.xcconfig"; sourceTree = "<group>"; };
@@ -268,6 +330,124 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4603CD6F2154DBF70040599F /* 自定义KVO */ = {
+			isa = PBXGroup;
+			children = (
+				4603CD732154DCA10040599F /* NSObject+category.h */,
+				4603CD742154DCA10040599F /* NSObject+category.m */,
+				46480C99215BA56D00A4DF13 /* TestCustomeKvoObject.h */,
+				46480C9A215BA56D00A4DF13 /* TestCustomeKvoObject.m */,
+				4603CD762154E7AA0040599F /* TestKVOObjectManager.h */,
+				4603CD772154E7AA0040599F /* TestKVOObjectManager.m */,
+			);
+			path = "自定义KVO";
+			sourceTree = "<group>";
+		};
+		4634CEEE21DF144300635E8E /* 如何手动触发一个kvo */ = {
+			isa = PBXGroup;
+			children = (
+				4634CEEF21DF149800635E8E /* TestManualTriggerKVOViewController.h */,
+				4634CEF021DF149800635E8E /* TestManualTriggerKVOViewController.m */,
+			);
+			path = "如何手动触发一个kvo";
+			sourceTree = "<group>";
+		};
+		46480C91215A18EF00A4DF13 /* 对字符串用copy与strong修饰 */ = {
+			isa = PBXGroup;
+			children = (
+				46480C92215A193F00A4DF13 /* TestCopyAndStrongModifyString.h */,
+				46480C93215A193F00A4DF13 /* TestCopyAndStrongModifyString.m */,
+			);
+			path = "对字符串用copy与strong修饰";
+			sourceTree = "<group>";
+		};
+		46480C9F215C6BF000A4DF13 /* NSObject的类方法load和initialize */ = {
+			isa = PBXGroup;
+			children = (
+				46480CA0215C6C3F00A4DF13 /* TestLoadAndInitializeFunc.h */,
+				46480CA1215C6C3F00A4DF13 /* TestLoadAndInitializeFunc.m */,
+			);
+			path = "NSObject的类方法load和initialize";
+			sourceTree = "<group>";
+		};
+		4684D3D921525ABF0084DA91 /* 测试window */ = {
+			isa = PBXGroup;
+			children = (
+				543B4B0D23017CAB008F32EE /* TestWindow.h */,
+				543B4B0B23017CAB008F32EE /* TestWindow.m */,
+				543B4B0A23017CAB008F32EE /* TestWindowViewController.h */,
+				543B4B0C23017CAB008F32EE /* TestWindowViewController.m */,
+			);
+			path = "测试window";
+			sourceTree = "<group>";
+		};
+		46A8A667216CA3ED00FAE06C /* ios获取其他信息 */ = {
+			isa = PBXGroup;
+			children = (
+				46A8A668216CA41C00FAE06C /* TestGetOtherInfo.h */,
+				46A8A669216CA41C00FAE06C /* TestGetOtherInfo.m */,
+			);
+			path = "ios获取其他信息";
+			sourceTree = "<group>";
+		};
+		46C259DD21EC70ED006B4D83 /* block引用计数 */ = {
+			isa = PBXGroup;
+			children = (
+				548E633F1EA99F2200158B7F /* TestBlockReference.h */,
+				548E63401EA99F2200158B7F /* TestBlockReference.m */,
+			);
+			path = "block引用计数";
+			sourceTree = "<group>";
+		};
+		46C259DE21EC70FB006B4D83 /* 三种类型的block */ = {
+			isa = PBXGroup;
+			children = (
+				46C259DF21EC7117006B4D83 /* TestThreeTypeBlock.h */,
+				46C259E021EC7117006B4D83 /* TestThreeTypeBlock.m */,
+			);
+			path = "三种类型的block";
+			sourceTree = "<group>";
+		};
+		46D0059121BE004D00F8C3B1 /* 主线程里更新UI */ = {
+			isa = PBXGroup;
+			children = (
+				46D0059221BE007300F8C3B1 /* TestUpdateUI.h */,
+				46D0059321BE007300F8C3B1 /* TestUpdateUI.m */,
+			);
+			path = "主线程里更新UI";
+			sourceTree = "<group>";
+		};
+		46D0059521BE526500F8C3B1 /* 常量指针、指针常量 */ = {
+			isa = PBXGroup;
+			children = (
+				46D0059621BE529100F8C3B1 /* TestConstPointer.h */,
+				46D0059721BE529100F8C3B1 /* TestConstPointer.m */,
+			);
+			path = "常量指针、指针常量";
+			sourceTree = "<group>";
+		};
+		46D0073E21D0DEFA00F8C3B1 /* block原理 */ = {
+			isa = PBXGroup;
+			children = (
+				46D0073F21D0DF1700F8C3B1 /* TestBlock.h */,
+				46D0074021D0DF1700F8C3B1 /* TestBlock.m */,
+				46D0075021DCA4FD00F8C3B1 /* TestRetainCycleInBlock.h */,
+				46D0075121DCA4FD00F8C3B1 /* TestRetainCycleInBlock.m */,
+			);
+			path = "block原理";
+			sourceTree = "<group>";
+		};
+		46D0074921D71D4700F8C3B1 /* objc向一个对象发送消息时，发生了什么 */ = {
+			isa = PBXGroup;
+			children = (
+				46D0074D21D71D7C00F8C3B1 /* TestRunTimePeople.h */,
+				46D0074A21D71D7C00F8C3B1 /* TestRunTimePeople.m */,
+				46D0074C21D71D7C00F8C3B1 /* TestRunTimeMsgForwarding.h */,
+				46D0074B21D71D7C00F8C3B1 /* TestRunTimeMsgForwarding.m */,
+			);
+			path = "objc向一个对象发送消息时，发生了什么";
+			sourceTree = "<group>";
+		};
 		5412CE381EC9A75C00ED6241 /* 使用xcode自带的instrument进行性能调优 */ = {
 			isa = PBXGroup;
 			children = (
@@ -320,20 +500,24 @@
 		54514FC71E8BB3D80067E7AF /* test_jobQuestions */ = {
 			isa = PBXGroup;
 			children = (
+				46D0074221D32F2300F8C3B1 /* test_jobQuestions.entitlements */,
 				54514FCB1E8BB3D80067E7AF /* AppDelegate.h */,
 				54514FCC1E8BB3D80067E7AF /* AppDelegate.m */,
 				54514FCE1E8BB3D80067E7AF /* ViewController.h */,
 				54514FCF1E8BB3D80067E7AF /* ViewController.m */,
-				54514FD11E8BB3D80067E7AF /* Main.storyboard */,
 				545BF6F31EC3205800FAFE5E /* UnitTestViewController.h */,
+				54514FD11E8BB3D80067E7AF /* Main.storyboard */,
 				545BF6F41EC3205800FAFE5E /* UnitTestViewController.m */,
 				545BF6F51EC3205800FAFE5E /* UnitTestViewController.xib */,
 				54BEDA6B1EC1A6C90036DF30 /* general.jpg */,
 				54514FD41E8BB3D80067E7AF /* Assets.xcassets */,
 				54514FD61E8BB3D80067E7AF /* LaunchScreen.storyboard */,
+				46C259E221EC7CF1006B4D83 /* Global.h */,
 				546F46841E96247200243CCE /* Const.h */,
 				546F46851E96247200243CCE /* Const.m */,
 				545150001E8BBD220067E7AF /* prefixHeader.pch */,
+				46A8A66B216CA63600FAE06C /* UIDevice+category.h */,
+				46A8A66C216CA63600FAE06C /* UIDevice+category.m */,
 				54514FD91E8BB3D80067E7AF /* Info.plist */,
 				5495B2CC1E94F024000CEF45 /* TestFolder */,
 				54514FC81E8BB3D80067E7AF /* Supporting Files */,
@@ -392,8 +576,9 @@
 		548E633E1EA99EFB00158B7F /* Block */ = {
 			isa = PBXGroup;
 			children = (
-				548E633F1EA99F2200158B7F /* TestBlockReference.h */,
-				548E63401EA99F2200158B7F /* TestBlockReference.m */,
+				46C259DE21EC70FB006B4D83 /* 三种类型的block */,
+				46C259DD21EC70ED006B4D83 /* block引用计数 */,
+				46D0073E21D0DEFA00F8C3B1 /* block原理 */,
 			);
 			path = Block;
 			sourceTree = "<group>";
@@ -414,6 +599,12 @@
 		5495B2CC1E94F024000CEF45 /* TestFolder */ = {
 			isa = PBXGroup;
 			children = (
+				46D0059521BE526500F8C3B1 /* 常量指针、指针常量 */,
+				46D0059121BE004D00F8C3B1 /* 主线程里更新UI */,
+				46A8A667216CA3ED00FAE06C /* ios获取其他信息 */,
+				46480C9F215C6BF000A4DF13 /* NSObject的类方法load和initialize */,
+				46480C91215A18EF00A4DF13 /* 对字符串用copy与strong修饰 */,
+				4684D3D921525ABF0084DA91 /* 测试window */,
 				54A1627E1FA1E1B100C0A8BA /* 测试模型里包含模型，模型自述 */,
 				54F31FA51F6B810800BC8AB4 /* 数据存储 */,
 				54550B5D1F5E9265001C2A18 /* 算法 */,
@@ -421,9 +612,6 @@
 				543C8D541F5D227900D1571C /* webView */,
 				54BF383C1E8E5677002A38DF /* BaseTest.h */,
 				54BF383D1E8E5678002A38DF /* BaseTest.m */,
-				54C16E401E95E38E003F6BFA /* NSString+category.h */,
-				54C16E411E95E38E003F6BFA /* NSString+category.m */,
-				542586011E9B6D2F0014D5E4 /* NSMutableArray+category.h */,
 				5412CE381EC9A75C00ED6241 /* 使用xcode自带的instrument进行性能调优 */,
 				54DE47741EC952AD00AC0FA9 /* 信息的顺传与逆传 */,
 				54A6BF941EC451DE00955313 /* 翻页控制器 */,
@@ -572,6 +760,8 @@
 		54B1B5141EA5B42200B7047F /* KVO */ = {
 			isa = PBXGroup;
 			children = (
+				4634CEEE21DF144300635E8E /* 如何手动触发一个kvo */,
+				4603CD6F2154DBF70040599F /* 自定义KVO */,
 				54A08D2F1EA851C50072B5B2 /* KVC以及KVO，利用runtime实现字典转模型 */,
 				54A4303C1EA7592C005BBCF6 /* 测试模型数组 */,
 				54A430351EA756B0005BBCF6 /* 控制器监听一个模型的改变，之后view刷新UI */,
@@ -620,10 +810,8 @@
 		54D925451EC020660042D438 /* Runtime解决数组越界、字典key为nil */ = {
 			isa = PBXGroup;
 			children = (
-				54D925461EC020660042D438 /* NSArray+extension.h */,
-				54D925471EC020660042D438 /* NSArray+extension.m */,
-				54D925481EC020660042D438 /* NSMutableArray+extension.h */,
-				54D925491EC020660042D438 /* NSMutableArray+extension.m */,
+				54F208CF23016E6A002B7166 /* 分类相关 */,
+				46D0074921D71D4700F8C3B1 /* objc向一个对象发送消息时，发生了什么 */,
 			);
 			path = "Runtime解决数组越界、字典key为nil";
 			sourceTree = "<group>";
@@ -716,6 +904,50 @@
 			path = "Cell的缓存机制";
 			sourceTree = "<group>";
 		};
+		54F208CF23016E6A002B7166 /* 分类相关 */ = {
+			isa = PBXGroup;
+			children = (
+				54F208D52301712E002B7166 /* Tool */,
+				54F208D4230170A9002B7166 /* Main */,
+				54F208D32301709E002B7166 /* Other */,
+			);
+			path = "分类相关";
+			sourceTree = "<group>";
+		};
+		54F208D32301709E002B7166 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				54C16E401E95E38E003F6BFA /* NSString+category.h */,
+				54C16E411E95E38E003F6BFA /* NSString+category.m */,
+				542586011E9B6D2F0014D5E4 /* NSMutableArray+category.h */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		54F208D4230170A9002B7166 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				543B4B3423017EA8008F32EE /* NSArray+extension.h */,
+				543B4B3523017EA8008F32EE /* NSArray+extension.m */,
+				54F208D9230174FD002B7166 /* NSArray+extension1.h */,
+				54F208DA230174FD002B7166 /* NSArray+extension1.m */,
+				54D925481EC020660042D438 /* NSMutableArray+extension.h */,
+				54D925491EC020660042D438 /* NSMutableArray+extension.m */,
+				54F208D023016F41002B7166 /* TestCatagoryClass.h */,
+				54F208D123016F41002B7166 /* TestCatagoryClass.m */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		54F208D52301712E002B7166 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				54F208D623017155002B7166 /* UIView+catagory.h */,
+				54F208D723017155002B7166 /* UIView+catagory.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
 		54F31FA51F6B810800BC8AB4 /* 数据存储 */ = {
 			isa = PBXGroup;
 			children = (
@@ -804,9 +1036,12 @@
 				TargetAttributes = {
 					54514FC41E8BB3D80067E7AF = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = QQLB9MPJWR;
+						DevelopmentTeam = 8H8NBYZ5EH;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
+							com.apple.Push = {
 								enabled = 0;
 							};
 						};
@@ -826,6 +1061,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -934,57 +1170,77 @@
 				5495B2EC1E94F153000CEF45 /* TestNine.m in Sources */,
 				5412CE3B1EC9A77200ED6241 /* TestInstrument.m in Sources */,
 				54DE47771EC952CB00AC0FA9 /* TestSendInfoVCOne.m in Sources */,
+				46D0074121D0DF1700F8C3B1 /* TestBlock.m in Sources */,
 				54C551AF1EB9D14A00FFB583 /* TestGetUUID.m in Sources */,
 				54C551AB1EB9B94F00FFB583 /* TestSaveDataMethod.m in Sources */,
 				5466DFD61F7B4BA000A35DEA /* TestAutoReleaspool.m in Sources */,
+				4603CD782154E7AA0040599F /* TestKVOObjectManager.m in Sources */,
 				54514FD01E8BB3D80067E7AF /* ViewController.m in Sources */,
 				54514FCD1E8BB3D80067E7AF /* AppDelegate.m in Sources */,
 				54DE477A1EC952D700AC0FA9 /* TestSendInfoVCTwo.m in Sources */,
 				54D9255A1EC06EB00042D438 /* TestLocks.m in Sources */,
 				54D925511EC020A00042D438 /* Test13.m in Sources */,
 				54550B601F5E9293001C2A18 /* TestAlgorithm.m in Sources */,
+				543B4B0F23017CAB008F32EE /* TestWindowViewController.m in Sources */,
 				54C551B41EB9D98000FFB583 /* TestMVVM.m in Sources */,
 				54BEDA6A1EC15D820036DF30 /* TestRemoteNotificate.m in Sources */,
+				46D0074F21D71D7D00F8C3B1 /* TestRunTimeMsgForwarding.m in Sources */,
 				5495B2EF1E94F153000CEF45 /* TestFour.m in Sources */,
 				5495B2ED1E94F153000CEF45 /* TestTen.m in Sources */,
 				54F31FA81F6B811B00BC8AB4 /* TestSaveData.m in Sources */,
+				46D0059421BE007300F8C3B1 /* TestUpdateUI.m in Sources */,
+				46D0059821BE529100F8C3B1 /* TestConstPointer.m in Sources */,
 				5495B2F51E94F153000CEF45 /* TestThree.m in Sources */,
+				46D0074E21D71D7D00F8C3B1 /* TestRunTimePeople.m in Sources */,
 				5495B2F41E94F153000CEF45 /* TestSeven.m in Sources */,
+				46480CA2215C6C3F00A4DF13 /* TestLoadAndInitializeFunc.m in Sources */,
+				54F208D223016F41002B7166 /* TestCatagoryClass.m in Sources */,
 				54A4303B1EA756B0005BBCF6 /* TestKVO.m in Sources */,
 				548590EF1F6FB734006EF903 /* TestNewKl.m in Sources */,
 				54A6BF971EC4520000955313 /* MyPageViewController.m in Sources */,
+				543B4B0E23017CAB008F32EE /* TestWindow.m in Sources */,
 				5495B2EA1E94F153000CEF45 /* Test11.m in Sources */,
 				54D9254B1EC020660042D438 /* NSMutableArray+extension.m in Sources */,
 				5495B2F21E94F153000CEF45 /* TestTwo.m in Sources */,
 				54A4304A1EA759A6005BBCF6 /* TestKVO2.m in Sources */,
+				46A8A66D216CA63600FAE06C /* UIDevice+category.m in Sources */,
 				546F46861E96247200243CCE /* Const.m in Sources */,
 				5492F7051E9E2C4000B04424 /* TestCoreData.m in Sources */,
 				54A430451EA7592C005BBCF6 /* TestKVO1.m in Sources */,
 				543C8D571F5D22A600D1571C /* TestWeView.m in Sources */,
 				5495B2EB1E94F153000CEF45 /* TestEight.m in Sources */,
+				46480C94215A193F00A4DF13 /* TestCopyAndStrongModifyString.m in Sources */,
 				54D925521EC020A00042D438 /* Test14.m in Sources */,
+				543B4B3623017EA8008F32EE /* NSArray+extension.m in Sources */,
 				54DBA4141EAD9B3B00F2CE11 /* TestCopy.m in Sources */,
 				54EFCE651EAA0D2100DB218D /* TestCellCacheMethod.m in Sources */,
 				54A08D321EA851EA0072B5B2 /* TestMyExtension.m in Sources */,
+				46D0075221DCA4FD00F8C3B1 /* TestRetainCycleInBlock.m in Sources */,
 				54A162831FA1E1D200C0A8BA /* BaseModel.m in Sources */,
 				54A428771E9F7659001D4E46 /* CoreDataModel.xcdatamodeld in Sources */,
+				54F208DB230174FD002B7166 /* NSArray+extension1.m in Sources */,
 				54EB681F1EA5F7EC00C13BB9 /* TestDynamicJson.m in Sources */,
+				46A8A66A216CA41C00FAE06C /* TestGetOtherInfo.m in Sources */,
 				54EFCE691EAA0D9B00DB218D /* TestCellCacheCell.m in Sources */,
 				545BF6F61EC3205800FAFE5E /* UnitTestViewController.m in Sources */,
 				548E63411EA99F2200158B7F /* TestBlockReference.m in Sources */,
 				549488221EC58F6600155981 /* MyPageChildSecondVC.m in Sources */,
 				54EFCE611EAA0AFC00DB218D /* LearnSDWebImage.m in Sources */,
+				4603CD752154DCA10040599F /* NSObject+category.m in Sources */,
+				46C259E121EC7117006B4D83 /* TestThreeTypeBlock.m in Sources */,
 				54BEDA671EC15D750036DF30 /* TestLocalNotificate.m in Sources */,
+				46480C9B215BA56D00A4DF13 /* TestCustomeKvoObject.m in Sources */,
 				54A430431EA7592C005BBCF6 /* TestKVOCell.m in Sources */,
 				54BF383E1E8E5678002A38DF /* BaseTest.m in Sources */,
-				54D9254A1EC020660042D438 /* NSArray+extension.m in Sources */,
 				549488251EC58F7100155981 /* MyPageChildThreeVC.m in Sources */,
 				5495B2F11E94F153000CEF45 /* TestSix.m in Sources */,
 				5495B2F01E94F153000CEF45 /* TestOne.m in Sources */,
 				54514FCA1E8BB3D80067E7AF /* main.m in Sources */,
+				4634CEF121DF149800635E8E /* TestManualTriggerKVOViewController.m in Sources */,
 				5495B2F31E94F153000CEF45 /* TestFive.m in Sources */,
 				54E152601E9F61CA0016771D /* BaseCoreDataModel.m in Sources */,
 				542585FD1E9B61880014D5E4 /* Test12.m in Sources */,
+				54F208D823017155002B7166 /* UIView+catagory.m in Sources */,
 				54C16E421E95E38E003F6BFA /* NSString+category.m in Sources */,
 				5494881F1EC58F5700155981 /* MyPageChildFirstVC.m in Sources */,
 			);
@@ -1131,7 +1387,7 @@
 			baseConfigurationReference = 4797361ED16B0B9C6E843CB7 /* Pods-test_jobQuestions.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QQLB9MPJWR;
+				DEVELOPMENT_TEAM = 8H8NBYZ5EH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/test_jobQuestions/prefixHeader.pch";
 				INFOPLIST_FILE = test_jobQuestions/Info.plist;
@@ -1146,7 +1402,7 @@
 			baseConfigurationReference = B3ED4F0DEAC4C485576572C6 /* Pods-test_jobQuestions.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = QQLB9MPJWR;
+				DEVELOPMENT_TEAM = 8H8NBYZ5EH;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/test_jobQuestions/prefixHeader.pch";
 				INFOPLIST_FILE = test_jobQuestions/Info.plist;
